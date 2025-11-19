@@ -1,0 +1,57 @@
+/* @font-face {
+    font-family: font;
+    src: url('/fonts/font.ttf');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next');
+
+html {
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    font-size:110%;
+    font-optical-sizing: auto;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.summary {
+ font-style: italic;
+}
+.post-summary {
+  font-style: italic;
+}
+nav {
+  font-size:85%;
+}
+
+#footer a{ 
+   text-decoration: underline;
+}
+
+figure {
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+}
+
+bullet {
+    font-size: 100%;
+}
+
+pre code {
+    background-color: rgb(0 0 0 / 0);
+    display: block;
+    max-height: 500px;  
+    overflow-y: auto; 
+    overflow-x: auto;
+}
+
+::selection {
+  color: oklch(95.3% 0.051 180.801);
+  background: oklch(35% 0.16 232.661);
+}
