@@ -32,7 +32,7 @@ There's an important assumption here: just because model fits the data well does
 
 Transformers are preciesly these kinds of models: they are, surprisingly good at fitting into all sorts of data whilst the math behind the model probably doesn't have much to do with the mechanisms behind. We don't know how transformers works so well for text-based tasks. At least not yet. Originally, transformer was designed as an add-on to the text-processing neural network models in order to tackle with some tricky problems (these problems are not the main forcus of the current blogpost so I'm skipping them, but [here's a good article if you were interested](https://towardsdatascience.com/beautifully-illustrated-nlp-models-from-rnn-to-transformer-80d69faf2109/)). We just happened to discover that transformers alone is good enough to solve these problems, we just need to make the transformers much bigger. So that's where the Aİ bloom started: GPT2 solved issues in GPT1 by simply being 10 times bigger; the most-recently open-sourced [pretrained GPT-Oss](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1), is 200 times bigger than [the previous openpsourced model, GPT2](https://huggingface.co/openai-community/gpt2) <i>(note: GPT-OSS is structurlly different from the original GPT2 but the fundamental ideas are the same.)</i>. There are even speculations suggesting transformer neural network models can be seen as some sort of universal function approximator. That is, it's capacable of 'approximate' other formulas/ functions with certain degree of accuracy, providing the model itself is big enough (['universal approximation theorem'](https://en.wikipedia.org/wiki/Universal_approximation_theorem)). <br>
 
-#### Demo: Machine translation with T5
+#### Demo: AI text translation
 It is preciesly the reason why it's very suprising is that, transformers are able to produce pretty impressive results for tasks model that are not specifically trained for. You can try this out yourself. I'll use Flan-T5 as a demo here. Flan-T5 is a variation of T5 model that fine-tuned on instruction-specific tasks. That is, we can insert some instructions before our prompt and the model shall return different results based on different instructions.<br>
 
 I'll use Python for the demo here because it's convinent. Before starting, you might want to install `transformers` if you haven't done aleady. It's a library collecting huge tone of open-sourced transformer models that allows you explore around.<br>
@@ -85,12 +85,23 @@ For example, if one wants to do english-to-romanian translation, the model input
 ```python
 print(pipe('translate English to Spanish: I love fish!!!!!'))
 ```
-
 Althogh the model was not trained on Spanish translation tasks, it still produced pretty impressive results:
 ```json
 [{'generated_text': 'Me encanta el pescado!'}]
 ```
+You can play around model generations using ```pipe('some_text')```, while some_text are whatever text you want the model to generate. But, remeber T5 is trained with text-completion in mind. Meaning that T5 works best for *auto-completion* types of inputs *("Big Mac is the signature dish of ")* instead of *question-answer* types of inputs *("What restaurant sells Big Mac?")*. <br>
+For example: <br>
 
+```python
+print(pipe('Microsoft is a machine that turns ')
+```
+
+Or, something like: 
+```python
+print(pipe("Tomrrow I must go to the"))
+```
+
+<br>
 It's very uncanny that model is able to do things us human did not ask it to do. There are lot of speculations on why model is able to perform such tasks. For exmaple, some researchers do suggest models that are big enough might [capture meanings behind words as well as language-specific syntax features](https://aclanthology.org/W19-4828/), and thus are able to convert one language to another. You can view how big the model in the demo is:
 
 ```python
@@ -351,9 +362,10 @@ I wanted to point out the (maybe) obvious thing here: almost all operations ment
 **So, it's just a huge stack of matirx calculation?**<br>
 In sense yes, it is. The three matrics in the attention head are commonly named as 'key'. 'query' and 'value', the idea behind these names are: 'user queries something, program looks for keys (i.e., keywords) to match with query, and value is whatever gets matched with'. Honstly I found this explaination very confusing, although by design, it does (sort of) work in such way. My main skeptcisim is that, just because we vaguely designed it this way does not mean it is really what's happening underneath. As shown in the demo earlier, a model that's not trained for English-Spanish translation did have some ability to do English-Spanish translation, innit. We gave names to these matrics, we don't know much about their behaviour.<br>
 
-## What's up next?<br>
-I think this is a rather good place to conclude this post, so I'll leave it here for now. I hope you find it helpfull.<br>
+## Conclusion
+Transformer neural network models aren't as mysterious as one think it would be. It has no difference compared with any other functions. At the end of the day it's just another mathematical function, but takes *matrix* as inputs, does *matrix* calculations, and outputs  *matrices*. Just like any other neural network models, it takes multiple steps to do the calculation. Within each computational step, the inputs gets processed by three mini-neural networks, and outputs are re-combined together as the output of the current step. In this sense, transformers are like nested neural networks: they are bigger neural network that contains lots of mini neural networks.<br>
 
+**What's up next?**<br>
 There are still a bit more stuffs that I'd like to share, like how text-generation works and what's really happenning when we are training a generative model. We've heard of the same old things over and over: *'generative LLM is just a very massive auto-complete!'*. Whilst I do aggree with it, I also find it not helpful if one wants to *understand* text generation, for both model training and model inference. In the next post, we'll have a look at the **Stage 3** for text generation.
 
 ## Some Other Resources

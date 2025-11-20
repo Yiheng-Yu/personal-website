@@ -17,14 +17,13 @@ giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [firebase]
-    apiKey = "AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg"
-    authDomain = "yiheng-blog-stats.firebaseapp.com"
-    projectId = "yiheng-blog-stats"
-    storageBucket = "yiheng-blog-stats.firebasestorage.app"
-    messagingSenderId = "674513555332"
-    appId = "1:674513555332:web:fcc2cd0ba68d0adc0017d1"
-    measurementId = "G-4X2W77Z3VD"
-
+apiKey = "AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg"
+authDomain = "yiheng-blog-stats.firebaseapp.com"
+projectId = "yiheng-blog-stats"
+storageBucket = "yiheng-blog-stats.firebasestorage.app"
+messagingSenderId = "674513555332"
+appId = "1:674513555332:web:fcc2cd0ba68d0adc0017d1"
+measurementId = "G-4X2W77Z3VD"
 fathomAnalytics = { }
 umamiAnalytics = { }
 selineAnalytics = { }
@@ -34,7 +33,7 @@ rssnext = { }
 advertisement = { }
 
 [header]
-layout = "fixed"
+layout = "fixed-fill"
 
 [footer]
 showMenu = true
@@ -81,7 +80,7 @@ showCategoryOnly = false
 showAuthorsBadges = true
 showWordCount = true
 showZenMode = true
-sharingLinks = ['bluesky', 'linkedin', 'mastodon']
+sharingLinks = [ "bluesky", "linkedin", "mastodon" ]
 
 [list]
 showHero = false

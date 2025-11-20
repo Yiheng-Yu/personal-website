@@ -105,8 +105,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.74c3f650a1b9d1325ddc12939a0fb9bbf02734be9a44d8f0e2f534f280127ef49706aad9a7390bb94edde7e4a5cc5c3d57927a84e5b5e9496f725ad08b3e7604.css"
-    integrity="sha512-dMP2UKG50TJd3BKTmg&#43;5u/AnNL6aRNjw4vU08oASfvSXBqrZpzkLuU7d5&#43;SlzFw9V5J6hOW16UlvclrQiz52BA==">
+    href="/css/main.bundle.min.e0d7aa938e611d632a6bcd77d7a653ca1f54eeca3a7e2bea616393ed5cbcbecfcff49199680b87d53eef76de12660619ce480158e6276f1e64b8ceb56d73ea30.css"
+    integrity="sha512-4Neqk45hHWMqa81316ZTyh9U7so6fivqYWOT7Vy8vs/P9JGZaAuH1T7vdt4SZgYZzkgBWOYnbx5kuM61bXPqMA==">
 
   
   
@@ -376,19 +376,13 @@
     "keywords": ["huggingface","AI","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3062"
+    "wordCount": "3216"
   }]
   </script>
 
 
 
   
-  
-    
-
-
-
-
   
 
   
@@ -458,10 +452,7 @@
     
     
       <div class="min-h-[148px]"></div>
-<div class="fixed inset-x-0 z-100">
-  <div
-    id="menu-blur"
-    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+<div class="fixed inset-x-0 bg-neutral dark:bg-neutral-800 z-100">
   <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
     
 
@@ -868,13 +859,6 @@
   </div>
 </div>
 
-
-<script
-  type="text/javascript"
-  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
-  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
-  data-blur-id="menu-blur"></script>
-
     
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
@@ -977,7 +961,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-31T00:00:00&#43;00:00">31 October 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3062 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+      <time datetime="2025-10-31T00:00:00&#43;00:00">31 October 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3216 words</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1174,7 +1158,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#demo-machine-translation-with-t5">Demo: Machine translation with T5</a></li>
+            <li><a href="#demo-ai-text-translation">Demo: AI text translation</a></li>
           </ul>
         </li>
       </ul>
@@ -1186,7 +1170,7 @@
       </ul>
     </li>
     <li><a href="#why-are-the-models-so-big">Why are the models so big?</a></li>
-    <li><a href="#whats-up-next">What’s up next?<br></a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
     <li><a href="#some-other-resources">Some Other Resources</a></li>
   </ul>
 </nav>
@@ -1205,7 +1189,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#demo-machine-translation-with-t5">Demo: Machine translation with T5</a></li>
+            <li><a href="#demo-ai-text-translation">Demo: AI text translation</a></li>
           </ul>
         </li>
       </ul>
@@ -1217,7 +1201,7 @@
       </ul>
     </li>
     <li><a href="#why-are-the-models-so-big">Why are the models so big?</a></li>
-    <li><a href="#whats-up-next">What’s up next?<br></a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
     <li><a href="#some-other-resources">Some Other Resources</a></li>
   </ul>
 </nav>
@@ -1387,12 +1371,12 @@
     target="_blank"
   >&lsquo;universal approximation theorem&rsquo;</a>). <br></p>
 
-<h4 class="relative group">Demo: Machine translation with T5
-    <div id="demo-machine-translation-with-t5" class="anchor"></div>
+<h4 class="relative group">Demo: AI text translation
+    <div id="demo-ai-text-translation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#demo-machine-translation-with-t5" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#demo-ai-text-translation" aria-label="Anchor">#</a>
     </span>
     
 </h4>
@@ -1500,10 +1484,13 @@ For example, if one wants to do english-to-romanian translation, the model input
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#39;translate English to Spanish: I love fish!!!!!&#39;</span>))
 </span></span></code></pre></div><p>Althogh the model was not trained on Spanish translation tasks, it still produced pretty impressive results:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[{<span style="color:#f38ba8">&#39;generated_text&#39;:</span> <span style="color:#f38ba8">&#39;Me</span> <span style="color:#f38ba8">encanta</span> <span style="color:#f38ba8">el</span> <span style="color:#f38ba8">pescado!&#39;</span>}]
-</span></span></code></pre></div><p>It&rsquo;s very uncanny that model is able to do things us human did not ask it to do. There are lot of speculations on why model is able to perform such tasks. For exmaple, some researchers do suggest models that are big enough might <a
-  href="https://aclanthology.org/W19-4828/"
-    target="_blank"
-  >capture meanings behind words as well as language-specific syntax features</a>, and thus are able to convert one language to another. You can view how big the model in the demo is:</p>
+</span></span></code></pre></div><p>You can play around model generations using <code>pipe('some_text')</code>, while some_text are whatever text you want the model to generate. But, remeber T5 is trained with text-completion in mind. Meaning that T5 works best for <em>auto-completion</em> types of inputs <em>(&ldquo;Big Mac is the signature dish of &ldquo;)</em> instead of <em>question-answer</em> types of inputs <em>(&ldquo;What restaurant sells Big Mac?&rdquo;)</em>. <br>
+For example: <br></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#39;Microsoft is a machine that turns &#39;</span>)
+</span></span></code></pre></div><p>Or, something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#34;Tomrrow I must go to the&#34;</span>))
+</span></span></code></pre></div><br>
+It's very uncanny that model is able to do things us human did not ask it to do. There are lot of speculations on why model is able to perform such tasks. For exmaple, some researchers do suggest models that are big enough might [capture meanings behind words as well as language-specific syntax features](https://aclanthology.org/W19-4828/), and thus are able to convert one language to another. You can view how big the model in the demo is:
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint<span style="color:#89dceb;font-weight:bold">.</span>pp(<span style="color:#f38ba8">f</span><span style="color:#a6e3a1">&#34;Number of parameters: </span><span style="color:#a6e3a1">{</span>pipe<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>num_parameters()<span style="color:#a6e3a1">:</span><span style="color:#a6e3a1">,</span><span style="color:#a6e3a1">}</span><span style="color:#a6e3a1">&#34;</span>)
 </span></span></code></pre></div><p>Output:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e3a1">&#39;Number of parameters: 247,577,856&#39;</span>
@@ -1789,17 +1776,18 @@ In our T5 model, this coresspinds to the <em><code>lm_head</code></em> at the en
 <p><strong>So, it&rsquo;s just a huge stack of matirx calculation?</strong><br>
 In sense yes, it is. The three matrics in the attention head are commonly named as &lsquo;key&rsquo;. &lsquo;query&rsquo; and &lsquo;value&rsquo;, the idea behind these names are: &lsquo;user queries something, program looks for keys (i.e., keywords) to match with query, and value is whatever gets matched with&rsquo;. Honstly I found this explaination very confusing, although by design, it does (sort of) work in such way. My main skeptcisim is that, just because we vaguely designed it this way does not mean it is really what&rsquo;s happening underneath. As shown in the demo earlier, a model that&rsquo;s not trained for English-Spanish translation did have some ability to do English-Spanish translation, innit. We gave names to these matrics, we don&rsquo;t know much about their behaviour.<br></p>
 
-<h2 class="relative group">What&rsquo;s up next?<br>
-    <div id="whats-up-next" class="anchor"></div>
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#whats-up-next" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>I think this is a rather good place to conclude this post, so I&rsquo;ll leave it here for now. I hope you find it helpfull.<br></p>
-<p>There are still a bit more stuffs that I&rsquo;d like to share, like how text-generation works and what&rsquo;s really happenning when we are training a generative model. We&rsquo;ve heard of the same old things over and over: <em>&lsquo;generative LLM is just a very massive auto-complete!&rsquo;</em>. Whilst I do aggree with it, I also find it not helpful if one wants to <em>understand</em> text generation, for both model training and model inference. In the next post, we&rsquo;ll have a look at the <strong>Stage 3</strong> for text generation.</p>
+<p>Transformer neural network models aren&rsquo;t as mysterious as one think it would be. It has no difference compared with any other functions. At the end of the day it&rsquo;s just another mathematical function, but takes <em>matrix</em> as inputs, does <em>matrix</em> calculations, and outputs  <em>matrices</em>. Just like any other neural network models, it takes multiple steps to do the calculation. Within each computational step, the inputs gets processed by three mini-neural networks, and outputs are re-combined together as the output of the current step. In this sense, transformers are like nested neural networks: they are bigger neural network that contains lots of mini neural networks.<br></p>
+<p><strong>What&rsquo;s up next?</strong><br>
+There are still a bit more stuffs that I&rsquo;d like to share, like how text-generation works and what&rsquo;s really happenning when we are training a generative model. We&rsquo;ve heard of the same old things over and over: <em>&lsquo;generative LLM is just a very massive auto-complete!&rsquo;</em>. Whilst I do aggree with it, I also find it not helpful if one wants to <em>understand</em> text generation, for both model training and model inference. In the next post, we&rsquo;ll have a look at the <strong>Stage 3</strong> for text generation.</p>
 
 <h2 class="relative group">Some Other Resources
     <div id="some-other-resources" class="anchor"></div>
