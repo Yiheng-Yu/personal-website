@@ -12,10 +12,6 @@ buildDrafts = false
 buildFuture = false
 enableEmoji = true
 
-[services]
-  [services.disqus]
-    shortname = 'blog-yiheng'
-
 [privacy]
   [privacy.disqus]
     disable = false
