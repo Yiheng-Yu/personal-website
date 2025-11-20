@@ -1,2 +1,4 @@
 */.DS_Store
-*/public
+# */public
+# Local Netlify folder
+.netlify
