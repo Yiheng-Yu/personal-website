@@ -10,8 +10,8 @@
   GIT_SUBMODULES = "true"
 
 [context.production.environment]
-  HUGO_VERSION = "0.104.1"
+  HUGO_VERSION = "0.152.2"
   HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.104.1"
+  HUGO_VERSION = "0.152.2"
