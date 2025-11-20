@@ -15,7 +15,16 @@ smartTOCHideUnfocusedChildren = false
 fingerprintAlgorithm = "sha512"
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
-firebase = { }
+
+[firebase]
+    apiKey = "AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg"
+    authDomain = "yiheng-blog-stats.firebaseapp.com"
+    projectId = "yiheng-blog-stats"
+    storageBucket = "yiheng-blog-stats.firebasestorage.app"
+    messagingSenderId = "674513555332"
+    appId = "1:674513555332:web:fcc2cd0ba68d0adc0017d1"
+    measurementId = "G-4X2W77Z3VD"
+
 fathomAnalytics = { }
 umamiAnalytics = { }
 selineAnalytics = { }
@@ -47,12 +56,12 @@ disableHeroImageFilter = false
 
 [article]
 showDate = true
-showViews = true
-showLikes = true
+showViews = false
+showLikes = false
 showDateOnlyInArticle = false
 showDateUpdated = false
 showAuthor = true
-showAuthorBottom = true
+showAuthorBottom = false
 showHero = false
 showComments = true
 layoutBackgroundBlur = true
@@ -72,7 +81,7 @@ showCategoryOnly = false
 showAuthorsBadges = true
 showWordCount = true
 showZenMode = true
-sharingLinks = ['bluesky', 'email', 'linkedin', 'mastodon', 'line', 'whatsapp']
+sharingLinks = ['bluesky', 'linkedin', 'mastodon']
 
 [list]
 showHero = false

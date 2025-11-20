@@ -16,6 +16,9 @@ enableEmoji = true
   [services.disqus]
     shortname = 'blog-yiheng'
 
+[privacy]
+  [privacy.disqus]
+    disable = false
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
