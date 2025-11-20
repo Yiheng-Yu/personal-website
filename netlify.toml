@@ -7,6 +7,7 @@
   NODE_ENV = "production"
   GO_VERSION = "1.16"
   TZ = "UTC"  # Set to preferred timezone
+  GIT_SUBMODULES = "true"
 
 [context.production.environment]
   HUGO_VERSION = "0.104.1"
