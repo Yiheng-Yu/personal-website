@@ -24,9 +24,9 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = """
     default-src 'none'; 
-    script-src 'self'; 
-    connect-src 'self'; 
-    img-src 'self'; 
-    style-src 'self';
-    base-uri 'self';
-    form-action 'self'"""
+    script-src 'none'; 
+    connect-src 'none'; 
+    img-src 'none'; 
+    style-src 'none';
+    base-uri 'none';
+    form-action 'none'"""
