@@ -22,11 +22,4 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = """
-    default-src 'none'; 
-    script-src 'none'; 
-    connect-src 'none'; 
-    img-src 'none'; 
-    style-src 'none';
-    base-uri 'none';
-    form-action 'none'"""
+    Content-Security-Policy = """"""
