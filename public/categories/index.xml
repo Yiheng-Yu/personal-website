@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Myxiniformes Moment</title>
-    <link>https://yuyiheng.cc/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Myxiniformes Moment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>yuyiheng1994@gmail.com (@Yiheng Yu)</managingEditor>
     <webMaster>yuyiheng1994@gmail.com (@Yiheng Yu)</webMaster>
     <copyright>© 2025 @Yiheng Yu</copyright>
-    <atom:link href="https://yuyiheng.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
