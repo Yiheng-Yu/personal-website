@@ -1,6 +1,6 @@
 # netlify.toml
 [build]
-  command = "hugo mod get -u && hugo --gc --cleanDestinationDir --forceSyncStatic --theme blowfish -b $URL"
+  command = "hugo mod get -u && hugo --gc --forceSyncStatic --theme blowfish -b $URL"
   publish = "public"
 
 [build.environment]
