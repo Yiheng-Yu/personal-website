@@ -12,6 +12,9 @@ buildDrafts = false
 buildFuture = false
 enableEmoji = true
 
+[services]
+  [services.disqus]
+    shortname = 'blog-yiheng'
 
 # googleAnalytics = "G-XXXXXXXXX"
 

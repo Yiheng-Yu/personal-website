@@ -40,7 +40,7 @@ Open terminal, run this command to install transformers:
 pip install torch
 pip install transformers
 ```
-The model I am going to use is [T5, released by Google a couple of years ago](https://arxiv.org/pdf/2210.11416) Here's huggingface's link to the model: [link](https://huggingface.co/google/flan-t5-base). <br>
+The model I am going to use is [T5, released by Google a couple of years ago](https://arxiv.org/pdf/2210.11416) Here's huggingface's link to the model: <br>
 {{< huggingface model="google/flan-t5-base" >}}
 <br>
 In python, run these lines to download & initialise the model:
