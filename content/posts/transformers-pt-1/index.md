@@ -370,7 +370,6 @@ There are still a bit more stuffs that I'd like to share, like how text-generati
 
 ## Some Other Resources
 I hope whoever come accross this post would find it useful. Here are some extra reading materials that İ found particularly useful:<br>
-1. [Pytorch's step-byp-step guide on creating a generative LLM is prob one of the best out there that teaches you all the fundenmentals.](https://docs.pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html)
-2. [BertViz, a very good visualisation tool for looking at attention heads layer by layer. You can run it interactively in a jupyter notebook.](https://github.com/jessevig/bertviz)
-3. [Huggingface's LLM cources. Although they tends to focus on the programming & practical applications, I found many of their conceptual guides very good for a beginner.](https://huggingface.co/learn/llm-course/en/chapter0/1)
-
+1. [Pytorch's step-byp-step guide](https://docs.pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html) on creating a generative LLM is prob one of the best out there that teaches you all the fundenmentals.
+2. [BertViz, a very good visualisation tool](https://github.com/jessevig/bertviz) for looking at attention heads layer by layer. You can run it interactively in a jupyter notebook.
+3. [Huggingface's LLM cources.](https://huggingface.co/learn/llm-course/en/chapter0/1) Although they tends to focus on the side of programming & practical applications, I found many of their conceptual guides very good for a beginner.

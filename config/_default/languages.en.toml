@@ -23,9 +23,10 @@ title = "Myxiniformes Moment"
   image = "doggo.jpg"
   email = "yuyiheng1994@gmail.com"
   headline = """
-  Hi, I'm a data scientist with a PhD in visual motion perception and a passion for computational modeling. <br>
-  This blog collects my study notes/ thoughts and resources that helped me learning programming. <br>Hopefully, it helps you too."""
-  bio = "The the industrial revolution and its consequence is auto-threading sewing machines (they are very epic)"
+  <p style="font-size:90%">Hi, I'm a data scientist with lifelong passion for computational modeling. <br>
+  This blog collects notes and easy explanations on statistics and programming, with as little math as possible.<br></p>
+  <i style="font-size:80%">*Plus random info-dumping depending on my whatever topic my autistic brain decides hyperfixate on.</i>"""
+  bio = "Everyday I feel blessed to live a PHP-free life 🙏"
   links = [
     {github = "https://github.com/Yiheng-Yu"},
   ]
