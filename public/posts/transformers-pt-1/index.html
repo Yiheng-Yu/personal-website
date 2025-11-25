@@ -24,7 +24,7 @@
     <meta name="description" content="(it&#39;s glorified linear algebra)">
   
   
-    <meta name="keywords" content="huggingface,AI,ELI5,">
+    <meta name="keywords" content="AI,Machine Learning,ELI5,">
   
   
   
@@ -55,8 +55,8 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-10-31T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-10-31T00:00:00+00:00">
-    <meta property="article:tag" content="Huggingface">
     <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Machine Learning">
     <meta property="article:tag" content="ELI5">
     <meta property="og:image" content="http://localhost:1313/posts/transformers-pt-1/featured.jpg">
 
@@ -105,8 +105,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.e0d7aa938e611d632a6bcd77d7a653ca1f54eeca3a7e2bea616393ed5cbcbecfcff49199680b87d53eef76de12660619ce480158e6276f1e64b8ceb56d73ea30.css"
-    integrity="sha512-4Neqk45hHWMqa81316ZTyh9U7so6fivqYWOT7Vy8vs/P9JGZaAuH1T7vdt4SZgYZzkgBWOYnbx5kuM61bXPqMA==">
+    href="/css/main.bundle.min.8fa6fd3f9af49484bbf82f0609df8f3f4bc32085820978e5ad5250a6c8273778244427c65e2bf3d36a38f9d25e8e608f5ada92453e830f8bb5b28956b8eac1d0.css"
+    integrity="sha512-j6b9P5r0lIS7&#43;C8GCd&#43;PP0vDIIWCCXjlrVJQpsgnN3gkRCfGXivz02o4&#43;dJejmCPWtqSRT6DD4u1solWuOrB0A==">
 
   
   
@@ -166,6 +166,16 @@
 <script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
 
 
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/mermaid.bundle.952a37a4056669084b44489b8acec851a95825e3c34632c74a0d9916b951884204b8f720e6292cc85b51c6bac44ab6392877b98585ecc205b41ea076df927163.js"
+    integrity="sha512-lSo3pAVmaQhLREibis7IUalYJePDRjLHSg2ZFrlRiEIEuPcg5iksyFtRxrrESrY5KHe5hYXswgW0HqB235JxYw=="></script>
 
 
 
@@ -321,6 +331,21 @@
 
 
 
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/components/carousel.8e65f2c27285218feed8ca2a6e12a80ec2fb4be8f774b7c74d9642f1bc528a3352288a700a64a0e1e3c38a40b74c978b5dbbeb38346202b5f7613d8fc023e3c9.css"
+    integrity="sha512-jmXywnKFIY/u2MoqbhKoDsL7S&#43;j3dLfHTZZC8bxSijNSKIpwCmSg4ePDikC3TJeLXbvrODRiArX3YT2PwCPjyQ==">
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/lib/tw-elements/index.min.5ffccf337b773ee831515cdde152c8039e972dd479f7dffb0532a79de9a6de5926154ae2587f181ed6c06a99aee25667096bcf6495da5aa86e235d98baee5943.js"
+    integrity="sha512-X/zPM3t3PugxUVzd4VLIA56XLdR599/7BTKnnemm3lkmFUriWH8YHtbAapmu4lZnCWvPZJXaWqhuI12Yuu5ZQw=="></script>
+
 
 
 
@@ -356,7 +381,7 @@
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "",
+    "articleSection": "Blog",
     "name": "ELI5 Transformers (Part 1): Attention Mechanism ",
     "headline": "ELI5 Transformers (Part 1): Attention Mechanism ",
     
@@ -373,10 +398,10 @@
     
     "dateModified": "2025-10-31T00:00:00\u002b00:00",
     
-    "keywords": ["huggingface","AI","ELI5"],
+    "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3218"
+    "wordCount": "2591"
   }]
   </script>
 
@@ -493,7 +518,7 @@
   
   class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
   aria-label="Blog"
-  title="">
+  title="Blog">
   
   
     <p class="text-base font-medium">
@@ -501,6 +526,61 @@
     </p>
   
 </a>
+
+
+
+      
+        
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a
+      
+        href="/topics/"
+        
+      
+      aria-label="Topics"
+      class="text-base font-medium hover:text-primary-600 dark:hover:text-primary-400"
+      title="Topics">
+      <p>
+        Topics
+      </p>
+    </a>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+          <a
+            href="/topics/transformers/"
+            
+            aria-label="Transformer"
+            class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+            
+            <p class="text-sm font-sm" title="Transformer">
+              Transformer
+            </p>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -819,7 +899,7 @@
     
     class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
     aria-label="Blog"
-    title="">
+    title="Blog">
     
     
       <p class="text-bg font-bg">
@@ -828,6 +908,52 @@
     
   </a>
 </li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/topics/"
+    aria-label="Topics"
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Topics">
+      Topics
+    </p>
+    <span>
+      <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+    </span>
+  </a>
+</li>
+
+  <li class="mt-1">
+    <a
+      href="/topics/transformers/"
+      
+      aria-label="Transformer"
+      class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+      
+      <p class="text-sm font-small" title="Transformer">
+        Transformer
+      </p>
+    </a>
+  </li>
+
+<li class="mb-2"></li>
 
 
 
@@ -887,7 +1013,7 @@
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
-      >posts</a
+      >Blog</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -928,8 +1054,6 @@
   
 
   
-    
-  
 
   
 
@@ -940,15 +1064,9 @@
   
 
   
-    
-  
 
   
-    
-  
 
-  
-    
   
 
   
@@ -961,65 +1079,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-31T00:00:00&#43;00:00">31 October 2025</time><span class="px-2 text-primary-500">&middot;</span><span>3218 words</span><span class="px-2 text-primary-500">&middot;</span><span>
-  
-  
-    
-    
-      
-      
-        
-        
-      
-      
-    
-  
-  <span
-    id="views_posts/transformers-pt-1/index.md"
-    class="animate-pulse inline-block text-transparent max-h-3 rounded-full -mt-[2px] align-middle bg-neutral-300 dark:bg-neutral-400"
-    title="views"
-    >loading</span
-  >
-  <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></span>
-</span>
-<span class="px-2 text-primary-500">&middot;</span><span>
-  
-  
-    
-    
-      
-      
-        
-        
-      
-      
-    
-  
-  <span
-    id="likes_posts/transformers-pt-1/index.md"
-    class="animate-pulse inline-block text-transparent max-h-3 rounded-full -mt-[2px] align-middle bg-neutral-300 dark:bg-neutral-400"
-    title="likes"
-    >loading</span
-  >
-  <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></span></span>
-</span>
-<span class="px-2 text-primary-500">&middot;</span><span>
-  <button
-    id="button_likes"
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    <span id="button_likes_heart" class="inline-block align-text-bottom hidden"
-      ><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></span>
-    </span>
-    <span id="button_likes_emtpty_heart" class="inline-block align-text-bottom"
-      ><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg></span></span
-    >
-    <span id="button_likes_text">&nbsp;Like</span>
-  </button>
-</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <span>2591 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1042,12 +1102,6 @@
     <div class="flex flex-row flex-wrap items-center">
       
         
-          
-        
-      
-        
-      
-        
       
         
       
@@ -1064,38 +1118,6 @@
       
         
           
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/category/eli5-transformers/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    ELI5-Transformers
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/huggingface/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Huggingface
-  </span>
-</span>
-
-              </a>
             
               <a class="relative mt-[0.5rem] me-2" href="/tags/ai/">
                 <span class="flex cursor-pointer">
@@ -1107,11 +1129,37 @@
 
               </a>
             
+              <a class="relative mt-[0.5rem] me-2" href="/tags/machine-learning/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Machine Learning
+  </span>
+</span>
+
+              </a>
+            
               <a class="relative mt-[0.5rem] me-2" href="/tags/eli5/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     ELI5
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/topics/transformers/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Transformer
   </span>
 </span>
 
@@ -1154,23 +1202,23 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#a-good-model-only-needs-to-be-useful">A good model only needs to be useful</a>
+    <li><a href="#model-only-needs-to-be-useful">Model only needs to be useful</a></li>
+    <li><a href="#transformer-model-architecture">Transformer Model Architecture</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#demo-ai-text-translation">Demo: AI text translation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#the-transformer-architecture">The Transformer Architecture</a>
-      <ul>
-        <li><a href="#overview-the-transformer-itself">Overview: <em>the</em> transformer itself</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#the-transformer-itself">The Transformer Itself</a></li>
         <li><a href="#the-attention-head">The attention head</a></li>
       </ul>
     </li>
-    <li><a href="#why-are-the-models-so-big">Why are the models so big?</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#example-qwen3">Example: Qwen3</a>
+      <ul>
+        <li><a href="#prep">Prep</a></li>
+        <li><a href="#get-the-model">Get the model</a></li>
+        <li><a href="#model-architecture">Model Architecture</a></li>
+        <li><a href="#have-some-fun">Have some fun!</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
     <li><a href="#some-other-resources">Some Other Resources</a></li>
   </ul>
 </nav>
@@ -1185,23 +1233,23 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#a-good-model-only-needs-to-be-useful">A good model only needs to be useful</a>
+    <li><a href="#model-only-needs-to-be-useful">Model only needs to be useful</a></li>
+    <li><a href="#transformer-model-architecture">Transformer Model Architecture</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#demo-ai-text-translation">Demo: AI text translation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#the-transformer-architecture">The Transformer Architecture</a>
-      <ul>
-        <li><a href="#overview-the-transformer-itself">Overview: <em>the</em> transformer itself</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#the-transformer-itself">The Transformer Itself</a></li>
         <li><a href="#the-attention-head">The attention head</a></li>
       </ul>
     </li>
-    <li><a href="#why-are-the-models-so-big">Why are the models so big?</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#example-qwen3">Example: Qwen3</a>
+      <ul>
+        <li><a href="#prep">Prep</a></li>
+        <li><a href="#get-the-model">Get the model</a></li>
+        <li><a href="#model-architecture">Model Architecture</a></li>
+        <li><a href="#have-some-fun">Have some fun!</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
     <li><a href="#some-other-resources">Some Other Resources</a></li>
   </ul>
 </nav>
@@ -1322,36 +1370,15 @@
         <div class="article-content max-w-prose mb-20">
           
 
-<p>As someone without much backrounds in neither physics nor computer science, I find lots of available introductions on transformers very confusing. Transformers is the talk of the street, GPT is short for &lsquo;Generative Pre-training <i>Transformer</i>&rsquo;! However, most of the articles on transformers focuses on attention mechanisms, using either <a
-  href="https://peterbloem.nl/blog/transformers"
-    target="_blank"
-  >the OG transformer</a> or <a
-  href="https://towardsdatascience.com/a-complete-guide-to-bert-with-code-9f87602e4a11/"
-    target="_blank"
-  >the classic BERT</a> as examples. They would spend lot of time talking about embeddings &amp; attetions on the encoding side, and skipped most the decoding by saying &lsquo;well you just do the same thing again and there you have it!&rsquo;. Well that&rsquo;s not very helpful isn&rsquo;t it. Don&rsquo;t get me wrong, there are a lot of very good learning materials out there, for example the amazing <a
-  href="https://poloclub.github.io/transformer-explainer"
-    target="_blank"
-  >interactive transofmer explainer</a>. However, I always find these heavy tutorials not very suitable for my very short attention span or the autism tendency of getting lost in details.<br></p>
-<p>Finally, I&rsquo;ve decided to bite the bullet and spend some time have a read through the HuggingFace&rsquo;s source code for google&rsquo;s T5 Model, <a
-  href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/t5/modeling_t5.py"
-    target="_blank"
-  >THE encoder-decoder everyone on the steet are talking about</a>. It was a relatively long process with lots of back and forth jumping between classes and methods. I could not emphasis how much I appretiate HuggingFace&rsquo;s <a
-  href="https://huggingface.co/blog/transformers-design-philosophy"
-    target="_blank"
-  >maximalist coding choice</a>, where the entire model architecture is contained inside one single .py file. The bonouns point is, I didn&rsquo;t experience the pain of come accross <code>import tensorflow</code> <a
-  href="https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/data/data_collator.py#L742"
-    target="_blank"
-  >inside dataset iteration</a>. <br></p>
-<p>I took lots of notes here and there during the process of studying transformers, think now it&rsquo;s a very good time to share some of my findings. In this (or probably a series of?) blogpost(s?), I am going to collate my past notes on text-specific transformer models piece by piece in a reader-friendly manner. I hope these notes can help others alongside their studying, or being an interesting nice little piece of articles to read through.<br></p>
 <p>In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won&rsquo;t go metion too much math and there won&rsquo;t be any mathenathical formulas. However, I would assume readers of this silly little post already have some okay-ish background of math/ datascience. (i.e., matrix computations embeddings, tokens, model fitting etc.). I am not going to list out all the implemention details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, İ would like to draw out a general framework on transformers to help one understand the detailed math behind.<br></p>
-<p>In this particular blogpost, I&rsquo;ll very quickly go through some very basics on neural network model, just enough to cover what needed for this post, accompied by demo of transformer model as a proof of concept. In this section, there will be some codes that you can copy and paste into an interactive python session to fiddle around for a bit. And lastly, I&rsquo;ll do a quick sketch on the general architecture of transformers, and a overview of the attention mechasm.<br></p>
+<p>Today, I&rsquo;ll very quickly go through some very basics on neural network model, just enough to cover what needed for this post, accompied by demo of transformer model as a proof of concept. In this section, there will be some codes that you can copy and paste into an interactive python session to fiddle around for a bit. And lastly, I&rsquo;ll do a quick sketch on the general architecture of transformers, and a overview of the attention mechasm.<br></p>
 
-<h2 class="relative group">A good model only needs to be useful
-    <div id="a-good-model-only-needs-to-be-useful" class="anchor"></div>
+<h2 class="relative group">Model only needs to be useful
+    <div id="model-only-needs-to-be-useful" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-good-model-only-needs-to-be-useful" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model-only-needs-to-be-useful" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -1371,26 +1398,260 @@
     target="_blank"
   >&lsquo;universal approximation theorem&rsquo;</a>). <br></p>
 
-<h4 class="relative group">Demo: AI text translation
-    <div id="demo-ai-text-translation" class="anchor"></div>
+<h2 class="relative group">Transformer Model Architecture
+    <div id="transformer-model-architecture" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#demo-ai-text-translation" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#transformer-model-architecture" aria-label="Anchor">#</a>
     </span>
     
-</h4>
-<p>It is preciesly the reason why it&rsquo;s very suprising is that, transformers are able to produce pretty impressive results for tasks model that are not specifically trained for. You can try this out yourself. I&rsquo;ll use Flan-T5 as a demo here. Flan-T5 is a variation of T5 model that fine-tuned on instruction-specific tasks. That is, we can insert some instructions before our prompt and the model shall return different results based on different instructions.<br></p>
-<p>I&rsquo;ll use Python for the demo here because it&rsquo;s convinent. Before starting, you might want to install <code>transformers</code> if you haven&rsquo;t done aleady. It&rsquo;s a library collecting huge tone of open-sourced transformer models that allows you explore around.<br>
-Open terminal, run this command to install transformers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install torch
-</span></span><span style="display:flex;"><span>pip install transformers
-</span></span></code></pre></div><p>The model I am going to use is <a
-  href="https://arxiv.org/pdf/2210.11416"
+</h2>
+
+<h3 class="relative group">Overview
+    <div id="overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>At conceptual level, the general idea behind transformer models are is actually pretty intuitive. We can roughly divide the model calclations into three stages:
+<ol class="border-s-2 border-primary-500 dark:border-primary-300 list-none">
+
+
+
+
+
+
+<li>
+  <div class="flex">
+    <div
+      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Stage 1</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Embedding
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          The input gets converted into vectors or matrics.
+        </h4>
+      
+      <div class="mb-6">
+        
+  The first step starts with creating a mathematical representation of our input data. This process can vary based on different types of inputs. It can simply be some sort of look-up tables (text embedding), some matrix transformations of the raw inputs (convolution) etc.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li>
+  <div class="flex">
+    <div
+      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Stage 2</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Transformer
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          The raw output from Stage 1 feeds into the multiple different attention layers.
+        </h4>
+      
+      <div class="mb-6">
+        
+  Mathematically, each attention layer is doing very much the same mathematical operation, with each layer having its own sets of parameters. Each layer takes a matrix as an input, and outputs another matrix to pass onto the next layer. This process is repeated multiple times. Stage 2 is the core of a transformer model, it *transforms* our inputs into something else.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li>
+  <div class="flex">
+    <div
+      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Stage 3</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Output
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          We convert the matrix output from Stage 2 into task-specific results.
+        </h4>
+      
+      <div class="mb-6">
+        
+  This is usually done by another set of simple matrix operations, depending on the task. For example, if we are doing text sentimental analysis task, this operation could be a simple matrix multiplication, resulting in a final score of 0-10.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+</ol>
+</p>
+<p>In other words, you can concepturally see <strong>Stage 1</strong> as a conversion stage in order to initiate the model, <strong>Stage 2</strong> being the core of a transformer model, and <strong>Stage 3</strong> as a &lsquo;decoding&rsquo; step to convert the output back into human-readable form. When we talk about transformer models, we are mostly referring to  <strong>Stage 2</strong>, which is the focus of the current post. I&rsquo;ll elabrate a lot more on what&rsquo;s hapenning in <strong>Stage 3</strong> in the next post.<br></p>
+
+<h3 class="relative group">The Transformer Itself
+    <div id="the-transformer-itself" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-transformer-itself" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The transformer itself is pretty straightforward: it consists of stacks of multiple attention layers that often share exactly the same, or very similar structure:
+<pre class="not-prose mermaid">
+---
+config:
+  layout: dagre
+---
+flowchart LR
+
+    n1["Input"] --> n2["Attention<br>Layer"]
+    n2 --> n3["Attention<br>Layer"]
+    n3 --> n6["Repeat"]
+    n6 --> n5["Output"]
+
+    n2@{ shape: rounded}
+    n3@{ shape: rounded}
+    n6@{ shape: text}
+    classDef default fill: transparent, bg-color: transparent
+
+</pre>
+</p>
+<p>Asttention layer consists of multiple &lsquo;attention heads&rsquo; that works in parallel: each attention head processes the inputs independently, and the output of all attention heads are merged back together. The joined matrix is the final output of the current layer: <br></p>
+<pre class="not-prose mermaid">
+flowchart LR
+ subgraph s1["Attention Heads"]
+
+    direction LR
+        n14["Attention Head"]
+        n16["Attention Head"]
+        n17["Attention Head"]
+
+  end
+
+    s1 --> n10["Merge"]
+    n10 --> n18["Next Layer"]
+    n19["Previous Layer"] --> s1
+
+    n18@{ shape: text}
+    n19@{ shape: text}
+    classDef default fill: transparent
+    style s1 fill:transparent
+
+</pre>
+
+
+<h3 class="relative group">The attention head
+    <div id="the-attention-head" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-attention-head" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>You can think each of the attention head as a mini neural network. A typical attention head works like this:</p>
+<p><pre class="not-prose mermaid">
+flowchart TB
+
+    IN["Previous Layer"] --> Q["Matrix 1"] & K["Matrix 2"] & V["Matrix 3"]
+    Q ---> SDPA["Matrix 1 & 2"]
+    K ---> SDPA
+    SDPA --> n1["Output"]
+    V ---> n1
+    classDef default fill: transparent, bg-color: transparent
+
+</pre>
+
+<br></p>
+<ol>
+<li><bullet> Step 1: The input matrix gets converted into multiple matices through matrix multiplication. Most current transformers converts input matrix into three smaller matrices.</bullet></li>
+<li><bullet>Step 2: Two of the matrix from step (1) gets combined together using some matrix operation, usually dot products.</bullet></li>
+<li><bullet>Step 3: The third matrix from step (1) combines with output from step (2), using some other matrix operation.</bullet></li>
+</ol>
+
+<h2 class="relative group">Example: Qwen3
+    <div id="example-qwen3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#example-qwen3" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We&rsquo;ll now take a look at an actual transformer model and see how it works in action.
+It&rsquo;s very suprising is that, transformers are able to produce pretty impressive results for tasks model that are not specifically trained for. Here, we&rsquo;ll use <a
+  href="https://qwen.ai/blog?id=qwen3"
     target="_blank"
-  >T5, released by Google a couple of years ago</a> Here&rsquo;s huggingface&rsquo;s link to the model: <br>
+  >Qwen3, a small-sized text generation model</a> as a demo. It&rsquo;s tiny (~1.5GB) but the performance is VERY impressive for its size.<br>
+Here&rsquo;s huggingface&rsquo;s link to the model: <br>
 <div class="huggingface-card-wrapper">
-    <a id="huggingface-4578251978aa78accb23ab9545af04b5" target="_blank" href="https://huggingface.co/google/flan-t5-base" class="cursor-pointer">
+    <a id="huggingface-61480284aec1dd272883911c77809285" target="_blank" href="https://huggingface.co/Qwen/Qwen3-0.6B" class="cursor-pointer">
       <div
         class="w-full md:w-auto p-0 m-0 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl">
         <div class="w-full md:w-auto pt-3 p-5">
@@ -1405,15 +1666,15 @@ Open terminal, run this command to install transformers:</p>
               </span>
             </span>
             <div
-              id="huggingface-4578251978aa78accb23ab9545af04b5-id"
+              id="huggingface-61480284aec1dd272883911c77809285-id"
               class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
-              google/flan-t5-base
+              Qwen/Qwen3-0.6B
             </div>
           </div><div class="m-0 mt-2 flex items-center">
             <span class="mr-1 inline-block h-3 w-3 rounded-full language-dot" data-language="model"></span>
             <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
               
-                model
+                text-generation
               
             </div>
 
@@ -1421,16 +1682,16 @@ Open terminal, run this command to install transformers:</p>
               <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg></span>
             </span>
-            <div id="huggingface-4578251978aa78accb23ab9545af04b5-likes" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
-              1018
+            <div id="huggingface-61480284aec1dd272883911c77809285-likes" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+              802
             </div>
 
             <span class="text-md mr-1 text-neutral-800 dark:text-neutral">
               <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
             </span>
-            <div id="huggingface-4578251978aa78accb23ab9545af04b5-downloads" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
-              1.185616e&#43;06
+            <div id="huggingface-61480284aec1dd272883911c77809285-downloads" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+              7.059495e&#43;06
             </div>
           </div>
         </div>
@@ -1442,58 +1703,229 @@ Open terminal, run this command to install transformers:</p>
         type="text/javascript"
         src="/js/fetch-repo.min.dc5533c50cefd50405344b235937142271f26229fe39cbee27fd4960e8bb897a0beebfad77a1091ca91cd0d1fb14e70fc37cc114dd9674fb2c32e0ab512ec8a4.js"
         integrity="sha512-3FUzxQzv1QQFNEsjWTcUInHyYin&#43;OcvuJ/1JYOi7iXoL7r&#43;td6EJHKkc0NH7FOcPw3zBFN2WdPssMuCrUS7IpA=="
-        data-repo-url="https://huggingface.co/api/models/google/flan-t5-base"
-        data-repo-id="huggingface-4578251978aa78accb23ab9545af04b5"></script>
+        data-repo-url="https://huggingface.co/api/models/Qwen/Qwen3-0.6B"
+        data-repo-id="huggingface-61480284aec1dd272883911c77809285"></script>
     </a>
   </div>
+</p>
 
-<br>
-In python, run these lines to download &amp; initialise the model:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> pipeline
-</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">pprint</span>  <span style="color:#6c7086;font-style:italic"># to print indented dictionary</span>
-</span></span><span style="display:flex;"><span>pipe <span style="color:#89dceb;font-weight:bold">=</span> pipeline(<span style="color:#a6e3a1">&#39;text2text-generation&#39;</span>, model<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;google/flan-t5-base&#34;</span>)
-</span></span></code></pre></div><p>T5 is one of the very few models that comes with very well-documented records on what kind of task the particular model has been trained on. To view the list of tasks the original T5 model fine-tuned on, we can check the &rsquo;task_specific_params&rsquo; attribute in model.config:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint<span style="color:#89dceb;font-weight:bold">.</span>pp(pipe<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>config<span style="color:#89dceb;font-weight:bold">.</span>task_specific_params)
-</span></span></code></pre></div><p>Output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#a6e3a1">&#39;summarization&#39;</span>: {<span style="color:#a6e3a1">&#39;early_stopping&#39;</span>: <span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;length_penalty&#39;</span>: <span style="color:#fab387">2.0</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;max_length&#39;</span>: <span style="color:#fab387">200</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;min_length&#39;</span>: <span style="color:#fab387">30</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;no_repeat_ngram_size&#39;</span>: <span style="color:#fab387">3</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;num_beams&#39;</span>: <span style="color:#fab387">4</span>,
-</span></span><span style="display:flex;"><span>                   <span style="color:#a6e3a1">&#39;prefix&#39;</span>: <span style="color:#a6e3a1">&#39;summarize: &#39;</span>},
-</span></span><span style="display:flex;"><span> <span style="color:#a6e3a1">&#39;translation_en_to_de&#39;</span>: {<span style="color:#a6e3a1">&#39;early_stopping&#39;</span>: <span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;max_length&#39;</span>: <span style="color:#fab387">300</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;num_beams&#39;</span>: <span style="color:#fab387">4</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;prefix&#39;</span>: <span style="color:#a6e3a1">&#39;translate English to German: &#39;</span>},
-</span></span><span style="display:flex;"><span> <span style="color:#a6e3a1">&#39;translation_en_to_fr&#39;</span>: {<span style="color:#a6e3a1">&#39;early_stopping&#39;</span>: <span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;max_length&#39;</span>: <span style="color:#fab387">300</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;num_beams&#39;</span>: <span style="color:#fab387">4</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;prefix&#39;</span>: <span style="color:#a6e3a1">&#39;translate English to French: &#39;</span>},
-</span></span><span style="display:flex;"><span> <span style="color:#a6e3a1">&#39;translation_en_to_ro&#39;</span>: {<span style="color:#a6e3a1">&#39;early_stopping&#39;</span>: <span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;max_length&#39;</span>: <span style="color:#fab387">300</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;num_beams&#39;</span>: <span style="color:#fab387">4</span>,
-</span></span><span style="display:flex;"><span>                          <span style="color:#a6e3a1">&#39;prefix&#39;</span>: <span style="color:#a6e3a1">&#39;translate English to Romanian: &#39;</span>}}
-</span></span></code></pre></div><p>These configurations are task-specific parameters for <a
-  href="https://huggingface.co/docs/transformers/en/main_classes/text_generation#transformers.GenerationMixin.generate"
+<h3 class="relative group">Prep
+    <div id="prep" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#prep" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Make sure you have python pre-installed. If you were using windows, python can be downloaded from the Microsoft Store. If you were Mac/ Linux Mint/ Ubuntu/ Debian etc., your computer should already come with python by default. For this demo, we would need python version <a style="font-size:75%">\( \geqslant \)</a> 3.12.<br></p>
+<p>We first need to install some dependencies. Open terminal/ command prompt, type this command to install required dependencies:<br></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install torch transformers
+</span></span></code></pre></div><p>And then type:<br></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python
+</span></span></code></pre></div><p>To open python and start an interactive python session.<br><br>
+<em>Alternatively, if you installed <a
+  href="https://ipython.org/install.html"
     target="_blank"
-  >text-generation</a>. Each item in the dictionary <i>(&rsquo;translation_en_to_de&rsquo;, &lsquo;summarization&rsquo; etc., )</i> corresponds to each text-generation task that the model been previously trained on. As shown in the code block above, the particular model we are testing today was trained on summarization, and three translation tasks: English-German, English-French, and English-Romanian.What we are interested is the &lsquo;prefix&rsquo; key under task name <i style="0.8em">(i.e., &rsquo;translate English to Romanian: &lsquo;)</i>. These are the texts that inserted at the beginning of every text input, as extra instructions of telling our model a bit more information about what it should do.<br>
-For example, if one wants to do english-to-romanian translation, the model input would be converted as follows:<br>
-        &lsquo;I LOVE FISH!!!!&rsquo; &ndash;&gt; <i>&lsquo;translate English to German: I LOVE FISH!!!!&rsquo;</i><br></p>
-<p>..So instead of languages model already trained on, let&rsquo;s try something model never trined before: English to Spanish translation:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#39;translate English to Spanish: I love fish!!!!!&#39;</span>))
-</span></span></code></pre></div><p>Althogh the model was not trained on Spanish translation tasks, it still produced pretty impressive results:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[{<span style="color:#f38ba8">&#39;generated_text&#39;:</span> <span style="color:#f38ba8">&#39;Me</span> <span style="color:#f38ba8">encanta</span> <span style="color:#f38ba8">el</span> <span style="color:#f38ba8">pescado!&#39;</span>}]
-</span></span></code></pre></div><p>You can play around model generations using <code>pipe('some_text')</code>, while some_text are whatever text you want the model to generate. But, remeber T5 is trained with text-completion in mind. Meaning that T5 works best for <em>auto-completion</em> types of inputs <em>(&ldquo;Big Mac is the signature dish of &ldquo;)</em> instead of <em>question-answer</em> types of inputs <em>(&ldquo;What restaurant sells Big Mac?&rdquo;)</em>. <br>
-For example: <br></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#39;Microsoft is a machine that turns &#39;</span>)
-</span></span></code></pre></div><p>Or, something like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(pipe(<span style="color:#a6e3a1">&#34;Tomrrow I must go to the&#34;</span>))
-</span></span></code></pre></div><br>
-It's very uncanny that model is able to do things us human did not ask it to do. There are lot of speculations on why model is able to perform such tasks. For exmaple, some researchers do suggest models that are big enough might [capture meanings behind words as well as language-specific syntax features](https://aclanthology.org/W19-4828/), and thus are able to convert one language to another. You can view how big the model in the demo is:
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint<span style="color:#89dceb;font-weight:bold">.</span>pp(<span style="color:#f38ba8">f</span><span style="color:#a6e3a1">&#34;Number of parameters: </span><span style="color:#a6e3a1">{</span>pipe<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>num_parameters()<span style="color:#a6e3a1">:</span><span style="color:#a6e3a1">,</span><span style="color:#a6e3a1">}</span><span style="color:#a6e3a1">&#34;</span>)
-</span></span></code></pre></div><p>Output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e3a1">&#39;Number of parameters: 247,577,856&#39;</span>
+  >ipython</a>, which should already be installed if you have installed <a
+  href="https://jupyter.org/install"
+    target="_blank"
+  >jupyter notebook</a> previously, you can open ipython instead:</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ipython
+</span></span></code></pre></div><p>Once python was opened, copy and paste these lines into python to import required packages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">pprint</span> <span style="color:#94e2d5">import</span> pprint
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> AutoModelForCausalLM, AutoTokenizer, BatchEncoding
+</span></span></code></pre></div><div class="aSeparator"></div>
+
+<h3 class="relative group">Get the model
+    <div id="get-the-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#get-the-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Models from <code>transformers</code> library takes matrics as inputs, and outputs matrics. Thus, text generation models needs to be paired with <code>tokenizer</code> in order to convert inputs into model-readable formant, and convert model outputs into human-readble format. <code>transformers</code> library has a special class called <code>TextGenerationPipeline</code> to handle this conversion class, but would be a bit too complicated for our purpose. Here, I modified demo code from <a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen3&rsquo;s demo code</a> that combines tokenizers and models together for</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#cba6f7">class</span> <span style="color:#f9e2af">DemoChatbot</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e3a1">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    A simple demo chatbot, code modified from https://huggingface.co/Qwen/Qwen3-0.6B
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">__init__</span>(<span style="color:#89dceb">self</span>, model_name:<span style="color:#89dceb">str</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;Qwen/Qwen3-0.6B&#34;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(model_name)
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(
+</span></span><span style="display:flex;"><span>            model_name,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">clear_history</span>(<span style="color:#89dceb">self</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> <span style="color:#fab387">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">tokenise</span>(<span style="color:#89dceb">self</span>, user_input:<span style="color:#89dceb">str</span>, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> BatchEncoding:
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> enable_thinking <span style="color:#89dceb;font-weight:bold">is</span> <span style="color:#fab387">None</span>:
+</span></span><span style="display:flex;"><span>          enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>enable_thinking  <span style="color:#6c7086;font-style:italic"># default value</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        messages <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">+</span> [{<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;user&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: user_input}]
+</span></span><span style="display:flex;"><span>        tokens <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>apply_chat_template(
+</span></span><span style="display:flex;"><span>            messages,
+</span></span><span style="display:flex;"><span>            tokenize<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
+</span></span><span style="display:flex;"><span>            enable_thinking<span style="color:#89dceb;font-weight:bold">=</span>enable_thinking, 
+</span></span><span style="display:flex;"><span>            add_generation_prompt<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
+</span></span><span style="display:flex;"><span>            return_tensors<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;pt&#34;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> tokens
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">__call__</span>(<span style="color:#89dceb">self</span>, user_input, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> <span style="color:#fab387">None</span>:
+</span></span><span style="display:flex;"><span>        inputs <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenise(user_input, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span>enable_thinking)
+</span></span><span style="display:flex;"><span>        response_ids <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>generate(
+</span></span><span style="display:flex;"><span>            <span style="color:#89dceb;font-weight:bold">**</span>inputs,
+</span></span><span style="display:flex;"><span>            max_new_tokens<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        response_ids <span style="color:#89dceb;font-weight:bold">=</span> response_ids[<span style="color:#fab387">0</span>][<span style="color:#89dceb">len</span>(inputs<span style="color:#89dceb;font-weight:bold">.</span>input_ids[<span style="color:#fab387">0</span>]):]<span style="color:#89dceb;font-weight:bold">.</span>tolist()
+</span></span><span style="display:flex;"><span>        response <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>decode(response_ids, skip_special_tokens<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># since we aren&#39;t going to do anything with the output, </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># just prints out the response and save it to the chat history.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">print</span>(response)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># Update history</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history<span style="color:#89dceb;font-weight:bold">.</span>append({<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;user&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: user_input})
+</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history<span style="color:#89dceb;font-weight:bold">.</span>append({<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;assistant&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: response})
+</span></span><span style="display:flex;"><span>        
+</span></span></code></pre></div><p>Then, create a new chat instance with the code below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat <span style="color:#89dceb;font-weight:bold">=</span> DemoChatbot()
+</span></span></code></pre></div><p>You will see a progress bar showing download status. Once completed, type the following to have a look at the QWen3 model structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint(chat<span style="color:#89dceb;font-weight:bold">.</span>model)
+</span></span></code></pre></div><p>…which in term will give you this output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3ForCausalLM(
+</span></span><span style="display:flex;"><span>  (model): Qwen3Model(
+</span></span><span style="display:flex;"><span>    (embed_tokens): Embedding(<span style="color:#fab387">151936</span>, <span style="color:#fab387">1024</span>)
+</span></span><span style="display:flex;"><span>    (layers): ModuleList(
+</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">0</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">27</span>): <span style="color:#fab387">28</span> x Qwen3DecoderLayer(
+</span></span><span style="display:flex;"><span>        (self_attn): Qwen3Attention(
+</span></span><span style="display:flex;"><span>          (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>          (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        (mlp): Qwen3MLP(
+</span></span><span style="display:flex;"><span>          (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (act_fn): SiLUActivation()
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>        (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    (norm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>    (rotary_emb): Qwen3RotaryEmbedding()
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (lm_head): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">151936</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div>
+<h3 class="relative group">Model Architecture
+    <div id="model-architecture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model-architecture" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The very core of a transformer model can be checked by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint(chat<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>model)
+</span></span></code></pre></div><p>And you will get an output similar to the previous output, but without the <code>embed_tokens</code> at the beginning and the <code>lm_head</code> at the end:<br></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3Model(
+</span></span><span style="display:flex;"><span>  (embed_tokens): Embedding(<span style="color:#fab387">151936</span>, <span style="color:#fab387">1024</span>)
+</span></span><span style="display:flex;"><span>  (layers): ModuleList(
+</span></span><span style="display:flex;"><span>    (<span style="color:#fab387">0</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">27</span>): <span style="color:#fab387">28</span> x Qwen3DecoderLayer(
+</span></span><span style="display:flex;"><span>      (self_attn): Qwen3Attention(
+</span></span><span style="display:flex;"><span>        (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>        (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>      (mlp): Qwen3MLP(
+</span></span><span style="display:flex;"><span>        (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>        (act_fn): SiLUActivation()
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>      (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>      (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (norm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>  (rotary_emb): Qwen3RotaryEmbedding()
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>The <code>embed_tokens</code> is the <a
+  href="#overview"><strong>Stage 1</strong></a> mentioned earlier, and the <code>lm_head</code> is the <a
+  href="#overview"><strong>Stage 3</strong></a>. The core of a transformer, is what we&rsquo;ve been discussing today.<br></p>
+<p>Let&rsquo;s have a look at one of the layers inside the transformer:<br></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>layer <span style="color:#89dceb;font-weight:bold">=</span> chat<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>layers[<span style="color:#fab387">0</span>]
+</span></span><span style="display:flex;"><span>pprint(layer)
+</span></span></code></pre></div><p>You will see something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3DecoderLayer(
+</span></span><span style="display:flex;"><span>  (self_attn): Qwen3Attention(
+</span></span><span style="display:flex;"><span>    (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>    (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (mlp): Qwen3MLP(
+</span></span><span style="display:flex;"><span>    (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>    (act_fn): SiLUActivation()
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>  (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Layer is divided into 2 major sections, Just like like we <a
+  href="#the-transformer-itself">discussed previously</a>:</p>
+<ul>
+<li><code>self_attn</code> is where attention gets calculatd.</li>
+<li>All the rest (i.e., <code>mlp</code>, <code>input_layernorm</code> and <code>post_attention_layernorm</code>) are step-by-step computations of combining and averaging the attention heads.</li>
+</ul>
+<p>Run the following code to see the structure of an attention head:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>attention <span style="color:#89dceb;font-weight:bold">=</span> layer<span style="color:#89dceb;font-weight:bold">.</span>self_attn
+</span></span><span style="display:flex;"><span>pprint(attention)
+</span></span></code></pre></div><p>The <code>q_proj</code>, <code>k_proj</code> and <code>v_proj</code> are the <a
+  href="#the-attention-head">three matrics</a> mentioned earlier:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3Attention(
+</span></span><span style="display:flex;"><span>  (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>  (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>  (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>  (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>  (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>  (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>The actual impelmentations of attention heads are different from model to model, but the general principle behind should be roughly the same. I&rsquo;ll dive depper into it in the future.</p>
+
+<h3 class="relative group">Have some fun!
+    <div id="have-some-fun" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#have-some-fun" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Meanwhile, since we&rsquo;ve got a generative model already, we might as well test out some text generations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat(<span style="color:#a6e3a1">&#34;Why is the content, which was held to be true in perceiving, in fact only belongs to the form, and it dissolves into the form’s unity 🥺🥺🥺🥺🥺??&#34;</span>)
+</span></span></code></pre></div><p>Or, you can turn on the &rsquo;thinking&rsquo; mode to enable chain-of-thought:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat<span style="color:#89dceb;font-weight:bold">.</span>enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">True</span>
+</span></span><span style="display:flex;"><span>chat(<span style="color:#a6e3a1">&#34;But...but the phenomenology Φ147 says the inner, essential is essentially the truth of appearance😠😠😠 I&#39;m absolutely fewming&#34;</span>)
+</span></span></code></pre></div><p>If it takes too long to run, you can clear chat history to remove cached chats:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat<span style="color:#89dceb;font-weight:bold">.</span>clear_history()
 </span></span></code></pre></div><figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -1502,286 +1934,17 @@ It's very uncanny that model is able to do things us human did not ask it to do.
     alt="llm is magic text"
     src="./featured.jpg"
     ><figcaption>&lsquo;LLM is magic&rsquo;</figcaption></figure>
-<!--  -->
-
-<h2 class="relative group">The Transformer Architecture
-    <div id="the-transformer-architecture" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-transformer-architecture" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Overview: <em>the</em> transformer itself
-    <div id="overview-the-transformer-itself" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview-the-transformer-itself" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>We&rsquo;ll now take a look inside the transformer models and see what kind of math calculations is hapenning. <code>pytorch</code>, the python package that the T5 model in this demo is based off, provies very good tool for visulising model structures Using models mentioned from the previous section, if you want to look at what the model actually lookes like, you can do so by running:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint<span style="color:#89dceb;font-weight:bold">.</span>pp(pipe<span style="color:#89dceb;font-weight:bold">.</span>model)
-</span></span></code></pre></div><p>&hellip;which in term will give you this monstrous output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>T5ForConditionalGeneration(
-</span></span><span style="display:flex;"><span>  (shared): Embedding(<span style="color:#fab387">32128</span>, <span style="color:#fab387">768</span>)
-</span></span><span style="display:flex;"><span>  (encoder): T5Stack(
-</span></span><span style="display:flex;"><span>    (embed_tokens): Embedding(<span style="color:#fab387">32128</span>, <span style="color:#fab387">768</span>)
-</span></span><span style="display:flex;"><span>    (block): ModuleList(
-</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">0</span>): T5Block(
-</span></span><span style="display:flex;"><span>        (layer): ModuleList(
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">0</span>): T5LayerSelfAttention(
-</span></span><span style="display:flex;"><span>            (SelfAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (relative_attention_bias): Embedding(<span style="color:#fab387">32</span>, <span style="color:#fab387">12</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">1</span>): T5LayerFF(
-</span></span><span style="display:flex;"><span>            (DenseReluDense): T5DenseGatedActDense(
-</span></span><span style="display:flex;"><span>              (wi_0): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wi_1): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wo): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (act): NewGELUActivation()
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">1</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">11</span>): <span style="color:#fab387">11</span> x T5Block(
-</span></span><span style="display:flex;"><span>        (layer): ModuleList(
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">0</span>): T5LayerSelfAttention(
-</span></span><span style="display:flex;"><span>            (SelfAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">1</span>): T5LayerFF(
-</span></span><span style="display:flex;"><span>            (DenseReluDense): T5DenseGatedActDense(
-</span></span><span style="display:flex;"><span>              (wi_0): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wi_1): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wo): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (act): NewGELUActivation()
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    (final_layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>    (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  )
-</span></span><span style="display:flex;"><span>  (decoder): T5Stack(
-</span></span><span style="display:flex;"><span>    (embed_tokens): Embedding(<span style="color:#fab387">32128</span>, <span style="color:#fab387">768</span>)
-</span></span><span style="display:flex;"><span>    (block): ModuleList(
-</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">0</span>): T5Block(
-</span></span><span style="display:flex;"><span>        (layer): ModuleList(
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">0</span>): T5LayerSelfAttention(
-</span></span><span style="display:flex;"><span>            (SelfAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (relative_attention_bias): Embedding(<span style="color:#fab387">32</span>, <span style="color:#fab387">12</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">1</span>): T5LayerCrossAttention(
-</span></span><span style="display:flex;"><span>            (EncDecAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">2</span>): T5LayerFF(
-</span></span><span style="display:flex;"><span>            (DenseReluDense): T5DenseGatedActDense(
-</span></span><span style="display:flex;"><span>              (wi_0): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wi_1): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wo): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (act): NewGELUActivation()
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">1</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">11</span>): <span style="color:#fab387">11</span> x T5Block(
-</span></span><span style="display:flex;"><span>        (layer): ModuleList(
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">0</span>): T5LayerSelfAttention(
-</span></span><span style="display:flex;"><span>            (SelfAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">1</span>): T5LayerCrossAttention(
-</span></span><span style="display:flex;"><span>            (EncDecAttention): T5Attention(
-</span></span><span style="display:flex;"><span>              (q): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (k): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (v): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (o): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>          (<span style="color:#fab387">2</span>): T5LayerFF(
-</span></span><span style="display:flex;"><span>            (DenseReluDense): T5DenseGatedActDense(
-</span></span><span style="display:flex;"><span>              (wi_0): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wi_1): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (wo): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>              (act): NewGELUActivation()
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            (layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>            (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>          )
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    (final_layer_norm): T5LayerNorm()
-</span></span><span style="display:flex;"><span>    (dropout): Dropout(p<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.1</span>, inplace<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  )
-</span></span><span style="display:flex;"><span>  (lm_head): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">768</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">32128</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>Despite its indimidate looks, at conceptual level, our T5 model is actually pretty simple. It does have a lot of layers, however, most of the layers are more or less the same, apart from the very beginning (<code>Embedding(32128, 768)</code>) and the very end (<code>lm_head</code>). Not only just T5, most of the popular transformer models that you heard of (GPT, Gemmini etc.,) all share similar three-stage structure like T5. Here&rsquo;s a simplified flow chart:</p>
-<body>
-    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code>╭─────────────────────────────────────────╮
-│                Embedding                │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                    ↓                    │
-╰─────────────────────────────────────────╯
-╭──────────── Attention Layer ────────────╮
-│ ╭───────────╮╭───────────╮╭───────────╮ │
-│ │ Attention ││ Attention ││           │ │
-│ │ Head      ││ Head      ││ ...       │ │
-│ ╰───────────╯╰───────────╯╰───────────╯ │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                    ↓                    │
-╰─────────────────────────────────────────╯
-╭──────────── Attention Layer ────────────╮
-│ ╭───────────╮╭───────────╮╭───────────╮ │
-│ │ Attention ││ Attention ││           │ │
-│ │ Head      ││ Head      ││ ...       │ │
-│ ╰───────────╯╰───────────╯╰───────────╯ │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                    ↓                    │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                   ...                   │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                    ↓                    │
-╰─────────────────────────────────────────╯
-╭─────────────────────────────────────────╮
-│                 Output                  │
-╰─────────────────────────────────────────╯
-</code></pre>
-</body>
-<p>These three stages are:</p>
-<ol>
-<li><bullet><em>The input gets converted into vectors or matrics.</em><br>
-The first step starts with creating a mathematical representation of our input data. This process can vary based on different types of inputs. It can simply be some sort of look-up tables (text embedding), some matrix transformations of the raw inputs (convolution) etc. <br>
-In our T5 mdoel, this corresponds to the <em><code>Embedding(32128, 768)</code></em> shown in our T5 model, or the <em>&lsquo;Embedding&rsquo;</em> in the flow chart.<br></bullet></li>
-<li><bullet><em>The raw output from Stage 1 feeds into the multiple different attention layers.</em><br>
-Mathematically, each attention layer is doing very much the same mathematical operation, with each layer having its own sets of parameters. Each layer takes a matrix as an input, and outputs another matrix to pass onto the next layer. This process is repeated multiple times. Stage 2 is the core of a transformer model, it <em>transforms</em> our inputs into something else.<br>
-In our T5 model, this coressponds to the <em><code>encoder</code></em> and the <em><code>deocoder</code></em>, or the <em>&lsquo;Attention Layers&rsquo;</em> in the flow chart.
-<bullet></li>
-<li><bullet><em>We convert the matrix output from Stage 2 into task-specific results.</em><br>
-This is usually done by another set of simple matrix operations, depending on the task. For example, if we are doing text sentimental analysis task, this operation could be a simple matrix multiplication, resulting in a final score of 0-10.<br>
-In our T5 model, this coresspinds to the <em><code>lm_head</code></em> at the end of the T5, or the <em>Output</em> in the flow chart.
-</bullet><br></li>
-</ol>
-<p>In other words, you can concepturally see <strong>Stage 1</strong> as a conversion stage in order to initiate the model, <strong>Stage 2</strong> being the core of a transformer model, and <strong>Stage 3</strong> as a &lsquo;decoding&rsquo; step to convert the output back into human-readable form. The rest of the post will focus on <strong>Stage 2</strong>, the core, and I&rsquo;ll elabrate a lot more on what&rsquo;s hapenning in <strong>Stage 3</strong> in the next post.</p>
-
-<h3 class="relative group">The attention head
-    <div id="the-attention-head" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-attention-head" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>Each attention layer consists of multiple attention heads <em>(<code>T5Attention</code>)</em>, each of them operated independent from one another: they take output matrix from the previous layer as the input, do some mathematical calculations, and output the transformed matrix. Outputs from each of the attention heads are then joined together <em>(<code>layer_norm</code>)</em>. The joined matrix is the final output of the current layer. <br></p>
-<p>You can think each of the attention head as a mini neural network. It takes some inputs and spits out some outputs.<br></p>
-<p>A typical attention head works like this:</p>
-<ol>
-<li><bullet>The input matrix gets converted into multiple matices through matrix multiplication. Most current transformers converts input matrix into three smaller matrices.</bullet></li>
-<li><bullet>Two of the matrix from step (1) gets combined together using some matrix operation, usually dot products.</bullet></li>
-<li><bullet>The third matrix from step (1) combines with output from step (2), using some other matrix operation.</bullet></li>
-</ol>
-<body>
-    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">╭──────────────────────────────────────────────╮
-│              * previous layer *              │
-╰──────────────────────────────────────────────╯
-     ↓           ↓                              
-╭──────────╮╭──────────╮                        
-│ Matrix 1 ││ Matrix 2 │           ↓            
-╰──────────╯╰──────────╯                        
-     ↓           ↓                              
-╭──────────────────────╮╭──────────────────────╮
-│ Matrix 1 &amp; 2 Merged  ││       Matrix 3       │
-╰──────────────────────╯╰──────────────────────╯
-           ↓                       ↓            
-<p>╭──────────────────────────────────────────────╮
-│          Matrix 1 &amp; 2 &amp; 3 Re-Joined          │
-╰──────────────────────────────────────────────╯
-╭──────────────────────────────────────────────╮
-│                    ↓ ↓ ↓                     │
-╰──────────────────────────────────────────────╯
-╭──────────────────────────────────────────────╮
-│              * to be combined *              │
-╰──────────────────────────────────────────────╯</code></pre></p>
-</body>
-
-<h2 class="relative group">Why are the models so big?
-    <div id="why-are-the-models-so-big" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-are-the-models-so-big" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
 <p>I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrics convreted by inputs are typically converted by multiplying (&lsquo;dot product&rsquo;) inputs with three <strong>separate</strong> matrices. These matrics are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has <a
   href="https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html"
     target="_blank"
-  >their own learnable parameters</a>. Furthermore, when we combining outputs from each &lsquo;attention heads&rsquo;, this combining opearation also has its own set of trainable parameters, so on and so on&hellip;Almost every stage of the matrix computations are parameterised, resulting the unbelievably <strong>massive</strong> Aİ models as of today.</p>
-<p><strong>So, it&rsquo;s just a huge stack of matirx calculation?</strong><br>
-In sense yes, it is. The three matrics in the attention head are commonly named as &lsquo;key&rsquo;. &lsquo;query&rsquo; and &lsquo;value&rsquo;, the idea behind these names are: &lsquo;user queries something, program looks for keys (i.e., keywords) to match with query, and value is whatever gets matched with&rsquo;. Honstly I found this explaination very confusing, although by design, it does (sort of) work in such way. My main skeptcisim is that, just because we vaguely designed it this way does not mean it is really what&rsquo;s happening underneath. As shown in the demo earlier, a model that&rsquo;s not trained for English-Spanish translation did have some ability to do English-Spanish translation, innit. We gave names to these matrics, we don&rsquo;t know much about their behaviour.<br></p>
+  >their own learnable parameters</a>. Furthermore, when we combining outputs from each &lsquo;attention heads&rsquo;, this combining opearation also has its own set of trainable parameters, so on and so on&hellip; Almost every stage of the matrix computations are parameterised, resulting the unbelievably <strong>massive</strong> Aİ models as of today. However, the model used in the demo today, despite it&rsquo;s size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matirx calculation? Howver, we know very little about the reason behind We gave names to these matrics, we don&rsquo;t know much about their behaviour.<br></p>
 
-<h2 class="relative group">Conclusion
-    <div id="conclusion" class="anchor"></div>
+<h2 class="relative group">Final thoughts
+    <div id="final-thoughts" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#final-thoughts" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -1830,68 +1993,9 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
   
 
   
-    
-    
-<div class="flex author">
-  
-    
-    
-      
-    
-    
-      
-      
-        
-      
-      <img
-        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
-        width="96"
-        height="96"
-        alt="@Yiheng Yu"
-        src="/doggo_hu_866cab9ed3fa5abb.jpg"
-        data-zoom-src="/doggo.jpg">
-    
-  
-  <div class="place-self-center">
-    
-      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
-        Author
-      </div>
-      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-        @Yiheng Yu
-      </div>
-    
-    
-      <div class="text-sm text-neutral-700 dark:text-neutral-400">Everyday I feel blessed to live a PHP-free life 🙏</div>
-    
-    <div class="text-2xl sm:text-lg">
-  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
-    
-      
-        <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://github.com/Yiheng-Yu"
-          target="_blank"
-          aria-label="Github"
-          title="Github"
-          rel="me noopener noreferrer"
-          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-</span></span></a
-        >
-      
-    
-  </div>
-
-</div>
-  </div>
-</div>
 
   
 
-  
-
-  
-    <div class="mb-10"></div>
   
 
         
@@ -1969,12 +2073,7 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
 
       
         
-          <div class="pt-3">
-            <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
-            <div class="pt-3">
-              
-            </div>
-          </div>
+          
         
       
     </footer>
@@ -2024,16 +2123,6 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
                 title="Tags">
                 
                 Tags
-              </a>
-            </li>
-          
-            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
-                href="/categories/"
-                title="Categories">
-                
-                Categories
               </a>
             </li>
           

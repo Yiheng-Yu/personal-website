@@ -52,6 +52,7 @@ cardView = false
 cardViewScreenWidth = false
 layoutBackgroundBlur = false
 disableHeroImageFilter = false
+orderByWeight = false
 
 [article]
 showDate = true
@@ -107,7 +108,7 @@ showHero = false
 showBreadcrumbs = false
 showViews = true
 showLikes = true
-showTableOfContents = false
+showTableOfContents = true
 cardView = false
 
 [term]
@@ -117,6 +118,7 @@ showViews = false
 showLikes = false
 showTableOfContents = true
 groupByYear = false
+orderByWeight = false
 cardView = false
 cardViewScreenWidth = false
 heroStyle = "basic"

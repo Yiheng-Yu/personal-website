@@ -3,12 +3,12 @@ title: "ELI5 Transformers (Part 2) - Generation"
 date: 2025-11-11
 publishDate: 2025-11-11
 draft: true
-# build:
-#   list: 'never'
+
 summary: "(it's glorified sequence classification)"
 font_family: "Monospace"
-tags: ["huggingface", "AI", "ELI5", "pytorch"]
-category: ["ELI5-Transformers",]
+tags: ["AI", "Machine Learning", "ELI5"]
+topics: "transformers"
+
 ---
 
 {{< katex >}}
@@ -110,12 +110,14 @@ generate("Who's that Pokemon!?!?", max_new_tokens=1024)
 ```
 
 ## Recap on transformer architecture
-As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/), 
+As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/),  
 
-{{< mermaid >}}
-graph TB;
-A[Lemons]-->B[Lemonade];
-B-->C[Profit]
+{{< mermaid config="theme:mc">}}
+flowchart TB
+    n1(["Raw Input"]) --> n2["Embedding"]
+    n2 --> n3["Transformer Layers"]
+    n3 --> n4["Raw Output"]
+    n4 --> n5(["Task-Specific Outputs"])
 {{< /mermaid >}}
 
 ### 1 - Inputs <-> outputs

@@ -1,1 +1,4 @@
-Categories = 'category'
+tag = "tags"
+topics = "topics"
+series = "series"
+
