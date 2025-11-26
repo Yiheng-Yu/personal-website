@@ -9,7 +9,7 @@
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
   NETLIFY_ALLOWED_PUBLIC_KEYS = "AIza"
-  SECRETS_SCAN_OMIT_KEYS = "firebase*"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES="AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg"
 
 [context.production.environment]
   HUGO_VERSION = "0.152.2"
