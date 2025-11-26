@@ -14,11 +14,25 @@ topics: "transformers"
 {{< katex >}}
 ![always has been](./featured.jpg "always has been")
 
-*This is part 2 of the ELI5 transformers series, however you do not need to read Part 1 in order to follow the article. Link to the previous article can be found [here]((https://yuyiheng.cc/posts/transformers-pt-1/)k*
+*This is part 2 of the ELI5 transformers series, however you do not need to read Part 1 in order to follow the article. Link to the previous article can be found [here](https://yuyiheng.cc/posts/transformers-pt-1/)*
 
 I'm pretty sure you've already heard about someting like this before: 'generative LLM is just slightly advanced auto complete'. Or, something like 'all it does is predicting what's the most likely next word with all the previous words given'.
 
-Today I would like to invite you think of text generation in a very different perspective, at least it's the persceptive I found helped me the most: ***text generation is glorified sequence classification.*** I'm going to use **GPT-2** model as an example, walk you through the mechanism of text generation with the source code, and show you how text generation *actually* works.
+Today I would like to invite you think of text generation in a very different perspective, at least it's the persceptive I found helped me the most: ***text generation is glorified sequence classification.*** I'm going to walk you through the mechanism of text generation with the source code, and show you how text generation *actually* works.
+
+## Recap on transformer architecture
+As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/),  
+
+{{< mermaid config="theme:mc">}}
+flowchart TB
+    n1(["Raw Input"]) --> n2["Embedding"]
+    n2 --> n3["Transformer Layers"]
+    n3 --> n4["Raw Output"]
+    n4 --> n5(["Task-Specific Outputs"])
+
+    l1[<a href='https://yuyiheng.cc/posts/transformers-pt-1'> previous post</a>] --> n3
+{{< /mermaid >}}
+
 
 ## Preparation
 ### Download the model
@@ -109,16 +123,7 @@ The first week has
 generate("Who's that Pokemon!?!?", max_new_tokens=1024)
 ```
 
-## Recap on transformer architecture
-As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/),  
 
-{{< mermaid config="theme:mc">}}
-flowchart TB
-    n1(["Raw Input"]) --> n2["Embedding"]
-    n2 --> n3["Transformer Layers"]
-    n3 --> n4["Raw Output"]
-    n4 --> n5(["Task-Specific Outputs"])
-{{< /mermaid >}}
 
 ### 1 - Inputs <-> outputs
 
