@@ -18,7 +18,7 @@ Today, I'll very quickly go through some very basics on neural network model, ju
 
 ## Model only needs to be useful
 
-In order to make things easier to understand, I would wish to start with an inaccuate premise: we can view neural network models as functions that takes some sort of matrix as inputs, do some sort of matrix computations, and output another matrix as the final result. What makes one neural network different from others is how the computation is carried out. It's like \(y=a \times x^2\) is a different function from \(y=a \times sin(x)\), only that in the case of neural network, both x and y are matrics, and the math is much complicated. When it comes to model training, we are essentially trying to find values gives best fit to the data.<br>
+In order to make things easier to understand, I would wish to start with an inaccuate premise: we can view neural network models as functions that takes some sort of matrix as inputs, do some sort of matrix computations, and output another matrix as the final result. What makes one neural network different from others is how the computation is carried out. It's like \(y=a \times x^2\) is a different function from \(y=a \times sin(x)\), only that in the case of neural network, both x and y are matrices, and the math is much complicated. When it comes to model training, we are essentially trying to find values gives best fit to the data.<br>
 
 There's an important assumption here: just because model fits the data well does not mean the model describes mechanisms behind the data. For example, we <i>definitely</i> can fit \(y=a \times sin(x) + b\) to a normal distribution data (like distribution of customer spendings in McDonald's), and it's prob going to be a pretty good fit, but this does not mean the sine function has anything to do with explaining the normal distribution. A good model does not always need to be description, a good model just needs to be useful for its purpose.<br>
 
@@ -29,7 +29,7 @@ Transformers are preciesly these kinds of models: they are, surprisingly good at
 At conceptual level, the general idea behind transformer models are is actually pretty intuitive. We can roughly divide the model calclations into three stages:
 {{< timeline >}}
 
-{{< timelineItem icon="code" header="Stage 1" badge="Embedding" subheader="The input gets converted into vectors or matrics." >}}
+{{< timelineItem icon="code" header="Stage 1" badge="Embedding" subheader="The input gets converted into vectors or matrices." >}}
   The first step starts with creating a mathematical representation of our input data. This process can vary based on different types of inputs. It can simply be some sort of look-up tables (text embedding), some matrix transformations of the raw inputs (convolution) etc.
 {{< /timelineItem >}}
 
@@ -141,7 +141,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BatchEncoding
 <div class="aSeparator"></div>
 
 ### Get the model
-Models from ```transformers``` library takes matrics as inputs, and outputs matrics. Thus, text generation models needs to be paired with ```tokenizer``` in order to convert inputs into model-readable formant, and convert model outputs into human-readble format. ```transformers``` library has a special class called ```TextGenerationPipeline``` to handle this conversion class, but would be a bit too complicated for our purpose. Here, I modified demo code from <a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen3's demo code</a> that combines tokenizers and models together for 
+Models from ```transformers``` library takes matrices as inputs, and outputs matrices. Thus, text generation models needs to be paired with ```tokenizer``` in order to convert inputs into model-readable formant, and convert model outputs into human-readble format. ```transformers``` library has a special class called ```TextGenerationPipeline``` to handle this conversion class, but would be a bit too complicated for our purpose. Here, I modified demo code from <a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen3's demo code</a> that simply combines tokenizers and models together. Here's the code for you to copy and paste into the currently running python session:
 
 ```python
 class DemoChatbot:
@@ -310,7 +310,7 @@ attention = layer.self_attn
 pprint(attention)
 ```
 
-The ```q_proj```, ```k_proj``` and ```v_proj``` are the [three matrics](#the-attention-head) mentioned earlier:
+The ```q_proj```, ```k_proj``` and ```v_proj``` are the [three matrices](#the-attention-head) mentioned earlier:
 ```python
 Qwen3Attention(
   (q_proj): Linear(in_features=1024, out_features=2048, bias=False)
@@ -345,7 +345,7 @@ chat.clear_history()
 
 ![llm is magic text](./featured.jpg "'LLM is magic'")
 
-I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrics convreted by inputs are typically converted by multiplying ('dot product') inputs with three **separate** matrices. These matrics are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has [their own learnable parameters](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). Furthermore, when we combining outputs from each 'attention heads', this combining opearation also has its own set of trainable parameters, so on and so on... Almost every stage of the matrix computations are parameterised, resulting the unbelievably **massive** Aİ models as of today. However, the model used in the demo today, despite it's size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matirx calculation? Howver, we know very little about the reason behind We gave names to these matrics, we don't know much about their behaviour.<br>
+I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrices convreted by inputs are typically converted by multiplying ('dot product') inputs with three **separate** matrices. These matrices are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has [their own learnable parameters](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). Furthermore, when we combining outputs from each 'attention heads', this combining opearation also has its own set of trainable parameters, so on and so on... Almost every stage of the matrix computations are parameterised, resulting the unbelievably **massive** Aİ models as of today. However, the model used in the demo today, despite it's size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matirx calculation? Howver, we know very little about the reason behind We gave names to these matrices, we don't know much about their behaviour.<br>
 
 ## Final thoughts
 
