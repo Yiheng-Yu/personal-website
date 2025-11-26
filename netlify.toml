@@ -8,6 +8,7 @@
   GO_VERSION = "1.16"
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "true"
 
 [context.production.environment]
   HUGO_VERSION = "0.152.2"
