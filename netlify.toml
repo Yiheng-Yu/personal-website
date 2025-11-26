@@ -9,13 +9,7 @@
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
   NETLIFY_ALLOWED_PUBLIC_KEYS = "AIza"
-  SECRETS_SCAN_OMIT_PATHS = "config/_default/params/firebase"
-
-[security]
-  allowed_public_keys = [
-    "AIza" # Firebase public API keys always start with this
-  ]
-  
+  SECRETS_SCAN_OMIT_KEYS = "firebaseConfig"
 
 [context.production.environment]
   HUGO_VERSION = "0.152.2"
