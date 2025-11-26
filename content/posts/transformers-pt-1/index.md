@@ -7,6 +7,8 @@ summary: "(it's glorified linear algebra)"
 font_family: "Monospace"
 tags: ["AI", "Machine Learning", "ELI5"]
 topics: "transformers"
+showLikes: true
+showViews: true
 params:
   math: true
 ---
