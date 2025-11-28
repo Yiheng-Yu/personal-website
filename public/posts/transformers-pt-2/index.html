@@ -386,7 +386,7 @@
     "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "714"
+    "wordCount": "728"
   }]
   </script>
 
@@ -1064,7 +1064,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>714 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <span>728 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1388,18 +1388,19 @@
 flowchart
     n1(["Raw Input"]) --> n2["Embedding"]
     n2 --> n3["Transformer"]
-    n3 --> n4["Output<br>(current post)"]
+    n3 --> n4["Model output"]
+    n4 --> n5(["Final output"])
 </pre>
 
 <ol>
-<li><bullet> Stage 1 <em>(&lsquo;Embedding&rsquo;)</em> converts inputs into vectors so that it&rsquo;s model-readable.</li>
-<li><bullet> Stage 2 <em>(&lsquo;Transformer&rsquo;)</em> computes the vector representation of the input. The <a
+<li><bullet> Stage 1 converts inputs into vectors so that it&rsquo;s model-readable (<strong><code>Embedding</code></strong>).</li>
+<li><bullet> Stage 2 computes the vector representation of the input. The <a
   href="https://yuyiheng.cc/posts/transformers-pt-1/"
     target="_blank"
-  >previous post</a> gave a rough overview of this stage.</li>
-<li><bullet> Stage 3 <em>(&lsquo;Output&rsquo;)</em> converts outputs from the transformer into human-readable, task-specific format.</li>
+  >previous post</a> gave a rough overview of this stage(<strong><code>Transformer</code></strong>).</li>
+<li><bullet> Stage 3 converts outputs from the transformer into human-readable, task-specific format (<strong><code>Model output</code></strong>).</li>
 </ol>
-<p>Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) and the desired output (being the same as the input, probability, classification score etc). For the case</p>
+<p>Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) For image data, this can simply be the RGBA values for each pixel; for text data, this can be a look up table of converting sub-words into matrices. <br></p>
 
 <h2 class="relative group">Preparation
     <div id="preparation" class="anchor"></div>

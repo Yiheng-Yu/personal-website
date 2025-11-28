@@ -10,6 +10,7 @@ topics: "transformers"
 params:
   math: true
 ---
+
 {{< katex >}}
 
 In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won't go metion too much math and there won't be any mathenathical formulas. However, I would assume readers of this silly little post already have some okay-ish background of math/ datascience. (i.e., matrix computations embeddings, tokens, model fitting etc.). I am not going to list out all the implemention details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, İ would like to draw out a general framework on transformers to help one understand the detailed math behind.<br>
@@ -137,6 +138,7 @@ ipython
 Once python was opened, copy and paste these lines into python to import required packages:
 ```python
 from pprint import pprint
+import re
 from transformers import AutoModelForCausalLM, AutoTokenizer, BatchEncoding
 ```
 <div class="aSeparator"></div>
@@ -152,6 +154,7 @@ class DemoChatbot:
     def __init__(self, model_name:str="Qwen/Qwen3-0.6B"):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.enable_thinking = False
+        self._thiniking_regex = r"<think>(.*?)</think>"
         self.model = AutoModelForCausalLM.from_pretrained(
             model_name,
             )
@@ -188,8 +191,9 @@ class DemoChatbot:
         print(response)
 
         # Update history
+        response_history = re.sub(self._thiniking_regex, "", response, flags=re.DOTALL).strip()
         self.history.append({"role": "user", "content": user_input})
-        self.history.append({"role": "assistant", "content": response})
+        self.history.append({"role": "assistant", "content": response_history})
         
 ```
 

@@ -21,7 +21,7 @@ I'm pretty sure you've already heard about someting like this before: 'generativ
 Today I would like to invite you think of text generation in a very different perspective, at least it's the persceptive I found helped me the most: ***text generation is glorified sequence classification.*** I'm going to walk you through the mechanism of text generation with the source code, and show you how text generation *actually* works.
 
 In this post, you will:
-- see the step-by-step process of how texts are generated
+- see the step-by-step process of how texts are generated 
 
 ## Recap on transformer architecture
 As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/), AI models as we know today computes data in roughly three stages:
@@ -30,14 +30,16 @@ As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/
 flowchart
     n1(["Raw Input"]) --> n2["Embedding"]
     n2 --> n3["Transformer"]
-    n3 --> n4["Output<br>(current post)"]
+    n3 --> n4["Model output"]
+    n4 --> n5(["Final output"])
 {{< /mermaid >}}
 
-1. <bullet> Stage 1 *('Embedding')* converts inputs into vectors so that it's model-readable.
-2. <bullet> Stage 2 *('Transformer')* computes the vector representation of the input. The [previous post](https://yuyiheng.cc/posts/transformers-pt-1/) gave a rough overview of this stage.
-3. <bullet> Stage 3 *('Output')* converts outputs from the transformer into human-readable, task-specific format.
+1. <bullet> Stage 1 converts inputs into vectors so that it's model-readable (**```Embedding```**).
+2. <bullet> Stage 2 computes the vector representation of the input. The [previous post](https://yuyiheng.cc/posts/transformers-pt-1/) gave a rough overview of this stage(**```Transformer```**).
+3. <bullet> Stage 3 converts outputs from the transformer into human-readable, task-specific format (**```Model output```**).
 
-Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) and the desired output (being the same as the input, probability, classification score etc). For the case
+Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) For image data, this can simply be the RGBA values for each pixel; for text data, this can be a look up table of converting sub-words into matrices. <br>
+
 
 ## Preparation
 ### Download the model
