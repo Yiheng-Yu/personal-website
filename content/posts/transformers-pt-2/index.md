@@ -20,19 +20,24 @@ I'm pretty sure you've already heard about someting like this before: 'generativ
 
 Today I would like to invite you think of text generation in a very different perspective, at least it's the persceptive I found helped me the most: ***text generation is glorified sequence classification.*** I'm going to walk you through the mechanism of text generation with the source code, and show you how text generation *actually* works.
 
+In this post, you will:
+- see the step-by-step process of how texts are generated
+
 ## Recap on transformer architecture
-As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/),  
+As mentioned in [the previous post](https://yuyiheng.cc/posts/transformers-pt-1/), AI models as we know today computes data in roughly three stages:
 
 {{< mermaid config="theme:mc">}}
-flowchart TB
+flowchart
     n1(["Raw Input"]) --> n2["Embedding"]
-    n2 --> n3["Transformer Layers"]
-    n3 --> n4["Raw Output"]
-    n4 --> n5(["Task-Specific Outputs"])
-
-    l1[<a href='https://yuyiheng.cc/posts/transformers-pt-1'> previous post</a>] --> n3
+    n2 --> n3["Transformer"]
+    n3 --> n4["Output<br>(current post)"]
 {{< /mermaid >}}
 
+1. <bullet> Stage 1 *('Embedding')* converts inputs into vectors so that it's model-readable.
+2. <bullet> Stage 2 *('Transformer')* computes the vector representation of the input. The [previous post](https://yuyiheng.cc/posts/transformers-pt-1/) gave a rough overview of this stage.
+3. <bullet> Stage 3 *('Output')* converts outputs from the transformer into human-readable, task-specific format.
+
+Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) and the desired output (being the same as the input, probability, classification score etc). For the case
 
 ## Preparation
 ### Download the model
@@ -55,7 +60,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Import dependencies:
 ```python
 import torch
-from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM
 ```
 
 *As of November 2025, Pytorch/ Apple still haven't fixed the [memory leak](https://github.com/pytorch/pytorch/issues/91368) issue on Apple Silicon devices (i.e., post-2020 Macbooks). As a result, running models with pytorch for some period of time will gets slower and slower over time. Just for demonstration purpose, I'd recomment manually set pytorch device as 'cpu' because of this. Skip this step if you were confident this won't happen. <br>Since we are just doing demonstrations, we can simly set torch device as 'cpu':<br>*
@@ -65,18 +70,10 @@ torch.set_default_device('cpu')  # or 'cuda' if you'd like to use GPU, would not
 
 Download the model:
 ```python
-checkpoint = "openai-community/gpt2"
+checkpoint = "Qwen/Qwen3-0.6B"
 device = torch.get_default_device()
-pipe = pipeline(
-    'text-generation', 
-    model=checkpoint, 
-    device=device,
-    max_new_tokens=256,
-    repetition_penalty=3.5,
-    no_repeat_ngram_size=5,
-    do_sample=True,
-    temperature=0.8
-    )
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+model = AutoModelForCausalLM.from_pretrained(checkpoint, device=device)
 ```
 
 The openai GPT2 model released on Huggingface doesn't come with some pretty import settings. We'll need to manually amend them first:

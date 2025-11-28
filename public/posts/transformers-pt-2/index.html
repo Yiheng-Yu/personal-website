@@ -386,7 +386,7 @@
     "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "622"
+    "wordCount": "714"
   }]
   </script>
 
@@ -1064,7 +1064,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>622 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <span>714 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1366,6 +1366,10 @@
   >here</a></em></p>
 <p>I&rsquo;m pretty sure you&rsquo;ve already heard about someting like this before: &lsquo;generative LLM is just slightly advanced auto complete&rsquo;. Or, something like &lsquo;all it does is predicting what&rsquo;s the most likely next word with all the previous words given&rsquo;.</p>
 <p>Today I would like to invite you think of text generation in a very different perspective, at least it&rsquo;s the persceptive I found helped me the most: <em><strong>text generation is glorified sequence classification.</strong></em> I&rsquo;m going to walk you through the mechanism of text generation with the source code, and show you how text generation <em>actually</em> works.</p>
+<p>In this post, you will:</p>
+<ul>
+<li>see the step-by-step process of how texts are generated</li>
+</ul>
 
 <h2 class="relative group">Recap on transformer architecture
     <div id="recap-on-transformer-architecture" class="anchor"></div>
@@ -1379,17 +1383,23 @@
 <p>As mentioned in <a
   href="https://yuyiheng.cc/posts/transformers-pt-1/"
     target="_blank"
-  >the previous post</a>,</p>
+  >the previous post</a>, AI models as we know today computes data in roughly three stages:</p>
 <pre class="not-prose mermaid">
-flowchart TB
+flowchart
     n1(["Raw Input"]) --> n2["Embedding"]
-    n2 --> n3["Transformer Layers"]
-    n3 --> n4["Raw Output"]
-    n4 --> n5(["Task-Specific Outputs"])
-
-    l1[<a href='https://yuyiheng.cc/posts/transformers-pt-1'> previous post</a>] --> n3
+    n2 --> n3["Transformer"]
+    n3 --> n4["Output<br>(current post)"]
 </pre>
 
+<ol>
+<li><bullet> Stage 1 <em>(&lsquo;Embedding&rsquo;)</em> converts inputs into vectors so that it&rsquo;s model-readable.</li>
+<li><bullet> Stage 2 <em>(&lsquo;Transformer&rsquo;)</em> computes the vector representation of the input. The <a
+  href="https://yuyiheng.cc/posts/transformers-pt-1/"
+    target="_blank"
+  >previous post</a> gave a rough overview of this stage.</li>
+<li><bullet> Stage 3 <em>(&lsquo;Output&rsquo;)</em> converts outputs from the transformer into human-readable, task-specific format.</li>
+</ol>
+<p>Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) and the desired output (being the same as the input, probability, classification score etc). For the case</p>
 
 <h2 class="relative group">Preparation
     <div id="preparation" class="anchor"></div>
@@ -1420,25 +1430,17 @@ flowchart TB
 </span></span><span style="display:flex;"><span>&gt;&gt;&gt;
 </span></span></code></pre></div><p>Import dependencies:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">torch</span>
-</span></span><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> pipeline
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> AutoTokenizer, AutoModelForCausalLM
 </span></span></code></pre></div><p><em>As of November 2025, Pytorch/ Apple still haven&rsquo;t fixed the <a
   href="https://github.com/pytorch/pytorch/issues/91368"
     target="_blank"
   >memory leak</a> issue on Apple Silicon devices (i.e., post-2020 Macbooks). As a result, running models with pytorch for some period of time will gets slower and slower over time. Just for demonstration purpose, I&rsquo;d recomment manually set pytorch device as &lsquo;cpu&rsquo; because of this. Skip this step if you were confident this won&rsquo;t happen. <br>Since we are just doing demonstrations, we can simly set torch device as &lsquo;cpu&rsquo;:<br></em></p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>set_default_device(<span style="color:#a6e3a1">&#39;cpu&#39;</span>)  <span style="color:#6c7086;font-style:italic"># or &#39;cuda&#39; if you&#39;d like to use GPU, would not recommend &#39;mps&#39; (at least for torch&lt;=2.9.1)</span>
 </span></span></code></pre></div><p>Download the model:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>checkpoint <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;openai-community/gpt2&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>checkpoint <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Qwen/Qwen3-0.6B&#34;</span>
 </span></span><span style="display:flex;"><span>device <span style="color:#89dceb;font-weight:bold">=</span> torch<span style="color:#89dceb;font-weight:bold">.</span>get_default_device()
-</span></span><span style="display:flex;"><span>pipe <span style="color:#89dceb;font-weight:bold">=</span> pipeline(
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e3a1">&#39;text-generation&#39;</span>, 
-</span></span><span style="display:flex;"><span>    model<span style="color:#89dceb;font-weight:bold">=</span>checkpoint, 
-</span></span><span style="display:flex;"><span>    device<span style="color:#89dceb;font-weight:bold">=</span>device,
-</span></span><span style="display:flex;"><span>    max_new_tokens<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">256</span>,
-</span></span><span style="display:flex;"><span>    repetition_penalty<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3.5</span>,
-</span></span><span style="display:flex;"><span>    no_repeat_ngram_size<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">5</span>,
-</span></span><span style="display:flex;"><span>    do_sample<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>    temperature<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">0.8</span>
-</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(checkpoint)
+</span></span><span style="display:flex;"><span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(checkpoint, device<span style="color:#89dceb;font-weight:bold">=</span>device)
 </span></span></code></pre></div><p>The openai GPT2 model released on Huggingface doesn&rsquo;t come with some pretty import settings. We&rsquo;ll need to manually amend them first:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pipe<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>pad_token_id <span style="color:#89dceb;font-weight:bold">=</span> pipe<span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>eos_token_id
 </span></span><span style="display:flex;"><span>pipe<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>bos_token_id <span style="color:#89dceb;font-weight:bold">=</span> pipe<span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>eos_token_id
@@ -1647,10 +1649,6 @@ Let&rsquo;s run 5 of them:</p>
   
 
 
-      
-        
-          
-        
       
     </footer>
   </article>
