@@ -70,22 +70,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 torch.set_default_device('cpu')  # or 'cuda' if you'd like to use GPU, would not recommend 'mps' (at least for torch<=2.9.1)
 ```
 
-Download the model:
+Download the model & the tokenizer:
 ```python
 checkpoint = "Qwen/Qwen3-0.6B"
 device = torch.get_default_device()
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForCausalLM.from_pretrained(checkpoint, device=device)
+model = AutoModelForCausalLM.from_pretrained(checkpoint)
 ```
-
-The openai GPT2 model released on Huggingface doesn't come with some pretty import settings. We'll need to manually amend them first:
-```python
-pipe.generation_config.pad_token_id = pipe.tokenizer.eos_token_id
-pipe.generation_config.bos_token_id = pipe.tokenizer.eos_token_id
-pipe.generation_config.decoder_start_token_id = pipe.tokenizer.eos_token_id
-```
-<br>
-You are now all set.
 
 ### *Optional: Testing text generation*
 We'll first test the text-generation model. Here's a little function to help with text generation. Basically, instead of returning the raw output (list of dictionaries), this function extracts the generated text and prints it directly, just for easier reading.

@@ -386,7 +386,7 @@
     "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "728"
+    "wordCount": "695"
   }]
   </script>
 
@@ -1064,7 +1064,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>728 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <span>695 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1437,18 +1437,12 @@ flowchart
     target="_blank"
   >memory leak</a> issue on Apple Silicon devices (i.e., post-2020 Macbooks). As a result, running models with pytorch for some period of time will gets slower and slower over time. Just for demonstration purpose, I&rsquo;d recomment manually set pytorch device as &lsquo;cpu&rsquo; because of this. Skip this step if you were confident this won&rsquo;t happen. <br>Since we are just doing demonstrations, we can simly set torch device as &lsquo;cpu&rsquo;:<br></em></p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>set_default_device(<span style="color:#a6e3a1">&#39;cpu&#39;</span>)  <span style="color:#6c7086;font-style:italic"># or &#39;cuda&#39; if you&#39;d like to use GPU, would not recommend &#39;mps&#39; (at least for torch&lt;=2.9.1)</span>
-</span></span></code></pre></div><p>Download the model:</p>
+</span></span></code></pre></div><p>Download the model &amp; the tokenizer:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>checkpoint <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Qwen/Qwen3-0.6B&#34;</span>
 </span></span><span style="display:flex;"><span>device <span style="color:#89dceb;font-weight:bold">=</span> torch<span style="color:#89dceb;font-weight:bold">.</span>get_default_device()
 </span></span><span style="display:flex;"><span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(checkpoint)
-</span></span><span style="display:flex;"><span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(checkpoint, device<span style="color:#89dceb;font-weight:bold">=</span>device)
-</span></span></code></pre></div><p>The openai GPT2 model released on Huggingface doesn&rsquo;t come with some pretty import settings. We&rsquo;ll need to manually amend them first:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pipe<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>pad_token_id <span style="color:#89dceb;font-weight:bold">=</span> pipe<span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>eos_token_id
-</span></span><span style="display:flex;"><span>pipe<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>bos_token_id <span style="color:#89dceb;font-weight:bold">=</span> pipe<span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>eos_token_id
-</span></span><span style="display:flex;"><span>pipe<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>decoder_start_token_id <span style="color:#89dceb;font-weight:bold">=</span> pipe<span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>eos_token_id
-</span></span></code></pre></div><br>
-You are now all set.
-
+</span></span><span style="display:flex;"><span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(checkpoint)
+</span></span></code></pre></div>
 <h3 class="relative group"><em>Optional: Testing text generation</em>
     <div id="optional-testing-text-generation" class="anchor"></div>
     
