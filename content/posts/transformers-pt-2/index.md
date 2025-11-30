@@ -40,18 +40,21 @@ flowchart
 
 Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) For image data, this can simply be the RGBA values for each pixel; for text data, this can be a look up table of converting sub-words into matrices. <br>
 
+<p style="font-size:250%">FINISH THIS LATER!!</p>
 
 ## Preparation
 ### Download the model
-Open termianl and type-in these codes to install depencies in case you haven't done so:
+Open termianl and type in these codes to install depencies in case you haven't done so:
 ```sh
-pip install transformers
+pip install torch transformers tokenizers
 ```
 Then in terminal, type 'python' to start python interactive REPL:
+
 ```sh
 python
 ```
-You should see something like this in your terminal:
+
+You should see something like this in your terminal, indicating the beginning of a python session.:
 
 ```sh
 Python 3.13.7 | packaged by conda-forge | (main, Sep  3 2025, 14:24:46) [Clang 19.1.7 ] on darwin
@@ -61,8 +64,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Import dependencies:
 ```python
+from functools import partial
+from collections.abc import Callable
+from typing import Union
+
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, BatchEncoding
 ```
 
 *As of November 2025, Pytorch/ Apple still haven't fixed the [memory leak](https://github.com/pytorch/pytorch/issues/91368) issue on Apple Silicon devices (i.e., post-2020 Macbooks). As a result, running models with pytorch for some period of time will gets slower and slower over time. Just for demonstration purpose, I'd recomment manually set pytorch device as 'cpu' because of this. Skip this step if you were confident this won't happen. <br>Since we are just doing demonstrations, we can simly set torch device as 'cpu':<br>*
@@ -70,12 +77,95 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 torch.set_default_device('cpu')  # or 'cuda' if you'd like to use GPU, would not recommend 'mps' (at least for torch<=2.9.1)
 ```
 
-Download the model & the tokenizer:
+### A quick few words on tokenisation...
+On top of the transformer models themselves, we also need some helper objects in order to convert inputs/ outputs between human-readable and machine-readable formats: our inputs and desirerd outputs are both texts, however models only accepts matrices as their inputs and would only output matrices. This conversation process is called [tokenisation](https://arxiv.org/html/2407.11606v3). For huggingface transformers library, tokenisation is handeled by obejcts called ```Tokenizer```. Tokenisation is very important process for linguistic research, and there are a lot of different methods to tokenise texts. <br>
+
+Tokenisation is not the main focus of today's post, but as a quick ELI5, you can functionally see tokenisers as glorified look-up tables that converts texts into indices. ```Model``` reads these indicies, through it's own internal lookup table, convert them into text matrices. Pre-trained text models from ```transformers``` library all come with their own paired tokenizers.
+<br>
+
+It works like this:
+{{< mermaid >}}
+flowchart LR
+    ipt(["input"]) <--> tkn["Tokenizer"]
+    tkn <--> mdl["Model"]
+    classDef default fill: transparent, bg-color: transparent
+{{< /mermaid >}}
+
+For example:
+{{< mermaid >}}
+flowchart LR
+    ipt(["text: 'cat sits'"]) <--tokenizer--> tkn["index: [[8, 10]]"]
+    tkn <--model--> mdl["matrix: <br>[[0.3, 0.2, 0.5], <br>[0.1, 0.7, 0.3]]"]
+    classDef default fill: transparent, bg-color: transparent
+{{< /mermaid >}}
+
+In order to test out the model, we'll first need to prepare a function that converts inputs & outputs back and forth. Copy this function and paste into python:
 ```python
-checkpoint = "Qwen/Qwen3-0.6B"
-device = torch.get_default_device()
-tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForCausalLM.from_pretrained(checkpoint)
+def model_converter(tokenizer, inputs: Union[str, ModelOutput, torch.Tensor]) -> Union[str, BatchEncoding]:
+    """Converts between text inputs and token indicies
+
+    Args:
+        tokenizer (PreTrainedTokenizerFast): the tokenizer to use
+        inputs (Union[str, ModelOutput, torch.Tensor]): text inputs or model outputs
+    """
+    # text -> model inputs
+    if isinstance(inputs, str):
+        message = [
+            {"role": "user", "content": inputs}
+        ]
+        tokens = tokenizer.apply_chat_template(
+            message, 
+            tokenize=True, 
+            return_dict=True, 
+            enable_thinking=False,
+            add_generation_prompt=True,
+            return_tensors='pt'
+            )
+        return tokens
+    
+    # in this demo, we will enconter several different types of model outputs...
+    # outputs from model.generate()
+    elif isinstance(inputs, torch.Tensor):
+        if inputs.ndim==1:
+            return tokenizer.decode(inputs)
+        
+        elif inputs.ndim > 1 and inputs.shape[0]==1:
+            return converter(tokenizer, inputs[0])    
+                
+        else:
+            return tokenizer.batch_decode(inputs)
+    
+    # outputs from model.forward
+    elif isinstance(inputs, ModelOutput):
+        if 'logits' in inputs:
+            sequences = inputs.logits.topk(1, dim=-1).view(1, -1)
+            return converter(tokenizer, sequences)
+    
+    raise TypeError(type(inputs))
+```
+
+
+### Prepare the model
+The model that's going to be used in this demo is [Qwen3](https://qwen.ai/blog?id=qwen3), same as the previous post. It's a very tiny text generation model that I feel performs very well. Here's huggingface's link to the model: <br>
+{{< huggingface model="Qwen/Qwen3-0.6B" >}}
+
+We'll first define some constants:
+```python
+DEVICE = torch.get_default_device()
+MODEL_CHECKPOINT = "Qwen/Qwen3-0.6B"
+print("Using device:", DEVICE)
+```
+
+1. *tokenizer*
+Copy these codes to initialise the tokenizer:
+```python
+tokenizer = AutoTokenizer.from_pretrained(MODEL_CHECKPOINT)
+convert:Callable = partial(model_converter, tokenizer)  # preload the tokenizer to use later
+```
+
+And copy these codes to initialise the model:
+```python
+model = AutoModelForCausalLM.from_pretrained(MODEL_CHECKPOINT)
 ```
 
 ### *Optional: Testing text generation*
