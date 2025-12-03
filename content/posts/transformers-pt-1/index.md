@@ -245,7 +245,7 @@ The very core of a transformer model can be checked by:
 pprint(chat.model.model)
 ```
 
-And you will get an output similar to the previous output, but without the ```embed_tokens``` at the beginning and the ```lm_head``` at the end:<br>
+And you will get an output similar to the previous output, but without ```lm_head``` at the end:<br>
 
 ```python
 Qwen3Model(
