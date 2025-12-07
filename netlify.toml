@@ -5,7 +5,8 @@
 
 [build.environment]
   NODE_ENV = "production"
-  GO_VERSION = "1.16"
+  GO_VERSION = "1.25.4"
+  NODE_VERSION = "25.2.1"
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
   # SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES="AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg,AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
