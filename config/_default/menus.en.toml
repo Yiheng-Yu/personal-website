@@ -15,6 +15,7 @@
  pageRef = "posts"
  weight = 10
  orderByWeight = false
+ firebase = true
 
 
 [[main]]

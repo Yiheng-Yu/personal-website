@@ -386,7 +386,7 @@
     "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2121"
+    "wordCount": "2146"
   }]
   </script>
 
@@ -1066,7 +1066,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>2121 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <span>2146 words</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1205,19 +1205,20 @@
         <li><a href="#example-input-text">example input text</a></li>
       </ul>
     </li>
-    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a>
+    <li><a href="#step-by-step-text-generation">Step-by-step Text Generation</a>
       <ul>
-        <li><a href="#step-1---tokenisation">Step 1 - tokenisation</a></li>
-        <li><a href="#step-2---base-model">Step 2 - base model</a></li>
+        <li><a href="#tokenisation">Tokenisation</a></li>
+        <li><a href="#the-transformer">The Transformer</a></li>
+        <li><a href="#the-task-head">The Task-Head</a></li>
       </ul>
     </li>
-    <li><a href="#tokenisation">Tokenisation</a>
+    <li><a href="#tokenisation-1">Tokenisation</a>
       <ul>
         <li><a href="#model-1">Model</a></li>
       </ul>
     </li>
     <li><a href="#running-the-model">Running the model</a></li>
-    <li><a href="#text-generation-one-word-at-a-time-1">Text generation, one word at a time</a></li>
+    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a></li>
   </ul>
 </nav>
   </div>
@@ -1239,19 +1240,20 @@
         <li><a href="#example-input-text">example input text</a></li>
       </ul>
     </li>
-    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a>
+    <li><a href="#step-by-step-text-generation">Step-by-step Text Generation</a>
       <ul>
-        <li><a href="#step-1---tokenisation">Step 1 - tokenisation</a></li>
-        <li><a href="#step-2---base-model">Step 2 - base model</a></li>
+        <li><a href="#tokenisation">Tokenisation</a></li>
+        <li><a href="#the-transformer">The Transformer</a></li>
+        <li><a href="#the-task-head">The Task-Head</a></li>
       </ul>
     </li>
-    <li><a href="#tokenisation">Tokenisation</a>
+    <li><a href="#tokenisation-1">Tokenisation</a>
       <ul>
         <li><a href="#model-1">Model</a></li>
       </ul>
     </li>
     <li><a href="#running-the-model">Running the model</a></li>
-    <li><a href="#text-generation-one-word-at-a-time-1">Text generation, one word at a time</a></li>
+    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a></li>
   </ul>
 </nav>
   </div>
@@ -1550,22 +1552,22 @@ You are now all set.
 <p>Let&rsquo;s start with an example text input:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>example <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Hi&#34;</span>
 </span></span></code></pre></div>
-<h2 class="relative group">Text generation, one word at a time
-    <div id="text-generation-one-word-at-a-time" class="anchor"></div>
+<h2 class="relative group">Step-by-step Text Generation
+    <div id="step-by-step-text-generation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#text-generation-one-word-at-a-time" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-by-step-text-generation" aria-label="Anchor">#</a>
     </span>
     
 </h2>
 
-<h3 class="relative group">Step 1 - tokenisation
-    <div id="step-1---tokenisation" class="anchor"></div>
+<h3 class="relative group">Tokenisation
+    <div id="tokenisation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1---tokenisation" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tokenisation" aria-label="Anchor">#</a>
     </span>
     
 </h3>
@@ -1597,19 +1599,23 @@ flowchart LR
 </span></span></code></pre></div><p>To tokenize our text:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tokens <span style="color:#89dceb;font-weight:bold">=</span> tokenizer(example, return_tensors<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#39;pt&#39;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(tokens)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(tokens[<span style="color:#a6e3a1">&#39;input_ids&#39;</span>]<span style="color:#89dceb;font-weight:bold">.</span>shape)
 </span></span></code></pre></div><p>You would see our tokenized text input:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#a6e3a1">&#39;input_ids&#39;</span>: tensor([[<span style="color:#fab387">13048</span>]]), <span style="color:#a6e3a1">&#39;attention_mask&#39;</span>: tensor([[<span style="color:#fab387">1</span>]])}
+</span></span><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">1</span>])
 </span></span></code></pre></div>
-<h3 class="relative group">Step 2 - base model
-    <div id="step-2---base-model" class="anchor"></div>
+<h3 class="relative group">The Transformer
+    <div id="the-transformer" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2---base-model" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-transformer" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Text models in the <code>transformers</code> library are assembed by two parts: the transformer itself,  task-specific &lsquo;head&rsquo;. Let&rsquo;s have a look at our model architecture by running <code>print(model)</code>:</p>
+<p><strong>Base model &amp; the task head</strong></p>
+<div class="aSeparator"></div>
+<p>Models in the <code>transformers</code> library are assembed by two parts: the transformer itself,  task-specific &lsquo;head&rsquo;. Let&rsquo;s have a look at our model architecture by running <code>print(model)</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#89dceb">print</span>(model)
 </span></span><span style="display:flex;"><span>Qwen3ForCausalLM(
 </span></span><span style="display:flex;"><span>  (model): Qwen3Model(
@@ -1642,21 +1648,39 @@ flowchart LR
 </span></span></code></pre></div><p>In output above, our transformer base model is the one called  <code>(model): Qwen3Model</code> at the very beginning, the task-head is the <code>lm_head: Linear</code> at the very end. Let&rsquo;s separate them apart:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>base_model <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>model
 </span></span><span style="display:flex;"><span>task_head <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>lm_head
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34; ============== Base model ============== </span><span style="color:#89b4fa">\n</span><span style="color:#a6e3a1">&#34;</span>, base_model)
-</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;============== Task head ============== </span><span style="color:#89b4fa">\n</span><span style="color:#a6e3a1">&#34;</span>, task_head)
-</span></span></code></pre></div><p>To do text generation, we first pass the inputs to the <code>base_model</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>transformed <span style="color:#89dceb;font-weight:bold">=</span> base_model(<span style="color:#89dceb;font-weight:bold">**</span>tokens)
-</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(transformed)
+</span></span></code></pre></div><p><code>print(base_model)</code>  shall give you the output save as above except the &rsquo;lm_head&rsquo; bits.</p>
+<p><strong>Running the transformer</strong></p>
+<div class="aSeparator"></div>
+<p>To do text generation, we first pass the inputs to the <code>base_model</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>output <span style="color:#89dceb;font-weight:bold">=</span> base_model(<span style="color:#89dceb;font-weight:bold">**</span>tokens)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(output)
 </span></span></code></pre></div><p>Which would give you this output:</p>
 <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>BaseModelOutputWithPast(last_hidden_state<span style="color:#89dceb;font-weight:bold">=</span>tensor([[[ <span style="color:#fab387">7.4006</span>, <span style="color:#fab387">29.0470</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.1732</span>,  <span style="color:#89dceb;font-weight:bold">...</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.2643</span>,  <span style="color:#fab387">1.1580</span>,  <span style="color:#fab387">1.1260</span>]]]), past_key_values<span style="color:#89dceb;font-weight:bold">=</span>DynamicCache(layers<span style="color:#89dceb;font-weight:bold">=</span>[DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer]), hidden_states<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>, attentions<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>)
+</span></span></code></pre></div><p>Output of the transformer <code>base_model</code> is the <code>last_hidden_state</code> attribute of the <code>BaseModelOutputWithPast</code> object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>last_hidden_state <span style="color:#89dceb;font-weight:bold">=</span> output<span style="color:#89dceb;font-weight:bold">.</span>last_hidden_state
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(last_hidden_state<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">1</span>, <span style="color:#fab387">1024</span>])
 </span></span></code></pre></div>
-<h2 class="relative group">Tokenisation
-    <div id="tokenisation" class="anchor"></div>
+<h3 class="relative group">The Task-Head
+    <div id="the-task-head" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tokenisation" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-task-head" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="aSeparator"></div>
+<div class="aSeparator"></div>
+<div class="aSeparator"></div>
+
+<h2 class="relative group">Tokenisation
+    <div id="tokenisation-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tokenisation-1" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -1791,11 +1815,11 @@ Use <code>model.generate</code> to run text generation:</p>
 </span></span><span style="display:flex;"><span>I<span style="color:#a6e3a1">&#39;m not running. I&#39;</span>m just here to help you <span style="color:#cba6f7">with</span> your questions<span style="color:#89dceb;font-weight:bold">.</span> Let me know how I can assist you<span style="color:#f38ba8">!</span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_end<span style="color:#89dceb;font-weight:bold">|&gt;</span>
 </span></span></code></pre></div>
 <h2 class="relative group">Text generation, one word at a time
-    <div id="text-generation-one-word-at-a-time-1" class="anchor"></div>
+    <div id="text-generation-one-word-at-a-time" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#text-generation-one-word-at-a-time-1" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#text-generation-one-word-at-a-time" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -2119,8 +2143,6 @@ TODO: RE-WRITE THE convert FUNCTION TO FIT MY CURRENT NARRATIVE!!!</p>
 </div>
 
     </div>
-    
-    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
   
 </html>

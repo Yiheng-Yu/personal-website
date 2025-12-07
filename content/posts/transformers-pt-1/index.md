@@ -13,7 +13,7 @@ params:
 
 {{< katex >}}
 
-In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won't go metion too much math and there won't be any mathenathical formulas. However, I would assume readers of this silly little post already have some okay-ish background of math/ datascience. (i.e., matrix computations embeddings, tokens, model fitting etc.). I am not going to list out all the implemention details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, İ would like to draw out a general framework on transformers to help one understand the detailed math behind.<br>
+In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won't go into too much math and there won't be any mathematical formulas. However, I would assume readers of this silly little post already have some okay-ish background in math/datascience. (i.e., matrix computations, embeddings, tokens, model fitting etc.). I am not going to list out all the implementation details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, I would like to draw out a general framework on transformers to help one understand the detailed math behind.<br>
 
 Today, I'll very quickly go through some very basics on neural network model, just enough to cover what needed for this post, accompied by demo of transformer model as a proof of concept. In this section, there will be some codes that you can copy and paste into an interactive python session to fiddle around for a bit. And lastly, I'll do a quick sketch on the general architecture of transformers, and a overview of the attention mechasm.<br>
 
@@ -22,13 +22,13 @@ Today, I'll very quickly go through some very basics on neural network model, ju
 
 In order to make things easier to understand, I would wish to start with an inaccuate premise: we can view neural network models as functions that takes some sort of matrix as inputs, do some sort of matrix computations, and output another matrix as the final result. What makes one neural network different from others is how the computation is carried out. It's like \(y=a \times x^2\) is a different function from \(y=a \times sin(x)\), only that in the case of neural network, both x and y are matrices, and the math is much complicated. When it comes to model training, we are essentially trying to find values gives best fit to the data.<br>
 
-There's an important assumption here: just because model fits the data well does not mean the model describes mechanisms behind the data. For example, we <i>definitely</i> can fit \(y=a \times sin(x) + b\) to a normal distribution data (like distribution of customer spendings in McDonald's), and it's prob going to be a pretty good fit, but this does not mean the sine function has anything to do with explaining the normal distribution. A good model does not always need to be description, a good model just needs to be useful for its purpose.<br>
+There's an important assumption here: just because a model fits the data well does not mean the model describes the mechanisms behind the data. For example, we <i>definitely</i> can fit \(y=a \times sin(x) + b\) to a normal distribution data (like distribution of customer spendings in McDonald's), and it's probably going to be a pretty good fit, but this does not mean the sine function has anything to do with explaining the normal distribution. A good model does not always need to be a description; a good model just needs to be useful for its purpose.<br>
 
-Transformers are preciesly these kinds of models: they are, surprisingly good at fitting into all sorts of data whilst the math behind the model probably doesn't have much to do with the mechanisms behind. We don't know how transformers works so well for text-based tasks. At least not yet. Originally, transformer was designed as an add-on to the text-processing neural network models in order to tackle with some tricky problems (these problems are not the main forcus of the current blogpost so I'm skipping them, but [here's a good article if you were interested](https://towardsdatascience.com/beautifully-illustrated-nlp-models-from-rnn-to-transformer-80d69faf2109/)). We just happened to discover that transformers alone is good enough to solve these problems, we just need to make the transformers much bigger. So that's where the Aİ bloom started: GPT2 solved issues in GPT1 by simply being 10 times bigger; the most-recently open-sourced [pretrained GPT-Oss](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1), is 200 times bigger than [the previous openpsourced model, GPT2](https://huggingface.co/openai-community/gpt2) <i>(note: GPT-OSS is structurlly different from the original GPT2 but the fundamental ideas are the same.)</i>. There are even speculations suggesting transformer neural network models can be seen as some sort of universal function approximator. That is, it's capacable of 'approximate' other formulas/ functions with certain degree of accuracy, providing the model itself is big enough (['universal approximation theorem'](https://en.wikipedia.org/wiki/Universal_approximation_theorem)). <br>
+Transformers are precisely these kinds of models: they are, surprisingly good at fitting into all sorts of data whilst the math behind the model probably doesn't have much to do with the mechanisms behind. We don't know how transformers work so well for text-based tasks. At least not yet. Originally, transformer was designed as an add-on to text-processing neural network models in order to tackle some tricky problems (these problems are not the main focus of the current blogpost so I'm skipping them, but [here's a good article if you were interested](https://towardsdatascience.com/beautifully-illustrated-nlp-models-from-rnn-to-transformer-80d69faf2109/)). We just happened to discover that transformers alone is good enough to solve these problems; we just need to make the transformers much bigger. So that's where the AI boom started: GPT2 solved issues in GPT1 by simply being 10 times bigger; the most-recently open-sourced [pretrained GPT-OSS](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) is 200 times bigger than [the previous open-sourced model, GPT2](https://huggingface.co/openai-community/gpt2) <i>(note: GPT-OSS is structurally different from the original GPT2 but the fundamental ideas are the same.)</i> There are even speculations suggesting transformer neural network models can be seen as some sort of universal function approximator. That is, it's capable of 'approximating' other formulas/functions with a certain degree of accuracy, providing the model itself is big enough (['universal approximation theorem'](https://en.wikipedia.org/wiki/Universal_approximation_theorem)). <br>
 
 ## Transformer Model Architecture
 ### Overview
-At conceptual level, the general idea behind transformer models are is actually pretty intuitive. We can roughly divide the model calclations into three stages:
+At conceptual level, the general idea behind transformer models is actually pretty intuitive. We can roughly divide the model calculations into three stages:
 {{< timeline >}}
 
 {{< timelineItem icon="code" header="Stage 1" badge="Embedding" subheader="The input gets converted into vectors or matrices." >}}
@@ -45,7 +45,7 @@ At conceptual level, the general idea behind transformer models are is actually 
 
 {{< /timeline >}}
 
-In other words, you can concepturally see **Stage 1** as a conversion stage in order to initiate the model, **Stage 2** being the core of a transformer model, and **Stage 3** as a 'decoding' step to convert the output back into human-readable form. When we talk about transformer models, we are mostly referring to  **Stage 2**, which is the focus of the current post. I'll elabrate a lot more on what's hapenning in **Stage 3** in the next post.<br>
+In other words, you can conceptually see **Stage 1** as a conversion stage in order to initiate the model, **Stage 2** being the core of a transformer model, and **Stage 3** as a 'decoding' step to convert the output back into human-readable form. When we talk about transformer models, we are mostly referring to **Stage 2**, which is the focus of the current post. I'll elaborate a lot more on what's happening in **Stage 3** in the next post.<br>
 
 ### The Transformer Itself
 The transformer itself is pretty straightforward: it consists of stacks of multiple attention layers that often share exactly the same, or very similar structure:
@@ -305,8 +305,8 @@ Qwen3DecoderLayer(
 )
 ```
 
-Layer is divided into 2 major sections, Just like like we [discussed previously](#the-transformer-itself):
-- ```self_attn``` is where attention gets calculatd.
+Layer is divided into 2 major sections, just like we [discussed previously](#the-transformer-itself):
+- ```self_attn``` is where attention gets calculated.
 - All the rest (i.e., ```mlp```, ```input_layernorm``` and ```post_attention_layernorm```) are step-by-step computations of combining and averaging the attention heads.
 
 Run the following code to see the structure of an attention head:
@@ -327,7 +327,9 @@ Qwen3Attention(
 )
 ```
 
-The actual impelmentations of attention heads are different from model to model, but the general principle behind should be roughly the same. I'll dive depper into it in the future. 
+The actual impelmentations of attention heads are different from model to model, but the general principle behind should be roughly the same. I'll dive deeper into it in the future.
+
+// ...existing code...
 
 ### Have some fun!
 Meanwhile, since we've got a generative model already, we might as well test out some text generations:
@@ -350,18 +352,18 @@ chat.clear_history()
 
 ![llm is magic text](./featured.jpg "'LLM is magic'")
 
-I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrices convreted by inputs are typically converted by multiplying ('dot product') inputs with three **separate** matrices. These matrices are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has [their own learnable parameters](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). Furthermore, when we combining outputs from each 'attention heads', this combining opearation also has its own set of trainable parameters, so on and so on... Almost every stage of the matrix computations are parameterised, resulting the unbelievably **massive** Aİ models as of today. However, the model used in the demo today, despite it's size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matirx calculation? Howver, we know very little about the reason behind We gave names to these matrices, we don't know much about their behaviour.<br>
+I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrices converted from inputs are typically created by multiplying ('dot product') inputs with three **separate** matrices. These matrices are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has [their own learnable parameters](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html). Furthermore, when we combine outputs from each 'attention head', this combining operation also has its own set of trainable parameters, so on and so on... Almost every stage of the matrix computations are parameterized, resulting in the unbelievably **massive** AI models as of today. However, the model used in the demo today, despite its size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matrix calculations. However, we know very little about the reason behind it. We gave names to these matrices, but we don't know much about their behavior.<br>
 
 ## Final thoughts
 
-Transformer neural network models aren't as mysterious as one think it would be. It has no difference compared with any other functions. At the end of the day it's just another mathematical function, but takes *matrix* as inputs, does *matrix* calculations, and outputs  *matrices*. Just like any other neural network models, it takes multiple steps to do the calculation. Within each computational step, the inputs gets processed by three mini-neural networks, and outputs are re-combined together as the output of the current step. In this sense, transformers are like nested neural networks: they are bigger neural network that contains lots of mini neural networks.<br>
+Transformer neural network models aren't as mysterious as one might think. It has no difference compared with any other functions. At the end of the day it's just another mathematical function, but takes *matrices* as inputs, does *matrix* calculations, and outputs *matrices*. Just like any other neural network models, it takes multiple steps to do the calculation. Within each computational step, the inputs get processed by three mini-neural networks, and outputs are re-combined together as the output of the current step. In this sense, transformers are like nested neural networks: they are bigger neural networks that contain lots of mini neural networks.<br>
 
 **What's up next?**<br>
 There are still a bit more stuffs that I'd like to share, like how text-generation works and what's really happenning when we are training a generative model. We've heard of the same old things over and over: *'generative LLM is just a very massive auto-complete!'*. Whilst I do aggree with it, I also find it not helpful if one wants to *understand* text generation, for both model training and model inference. In the next post, we'll have a look at the **Stage 3** for text generation.
 
 ## Some Other Resources
 
-I hope whoever come accross this post would find it useful. Here are some extra reading materials that İ found particularly useful:<br>
+I hope whoever comes across this post would find it useful. Here are some extra reading materials that I found particularly useful:<br>
 
 1. [Pytorch's step-byp-step guide](https://docs.pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html) on creating a generative LLM is prob one of the best out there that teaches you all the fundenmentals.
 2. [BertViz, a very good visualisation tool](https://github.com/jessevig/bertviz) for looking at attention heads layer by layer. You can run it interactively in a jupyter notebook.

@@ -106,8 +106,8 @@ Let's start with an example text input:
 example = "Hi"
 ```
 
-## Text generation, one word at a time
-### Step 1 - tokenisation
+## Step-by-step Text Generation
+### Tokenisation
 
 Our firtst problem is that our input (```example```), is ```str```. However, our ```model``` does not accept ```str``` as input. If you just pass our input to the model, you would get this TypeError:
 ```python
@@ -143,16 +143,20 @@ To tokenize our text:
 ```python
 tokens = tokenizer(example, return_tensors='pt')
 print(tokens)
+print(tokens['input_ids'].shape)
 ```
 
 You would see our tokenized text input:
 ```python
 {'input_ids': tensor([[13048]]), 'attention_mask': tensor([[1]])}
+torch.Size([1, 1])
 ```
 
-### Step 2 - base model
+### The Transformer
+**Base model & the task head**
+<div class="aSeparator"></div>
 
-Text models in the ```transformers``` library are assembed by two parts: the transformer itself,  task-specific 'head'. Let's have a look at our model architecture by running ```print(model)```:
+Models in the ```transformers``` library are assembed by two parts: the transformer itself,  task-specific 'head'. Let's have a look at our model architecture by running ```print(model)```:
 
 ```python
 >>> print(model)
@@ -187,19 +191,20 @@ Qwen3ForCausalLM(
 ```
 
 In output above, our transformer base model is the one called  ```(model): Qwen3Model``` at the very beginning, the task-head is the ```lm_head: Linear``` at the very end. Let's separate them apart:
-
 ```python
 base_model = model.model
 task_head = model.lm_head
-
-print(" ============== Base model ============== \n", base_model)
-print("============== Task head ============== \n", task_head)
 ```
+
+```print(base_model)```  shall give you the output save as above except the 'lm_head' bits.
+
+**Running the transformer**
+<div class="aSeparator"></div>
 
 To do text generation, we first pass the inputs to the ```base_model```:
 ```python
-transformed = base_model(**tokens)
-print(transformed)
+output = base_model(**tokens)
+print(output)
 ```
 
 Which would give you this output:
@@ -207,8 +212,24 @@ Which would give you this output:
 BaseModelOutputWithPast(last_hidden_state=tensor([[[ 7.4006, 29.0470, -0.1732,  ..., -1.2643,  1.1580,  1.1260]]]), past_key_values=DynamicCache(layers=[DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer]), hidden_states=None, attentions=None)
 ```
 
+Output of the transformer ```base_model``` is the ```last_hidden_state``` attribute of the ```BaseModelOutputWithPast``` object:
+```python
+last_hidden_state = output.last_hidden_state
+print(last_hidden_state.shape)
+```
+
+Output:
+```python
+torch.Size([1, 1, 1024])
+```
+
+### The Task-Head
 
 
+
+<div class="aSeparator"></div>
+<div class="aSeparator"></div>
+<div class="aSeparator"></div>
 
 ## Tokenisation
 **Quick sidenote on tokenizer**<br>
