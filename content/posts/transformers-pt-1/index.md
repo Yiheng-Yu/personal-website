@@ -7,11 +7,10 @@ summary: "(it's glorified linear algebra)"
 font_family: "Monospace"
 tags: ["AI", "Machine Learning", "ELI5"]
 topics: "transformers"
+
 params:
   math: true
 ---
-
-{{< katex >}}
 
 In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won't go into too much math and there won't be any mathematical formulas. However, I would assume readers of this silly little post already have some okay-ish background in math/datascience. (i.e., matrix computations, embeddings, tokens, model fitting etc.). I am not going to list out all the implementation details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, I would like to draw out a general framework on transformers to help one understand the detailed math behind.<br>
 

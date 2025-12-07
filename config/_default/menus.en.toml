@@ -17,7 +17,6 @@
  orderByWeight = false
  firebase = true
 
-
 [[main]]
  name = "Topics"
  pageRef = "Topics"

@@ -8,6 +8,7 @@
 html {
     font-family: 'Atkinson Hyperlegible Next', sans-serif;
     font-size:115%;
+    font-weight:normal;
     font-optical-sizing: auto;
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
