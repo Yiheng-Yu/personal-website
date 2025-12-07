@@ -8,6 +8,7 @@ font_family: "Monospace"
 tags: ["AI", "Machine Learning", "ELI5"]
 topics: "transformers"
 status: "draft"
+draft: true
 ---
 
 {{< katex >}}
