@@ -53,6 +53,7 @@ cardViewScreenWidth = false
 layoutBackgroundBlur = false
 disableHeroImageFilter = false
 orderByWeight = false
+showViews = true
 
 [article]
 showDate = true

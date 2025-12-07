@@ -1,6 +1,7 @@
 ---
 title: "Topics"
 cascade:
+  firebase: true
   showDate: false
   showAuthor: false
   showViews: false
@@ -8,4 +9,4 @@ cascade:
   invertPagination: false
 ---
 
-<div class="aSeparator"></div>
+***

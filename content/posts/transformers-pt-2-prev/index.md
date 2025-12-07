@@ -21,7 +21,6 @@ I'm pretty sure you've already heard about someting like this before: 'generativ
 Today I would like to invite you think of text generation in a very different perspective, at least it's the persceptive I found helped me the most: ***text generation is glorified sequence classification.*** I'm going to walk your way through the text generation process, step-by-step, one word at a time, showing you how text generation *actually* works.
 
 
-
 <p style="font-size:250%">FINISH THIS LATER!!</p>
 
 ## Recap on transformer architecture
@@ -77,6 +76,7 @@ import torch
 from transformers import AutoTokenizer, Qwen3ForCausalLM
 ```
 
+***
 <i>Sidenote:<br>
 As of November 2025, Pytorch/ Apple still haven't fully fixed the <a href="https://github.com/pytorch/pytorch/issues/91368">memory leak</a> issue for Apple Silicon devices. As a result, running models with pytorch may gets slower and slower over time, or freeze compeletly. If you were running a Macbook purchased after 2020, I'd recomment manually set pytorch device as 'cpu'. Skip this code if you were confident that this memory leak won't happen:</i>
 

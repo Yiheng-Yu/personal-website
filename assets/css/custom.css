@@ -55,9 +55,3 @@ pre code {
   color: oklch(95.3% 0.051 180.801);
   background: oklch(35% 0.16 232.661);
 }
-
-.aSeparator {
-  border-top: 1px solid #5f656d;
-  height: 1px;
-  margin: 16px 0;
-}

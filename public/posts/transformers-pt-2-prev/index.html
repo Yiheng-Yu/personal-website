@@ -15,20 +15,20 @@
 
   
   
-    <title>ELI5 Transformers (Part 1): Attention Mechanism  &middot; Myxiniformes Moment</title>
-    <meta name="title" content="ELI5 Transformers (Part 1): Attention Mechanism  &middot; Myxiniformes Moment">
+    <title>ELI5 Transformers (Part 2) - Generation &middot; Myxiniformes Moment</title>
+    <meta name="title" content="ELI5 Transformers (Part 2) - Generation &middot; Myxiniformes Moment">
   
 
   
   
-    <meta name="description" content="(it&#39;s glorified linear algebra)">
+    <meta name="description" content="(it&#39;s glorified sequence classification)">
   
   
     <meta name="keywords" content="AI,Machine Learning,ELI5,">
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/transformers-pt-1/">
+  <link rel="canonical" href="http://localhost:1313/posts/transformers-pt-2-prev/">
   
 
   
@@ -46,25 +46,25 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/transformers-pt-1/">
+  <meta property="og:url" content="http://localhost:1313/posts/transformers-pt-2-prev/">
   <meta property="og:site_name" content="Myxiniformes Moment">
-  <meta property="og:title" content="ELI5 Transformers (Part 1): Attention Mechanism ">
-  <meta property="og:description" content="(it’s glorified linear algebra)">
+  <meta property="og:title" content="ELI5 Transformers (Part 2) - Generation">
+  <meta property="og:description" content="(it’s glorified sequence classification)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-31T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-11-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-11T00:00:00+00:00">
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="Machine Learning">
     <meta property="article:tag" content="ELI5">
-    <meta property="og:image" content="http://localhost:1313/posts/transformers-pt-1/featured.jpg">
+    <meta property="og:image" content="http://localhost:1313/posts/transformers-pt-2-prev/featured.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/transformers-pt-1/featured.jpg">
-  <meta name="twitter:title" content="ELI5 Transformers (Part 1): Attention Mechanism ">
-  <meta name="twitter:description" content="(it’s glorified linear algebra)">
+  <meta name="twitter:image" content="http://localhost:1313/posts/transformers-pt-2-prev/featured.jpg">
+  <meta name="twitter:title" content="ELI5 Transformers (Part 2) - Generation">
+  <meta name="twitter:description" content="(it’s glorified sequence classification)">
 
   
   
@@ -331,21 +331,6 @@
 
 
 
-  
-  
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/components/carousel.8e65f2c27285218feed8ca2a6e12a80ec2fb4be8f774b7c74d9642f1bc528a3352288a700a64a0e1e3c38a40b74c978b5dbbeb38346202b5f7613d8fc023e3c9.css"
-    integrity="sha512-jmXywnKFIY/u2MoqbhKoDsL7S&#43;j3dLfHTZZC8bxSijNSKIpwCmSg4ePDikC3TJeLXbvrODRiArX3YT2PwCPjyQ==">
-  
-  
-  <script
-    defer
-    type="text/javascript"
-    src="/lib/tw-elements/index.min.5ffccf337b773ee831515cdde152c8039e972dd479f7dffb0532a79de9a6de5926154ae2587f181ed6c06a99aee25667096bcf6495da5aa86e235d98baee5943.js"
-    integrity="sha512-X/zPM3t3PugxUVzd4VLIA56XLdR599/7BTKnnemm3lkmFUriWH8YHtbAapmu4lZnCWvPZJXaWqhuI12Yuu5ZQw=="></script>
-
 
 
 
@@ -382,26 +367,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "ELI5 Transformers (Part 1): Attention Mechanism ",
-    "headline": "ELI5 Transformers (Part 1): Attention Mechanism ",
+    "name": "ELI5 Transformers (Part 2) - Generation",
+    "headline": "ELI5 Transformers (Part 2) - Generation",
     
-    "abstract": "(it\u0026rsquo;s glorified linear algebra)",
+    "abstract": "(it\u0026rsquo;s glorified sequence classification)",
     "inLanguage": "en",
-    "url" : "http://localhost:1313/posts/transformers-pt-1/",
+    "url" : "http://localhost:1313/posts/transformers-pt-2-prev/",
     "author" : {
       "@type": "Person",
       "name": "@Yiheng Yu"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-10-31T00:00:00\u002b00:00",
-    "datePublished": "2025-10-31T00:00:00\u002b00:00",
+    "dateCreated": "2025-11-11T00:00:00\u002b00:00",
+    "datePublished": "2025-11-11T00:00:00\u002b00:00",
     
-    "dateModified": "2025-10-31T00:00:00\u002b00:00",
+    "dateModified": "2025-11-11T00:00:00\u002b00:00",
     
     "keywords": ["AI","Machine Learning","ELI5"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2612"
+    "wordCount": "2146"
   }]
   </script>
 
@@ -998,8 +983,8 @@
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/transformers-pt-1/"
-      >ELI5 Transformers (Part 1): Attention Mechanism </a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/transformers-pt-2-prev/"
+      >ELI5 Transformers (Part 2) - Generation</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -1008,7 +993,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        ELI5 Transformers (Part 1): Attention Mechanism 
+        ELI5 Transformers (Part 2) - Generation
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -1066,7 +1051,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-31T00:00:00&#43;00:00">31 October 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2612 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+      <time datetime="2025-11-11T00:00:00&#43;00:00">11 November 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2146 words</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1080,7 +1065,7 @@
     
   
   <span
-    id="views_posts/transformers-pt-1/index.md"
+    id="views_posts/transformers-pt-2-prev/index.md"
     class="animate-pulse inline-block text-transparent max-h-3 rounded-full -mt-[2px] align-middle bg-neutral-300 dark:bg-neutral-400"
     title="views"
     >loading</span
@@ -1102,7 +1087,7 @@
     
   
   <span
-    id="likes_posts/transformers-pt-1/index.md"
+    id="likes_posts/transformers-pt-2-prev/index.md"
     class="animate-pulse inline-block text-transparent max-h-3 rounded-full -mt-[2px] align-middle bg-neutral-300 dark:bg-neutral-400"
     title="likes"
     >loading</span
@@ -1140,6 +1125,14 @@
     
 
     
+    
+      <span class="ps-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+</span>
     
   </div>
 
@@ -1247,24 +1240,28 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#model-only-needs-to-be-useful">Model only needs to be useful</a></li>
-    <li><a href="#transformer-model-architecture">Transformer Model Architecture</a>
+    <li><a href="#recap-on-transformer-architecture">Recap on transformer architecture</a></li>
+    <li><a href="#setup">Setup</a>
       <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#the-transformer-itself">The Transformer Itself</a></li>
-        <li><a href="#the-attention-head">The attention head</a></li>
+        <li><a href="#depencies">depencies</a></li>
+        <li><a href="#model">model</a></li>
+        <li><a href="#example-input-text">example input text</a></li>
       </ul>
     </li>
-    <li><a href="#example-qwen3">Example: Qwen3</a>
+    <li><a href="#step-by-step-text-generation">Step-by-step Text Generation</a>
       <ul>
-        <li><a href="#prep">Prep</a></li>
-        <li><a href="#get-the-model">Get the model</a></li>
-        <li><a href="#model-architecture">Model Architecture</a></li>
-        <li><a href="#have-some-fun">Have some fun!</a></li>
+        <li><a href="#tokenisation">Tokenisation</a></li>
+        <li><a href="#the-transformer">The Transformer</a></li>
+        <li><a href="#the-task-head">The Task-Head</a></li>
       </ul>
     </li>
-    <li><a href="#final-thoughts">Final thoughts</a></li>
-    <li><a href="#some-other-resources">Some Other Resources</a></li>
+    <li><a href="#tokenisation-1">Tokenisation</a>
+      <ul>
+        <li><a href="#model-1">Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-the-model">Running the model</a></li>
+    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a></li>
   </ul>
 </nav>
   </div>
@@ -1278,24 +1275,28 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#model-only-needs-to-be-useful">Model only needs to be useful</a></li>
-    <li><a href="#transformer-model-architecture">Transformer Model Architecture</a>
+    <li><a href="#recap-on-transformer-architecture">Recap on transformer architecture</a></li>
+    <li><a href="#setup">Setup</a>
       <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#the-transformer-itself">The Transformer Itself</a></li>
-        <li><a href="#the-attention-head">The attention head</a></li>
+        <li><a href="#depencies">depencies</a></li>
+        <li><a href="#model">model</a></li>
+        <li><a href="#example-input-text">example input text</a></li>
       </ul>
     </li>
-    <li><a href="#example-qwen3">Example: Qwen3</a>
+    <li><a href="#step-by-step-text-generation">Step-by-step Text Generation</a>
       <ul>
-        <li><a href="#prep">Prep</a></li>
-        <li><a href="#get-the-model">Get the model</a></li>
-        <li><a href="#model-architecture">Model Architecture</a></li>
-        <li><a href="#have-some-fun">Have some fun!</a></li>
+        <li><a href="#tokenisation">Tokenisation</a></li>
+        <li><a href="#the-transformer">The Transformer</a></li>
+        <li><a href="#the-task-head">The Task-Head</a></li>
       </ul>
     </li>
-    <li><a href="#final-thoughts">Final thoughts</a></li>
-    <li><a href="#some-other-resources">Some Other Resources</a></li>
+    <li><a href="#tokenisation-1">Tokenisation</a>
+      <ul>
+        <li><a href="#model-1">Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-the-model">Running the model</a></li>
+    <li><a href="#text-generation-one-word-at-a-time">Text generation, one word at a time</a></li>
   </ul>
 </nav>
   </div>
@@ -1413,290 +1414,62 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          
+          <p>
 
-<p>In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won&rsquo;t go into too much math and there won&rsquo;t be any mathematical formulas. However, I would assume readers of this silly little post already have some okay-ish background in math/datascience. (i.e., matrix computations, embeddings, tokens, model fitting etc.). I am not going to list out all the implementation details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, I would like to draw out a general framework on transformers to help one understand the detailed math behind.<br></p>
-<p>Today, I&rsquo;ll very quickly go through some very basics on neural network model, just enough to cover what needed for this post, accompied by demo of transformer model as a proof of concept. In this section, there will be some codes that you can copy and paste into an interactive python session to fiddle around for a bit. And lastly, I&rsquo;ll do a quick sketch on the general architecture of transformers, and a overview of the attention mechasm.<br></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="always has been"
+    src="./featured.jpg"
+    ><figcaption>always has been</figcaption></figure>
+</p>
+<p><em>This is part 2 of the ELI5 transformers series, however you do not need to read Part 1 in order to follow the article. Link to the previous article can be found <a
+  href="https://yuyiheng.cc/posts/transformers-pt-1/"
+    target="_blank"
+  >here</a></em></p>
+<p>I&rsquo;m pretty sure you&rsquo;ve already heard about someting like this before: &lsquo;generative LLM is just slightly advanced auto complete&rsquo;. Or, something like &lsquo;all it does is predicting what&rsquo;s the most likely next word with all the previous words given&rsquo;.</p>
+<p>Today I would like to invite you think of text generation in a very different perspective, at least it&rsquo;s the persceptive I found helped me the most: <em><strong>text generation is glorified sequence classification.</strong></em> I&rsquo;m going to walk your way through the text generation process, step-by-step, one word at a time, showing you how text generation <em>actually</em> works.</p>
+<p style="font-size:250%">FINISH THIS LATER!!</p>
 
-<h2 class="relative group">Model only needs to be useful
-    <div id="model-only-needs-to-be-useful" class="anchor"></div>
+<h2 class="relative group">Recap on transformer architecture
+    <div id="recap-on-transformer-architecture" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model-only-needs-to-be-useful" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#recap-on-transformer-architecture" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>In order to make things easier to understand, I would wish to start with an inaccuate premise: we can view neural network models as functions that takes some sort of matrix as inputs, do some sort of matrix computations, and output another matrix as the final result. What makes one neural network different from others is how the computation is carried out. It&rsquo;s like \(y=a \times x^2\) is a different function from \(y=a \times sin(x)\), only that in the case of neural network, both x and y are matrices, and the math is much complicated. When it comes to model training, we are essentially trying to find values gives best fit to the data.<br></p>
-<p>There&rsquo;s an important assumption here: just because a model fits the data well does not mean the model describes the mechanisms behind the data. For example, we <i>definitely</i> can fit \(y=a \times sin(x) + b\) to a normal distribution data (like distribution of customer spendings in McDonald&rsquo;s), and it&rsquo;s probably going to be a pretty good fit, but this does not mean the sine function has anything to do with explaining the normal distribution. A good model does not always need to be a description; a good model just needs to be useful for its purpose.<br></p>
-<p>Transformers are precisely these kinds of models: they are, surprisingly good at fitting into all sorts of data whilst the math behind the model probably doesn&rsquo;t have much to do with the mechanisms behind. We don&rsquo;t know how transformers work so well for text-based tasks. At least not yet. Originally, transformer was designed as an add-on to text-processing neural network models in order to tackle some tricky problems (these problems are not the main focus of the current blogpost so I&rsquo;m skipping them, but <a
-  href="https://towardsdatascience.com/beautifully-illustrated-nlp-models-from-rnn-to-transformer-80d69faf2109/"
+<p>As mentioned in <a
+  href="https://yuyiheng.cc/posts/transformers-pt-1/"
     target="_blank"
-  >here&rsquo;s a good article if you were interested</a>). We just happened to discover that transformers alone is good enough to solve these problems; we just need to make the transformers much bigger. So that&rsquo;s where the AI boom started: GPT2 solved issues in GPT1 by simply being 10 times bigger; the most-recently open-sourced <a
-  href="https://huggingface.co/mistralai/Mixtral-8x7B-v0.1"
-    target="_blank"
-  >pretrained GPT-OSS</a> is 200 times bigger than <a
-  href="https://huggingface.co/openai-community/gpt2"
-    target="_blank"
-  >the previous open-sourced model, GPT2</a> <i>(note: GPT-OSS is structurally different from the original GPT2 but the fundamental ideas are the same.)</i> There are even speculations suggesting transformer neural network models can be seen as some sort of universal function approximator. That is, it&rsquo;s capable of &lsquo;approximating&rsquo; other formulas/functions with a certain degree of accuracy, providing the model itself is big enough (<a
-  href="https://en.wikipedia.org/wiki/Universal_approximation_theorem"
-    target="_blank"
-  >&lsquo;universal approximation theorem&rsquo;</a>). <br></p>
-
-<h2 class="relative group">Transformer Model Architecture
-    <div id="transformer-model-architecture" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#transformer-model-architecture" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Overview
-    <div id="overview" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>At conceptual level, the general idea behind transformer models is actually pretty intuitive. We can roughly divide the model calculations into three stages:
-<ol class="border-s-2 border-primary-500 dark:border-primary-300 list-none">
-
-
-
-
-
-
-<li>
-  <div class="flex">
-    <div
-      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
-      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
-    </div>
-    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
-      <div class="flex justify-between">
-        
-          <h2 class="mt-0">Stage 1</h2>
-        
-        
-          <h3 class="">
-            <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Embedding
-  </span>
-</span>
-
-          </h3>
-        
-      </div>
-      
-        <h4 class="mt-0">
-          The input gets converted into vectors or matrices.
-        </h4>
-      
-      <div class="mb-6">
-        
-  The first step starts with creating a mathematical representation of our input data. This process can vary based on different types of inputs. It can simply be some sort of look-up tables (text embedding), some matrix transformations of the raw inputs (convolution) etc.
-
-      </div>
-    </div>
-  </div>
-</li>
-
-
-
-
-
-
-<li>
-  <div class="flex">
-    <div
-      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
-      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
-    </div>
-    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
-      <div class="flex justify-between">
-        
-          <h2 class="mt-0">Stage 2</h2>
-        
-        
-          <h3 class="">
-            <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Transformer
-  </span>
-</span>
-
-          </h3>
-        
-      </div>
-      
-        <h4 class="mt-0">
-          The raw output from Stage 1 feeds into the multiple different attention layers.
-        </h4>
-      
-      <div class="mb-6">
-        
-  Mathematically, each attention layer is doing very much the same mathematical operation, with each layer having its own sets of parameters. Each layer takes a matrix as an input, and outputs another matrix to pass onto the next layer. This process is repeated multiple times. Stage 2 is the core of a transformer model, it *transforms* our inputs into something else.
-
-      </div>
-    </div>
-  </div>
-</li>
-
-
-
-
-
-
-<li>
-  <div class="flex">
-    <div
-      class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5">
-      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span>
-    </div>
-    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
-      <div class="flex justify-between">
-        
-          <h2 class="mt-0">Stage 3</h2>
-        
-        
-          <h3 class="">
-            <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Output
-  </span>
-</span>
-
-          </h3>
-        
-      </div>
-      
-        <h4 class="mt-0">
-          We convert the matrix output from Stage 2 into task-specific results.
-        </h4>
-      
-      <div class="mb-6">
-        
-  This is usually done by another set of simple matrix operations, depending on the task. For example, if we are doing text sentimental analysis task, this operation could be a simple matrix multiplication, resulting in a final score of 0-10.
-
-      </div>
-    </div>
-  </div>
-</li>
-
-</ol>
-</p>
-<p>In other words, you can conceptually see <strong>Stage 1</strong> as a conversion stage in order to initiate the model, <strong>Stage 2</strong> being the core of a transformer model, and <strong>Stage 3</strong> as a &lsquo;decoding&rsquo; step to convert the output back into human-readable form. When we talk about transformer models, we are mostly referring to <strong>Stage 2</strong>, which is the focus of the current post. I&rsquo;ll elaborate a lot more on what&rsquo;s happening in <strong>Stage 3</strong> in the next post.<br></p>
-
-<h3 class="relative group">The Transformer Itself
-    <div id="the-transformer-itself" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-transformer-itself" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>The transformer itself is pretty straightforward: it consists of stacks of multiple attention layers that often share exactly the same, or very similar structure:
-<pre class="not-prose mermaid">
----
-config:
-  layout: dagre
----
-flowchart LR
-
-    n1["Input"] --> n2["Attention<br>Layer"]
-    n2 --> n3["Attention<br>Layer"]
-    n3 --> n6["Repeat"]
-    n6 --> n5["Output"]
-
-    n2@{ shape: rounded}
-    n3@{ shape: rounded}
-    n6@{ shape: text}
-    classDef default fill: transparent, bg-color: transparent
-
-</pre>
-</p>
-<p>Asttention layer consists of multiple &lsquo;attention heads&rsquo; that works in parallel: each attention head processes the inputs independently, and the output of all attention heads are merged back together. The joined matrix is the final output of the current layer: <br></p>
+  >the previous post</a>, AI models as we know today computes data in roughly three stages:</p>
 <pre class="not-prose mermaid">
 flowchart LR
- subgraph s1["Attention Heads"]
-
-    direction LR
-        n14["Attention Head"]
-        n16["Attention Head"]
-        n17["Attention Head"]
-
-  end
-
-    s1 --> n10["Merge"]
-    n10 --> n18["Next Layer"]
-    n19["Previous Layer"] --> s1
-
-    n18@{ shape: text}
-    n19@{ shape: text}
-    classDef default fill: transparent
-    style s1 fill:transparent
-
-</pre>
-
-
-<h3 class="relative group">The attention head
-    <div id="the-attention-head" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-attention-head" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>You can think each of the attention head as a mini neural network. A typical attention head works like this:</p>
-<p><pre class="not-prose mermaid">
-flowchart TB
-
-    IN["Previous Layer"] --> Q["Matrix 1"] & K["Matrix 2"] & V["Matrix 3"]
-    Q ---> SDPA["Matrix 1 & 2"]
-    K ---> SDPA
-    SDPA --> n1["Output"]
-    V ---> n1
+    n1(["Raw Input"]) --> n2["Embedding"]
+    n2 --> n3["Transformer"]
+    n3 --> n4["Model output"]
+    n4 --> n5(["Final output"])
     classDef default fill: transparent, bg-color: transparent
-
 </pre>
 
-<br></p>
 <ol>
-<li><bullet> Step 1: The input matrix gets converted into multiple matices through matrix multiplication. Most current transformers converts input matrix into three smaller matrices.</bullet></li>
-<li><bullet>Step 2: Two of the matrix from step (1) gets combined together using some matrix operation, usually dot products.</bullet></li>
-<li><bullet>Step 3: The third matrix from step (1) combines with output from step (2), using some other matrix operation.</bullet></li>
+<li><bullet> Stage 1 converts inputs into vectors so that it&rsquo;s model-readable (<strong><code>Embedding</code></strong>).</li>
+<li><bullet> Stage 2 computes the vector representation of the input. This is the main focus of the <a
+  href="https://yuyiheng.cc/posts/transformers-pt-1/"
+    target="_blank"
+  >previous post</a> (<strong><code>Transformer</code></strong>).</li>
+<li><bullet> Stage 3 converts outputs from the transformer into human-readable, task-specific format (<strong><code>Model output</code></strong>).</li>
 </ol>
-
-<h2 class="relative group">Example: Qwen3
-    <div id="example-qwen3" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#example-qwen3" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>We&rsquo;ll now take a look at an actual transformer model and see how it works in action.
-It&rsquo;s very suprising is that, transformers are able to produce pretty impressive results for tasks model that are not specifically trained for. Here, we&rsquo;ll use <a
+<p>Stage 1 and 3 are very context-dependent as they are dependent on the type of inputs (text, image, audio etc.,) For image data, this can simply be the RGBA values for each pixel; for text data, this can be a look up table of converting sub-words into matrices. <br></p>
+<p>The model that&rsquo;s going to be used in this demo is <a
   href="https://qwen.ai/blog?id=qwen3"
     target="_blank"
-  >Qwen3, a small-sized text generation model</a> as a demo. It&rsquo;s tiny (~1.5GB) but the performance is VERY impressive for its size.<br>
-Here&rsquo;s huggingface&rsquo;s link to the model: <br>
+  >Qwen3</a>, same as the previous post. It&rsquo;s a very tiny text generation model that I feel performs very well. Here&rsquo;s huggingface&rsquo;s link to the model: <br>
 <div class="huggingface-card-wrapper">
-    <a id="huggingface-61480284aec1dd272883911c77809285" target="_blank" href="https://huggingface.co/Qwen/Qwen3-0.6B" class="cursor-pointer">
+    <a id="huggingface-89467fc8fa2ee801de5202a9eb502bd9" target="_blank" href="https://huggingface.co/Qwen/Qwen3-0.6B" class="cursor-pointer">
       <div
         class="w-full md:w-auto p-0 m-0 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl">
         <div class="w-full md:w-auto pt-3 p-5">
@@ -1711,7 +1484,7 @@ Here&rsquo;s huggingface&rsquo;s link to the model: <br>
               </span>
             </span>
             <div
-              id="huggingface-61480284aec1dd272883911c77809285-id"
+              id="huggingface-89467fc8fa2ee801de5202a9eb502bd9-id"
               class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
               Qwen/Qwen3-0.6B
             </div>
@@ -1727,7 +1500,7 @@ Here&rsquo;s huggingface&rsquo;s link to the model: <br>
               <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg></span>
             </span>
-            <div id="huggingface-61480284aec1dd272883911c77809285-likes" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+            <div id="huggingface-89467fc8fa2ee801de5202a9eb502bd9-likes" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
               802
             </div>
 
@@ -1735,7 +1508,7 @@ Here&rsquo;s huggingface&rsquo;s link to the model: <br>
               <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
             </span>
-            <div id="huggingface-61480284aec1dd272883911c77809285-downloads" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+            <div id="huggingface-89467fc8fa2ee801de5202a9eb502bd9-downloads" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
               7.059495e&#43;06
             </div>
           </div>
@@ -1749,104 +1522,145 @@ Here&rsquo;s huggingface&rsquo;s link to the model: <br>
         src="/js/fetch-repo.min.dc5533c50cefd50405344b235937142271f26229fe39cbee27fd4960e8bb897a0beebfad77a1091ca91cd0d1fb14e70fc37cc114dd9674fb2c32e0ab512ec8a4.js"
         integrity="sha512-3FUzxQzv1QQFNEsjWTcUInHyYin&#43;OcvuJ/1JYOi7iXoL7r&#43;td6EJHKkc0NH7FOcPw3zBFN2WdPssMuCrUS7IpA=="
         data-repo-url="https://huggingface.co/api/models/Qwen/Qwen3-0.6B"
-        data-repo-id="huggingface-61480284aec1dd272883911c77809285"></script>
+        data-repo-id="huggingface-89467fc8fa2ee801de5202a9eb502bd9"></script>
     </a>
   </div>
 </p>
 
-<h3 class="relative group">Prep
-    <div id="prep" class="anchor"></div>
+<h2 class="relative group">Setup
+    <div id="setup" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#prep" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before we start, make sure you installed all the dependencies. Open termianl and type these codes to install depencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install torch transformers tokenizers -U
+</span></span></code></pre></div><p>Then in terminal, to start python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python
+</span></span></code></pre></div><p>..Or ipython if you installed jupyter notebook previously:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ipython
+</span></span></code></pre></div><p>You should see something like this in your terminal, indicating the beginning of a python session:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Python 3.13.7 | packaged by conda-forge | <span style="color:#89dceb;font-weight:bold">(</span>main, Sep  <span style="color:#fab387">3</span> 2025, 14:24:46<span style="color:#89dceb;font-weight:bold">)</span> <span style="color:#89dceb;font-weight:bold">[</span>Clang 19.1.7 <span style="color:#89dceb;font-weight:bold">]</span> on darwin
+</span></span><span style="display:flex;"><span>Type <span style="color:#a6e3a1">&#34;help&#34;</span>, <span style="color:#a6e3a1">&#34;copyright&#34;</span>, <span style="color:#a6e3a1">&#34;credits&#34;</span> or <span style="color:#a6e3a1">&#34;license&#34;</span> <span style="color:#cba6f7">for</span> more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;
+</span></span></code></pre></div>
+<h3 class="relative group">depencies
+    <div id="depencies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#depencies" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Make sure you have python pre-installed. If you were using windows, python can be downloaded from the Microsoft Store. If you were Mac/ Linux Mint/ Ubuntu/ Debian etc., your computer should already come with python by default. For this demo, we would need python version <a style="font-size:75%">\( \geqslant \)</a> 3.12.<br></p>
-<p>We first need to install some dependencies. Open terminal/ command prompt, type this command to install required dependencies:<br></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip install torch transformers
-</span></span></code></pre></div><p>And then type:<br></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python
-</span></span></code></pre></div><p>To open python and start an interactive python session.<br><br>
-<em>Alternatively, if you installed <a
-  href="https://ipython.org/install.html"
-    target="_blank"
-  >ipython</a>, which should already be installed if you have installed <a
-  href="https://jupyter.org/install"
-    target="_blank"
-  >jupyter notebook</a> previously, you can open ipython instead:</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ipython
-</span></span></code></pre></div><p>Once python was opened, copy and paste these lines into python to import required packages:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">pprint</span> <span style="color:#94e2d5">import</span> pprint
-</span></span><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">re</span>
-</span></span><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> AutoModelForCausalLM, AutoTokenizer, BatchEncoding
+<p>Now import dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#94e2d5">import</span> <span style="color:#fab387">torch</span>
+</span></span><span style="display:flex;"><span><span style="color:#94e2d5">from</span> <span style="color:#fab387">transformers</span> <span style="color:#94e2d5">import</span> AutoTokenizer, Qwen3ForCausalLM
+</span></span></code></pre></div><hr>
+<p><i>Sidenote:<br>
+As of November 2025, Pytorch/ Apple still haven&rsquo;t fully fixed the <a href="https://github.com/pytorch/pytorch/issues/91368">memory leak</a> issue for Apple Silicon devices. As a result, running models with pytorch may gets slower and slower over time, or freeze compeletly. If you were running a Macbook purchased after 2020, I&rsquo;d recomment manually set pytorch device as &lsquo;cpu&rsquo;. Skip this code if you were confident that this memory leak won&rsquo;t happen:</i></p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>set_default_device(<span style="color:#a6e3a1">&#39;cpu&#39;</span>)
 </span></span></code></pre></div><hr>
 
-<h3 class="relative group">Get the model
-    <div id="get-the-model" class="anchor"></div>
+<h3 class="relative group">model
+    <div id="model" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#get-the-model" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Models from <code>transformers</code> library takes matrices as inputs, and outputs matrices. Thus, text generation models needs to be paired with <code>tokenizer</code> in order to convert inputs into model-readable formant, and convert model outputs into human-readble format. <code>transformers</code> library has a special class called <code>TextGenerationPipeline</code> to handle this conversion class, but would be a bit too complicated for our purpose. Here, I modified demo code from <a href='https://huggingface.co/Qwen/Qwen3-0.6B'>Qwen3&rsquo;s demo code</a> that simply combines tokenizers and models together. Here&rsquo;s the code for you to copy and paste into the currently running python session:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#cba6f7">class</span> <span style="color:#f9e2af">DemoChatbot</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e3a1">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    A simple demo chatbot, code modified from https://huggingface.co/Qwen/Qwen3-0.6B
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">__init__</span>(<span style="color:#89dceb">self</span>, model_name:<span style="color:#89dceb">str</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;Qwen/Qwen3-0.6B&#34;</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(model_name)
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">False</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>_thiniking_regex <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#f38ba8">r</span><span style="color:#a6e3a1">&#34;&lt;think&gt;(.*?)&lt;/think&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(
-</span></span><span style="display:flex;"><span>            model_name,
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">=</span> []
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">clear_history</span>(<span style="color:#89dceb">self</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> <span style="color:#fab387">None</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">=</span> []
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">tokenise</span>(<span style="color:#89dceb">self</span>, user_input:<span style="color:#89dceb">str</span>, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> BatchEncoding:
-</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> enable_thinking <span style="color:#89dceb;font-weight:bold">is</span> <span style="color:#fab387">None</span>:
-</span></span><span style="display:flex;"><span>          enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>enable_thinking  <span style="color:#6c7086;font-style:italic"># default value</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        messages <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history <span style="color:#89dceb;font-weight:bold">+</span> [{<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;user&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: user_input}]
-</span></span><span style="display:flex;"><span>        tokens <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>apply_chat_template(
-</span></span><span style="display:flex;"><span>            messages,
-</span></span><span style="display:flex;"><span>            tokenize<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>            enable_thinking<span style="color:#89dceb;font-weight:bold">=</span>enable_thinking, 
-</span></span><span style="display:flex;"><span>            add_generation_prompt<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
-</span></span><span style="display:flex;"><span>            return_tensors<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;pt&#34;</span>
-</span></span><span style="display:flex;"><span>        )
-</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> tokens
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">def</span> <span style="color:#89b4fa">__call__</span>(<span style="color:#89dceb">self</span>, user_input, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>) <span style="color:#89dceb;font-weight:bold">-&gt;</span> <span style="color:#fab387">None</span>:
-</span></span><span style="display:flex;"><span>        inputs <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenise(user_input, enable_thinking<span style="color:#89dceb;font-weight:bold">=</span>enable_thinking)
-</span></span><span style="display:flex;"><span>        response_ids <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>generate(
-</span></span><span style="display:flex;"><span>            <span style="color:#89dceb;font-weight:bold">**</span>inputs,
-</span></span><span style="display:flex;"><span>            max_new_tokens<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>,
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>        response_ids <span style="color:#89dceb;font-weight:bold">=</span> response_ids[<span style="color:#fab387">0</span>][<span style="color:#89dceb">len</span>(inputs<span style="color:#89dceb;font-weight:bold">.</span>input_ids[<span style="color:#fab387">0</span>]):]<span style="color:#89dceb;font-weight:bold">.</span>tolist()
-</span></span><span style="display:flex;"><span>        response <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>tokenizer<span style="color:#89dceb;font-weight:bold">.</span>decode(response_ids, skip_special_tokens<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>)
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># since we aren&#39;t going to do anything with the output, </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># just prints out the response and save it to the chat history.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">print</span>(response)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6c7086;font-style:italic"># Update history</span>
-</span></span><span style="display:flex;"><span>        response_history <span style="color:#89dceb;font-weight:bold">=</span> re<span style="color:#89dceb;font-weight:bold">.</span>sub(<span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>_thiniking_regex, <span style="color:#a6e3a1">&#34;&#34;</span>, response, flags<span style="color:#89dceb;font-weight:bold">=</span>re<span style="color:#89dceb;font-weight:bold">.</span>DOTALL)<span style="color:#89dceb;font-weight:bold">.</span>strip()
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history<span style="color:#89dceb;font-weight:bold">.</span>append({<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;user&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: user_input})
-</span></span><span style="display:flex;"><span>        <span style="color:#89dceb">self</span><span style="color:#89dceb;font-weight:bold">.</span>history<span style="color:#89dceb;font-weight:bold">.</span>append({<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;assistant&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: response_history})
-</span></span><span style="display:flex;"><span>        
-</span></span></code></pre></div><p>Then, create a new chat instance with the code below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat <span style="color:#89dceb;font-weight:bold">=</span> DemoChatbot()
-</span></span></code></pre></div><p>You will see a progress bar showing download status. Once completed, type the following to have a look at the QWen3 model structure:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint(chat<span style="color:#89dceb;font-weight:bold">.</span>model)
-</span></span></code></pre></div><p>…which in term will give you this output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3ForCausalLM(
+<p>Finally, load the model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DEVICE <span style="color:#89dceb;font-weight:bold">=</span> torch<span style="color:#89dceb;font-weight:bold">.</span>get_default_device()
+</span></span><span style="display:flex;"><span>CHECKPOINT <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Qwen/Qwen3-0.6B&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Using device:&#34;</span>, DEVICE)
+</span></span><span style="display:flex;"><span>model <span style="color:#89dceb;font-weight:bold">=</span> Qwen3ForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(CHECKPOINT)
+</span></span><span style="display:flex;"><span>model<span style="color:#89dceb;font-weight:bold">.</span>requires_grad_(<span style="color:#fab387">False</span>)
+</span></span></code></pre></div><br>
+You are now all set.
+
+<h3 class="relative group">example input text
+    <div id="example-input-text" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#example-input-text" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Let&rsquo;s start with an example text input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>example <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Hi&#34;</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Step-by-step Text Generation
+    <div id="step-by-step-text-generation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-by-step-text-generation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Tokenisation
+    <div id="tokenisation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tokenisation" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Our firtst problem is that our input (<code>example</code>), is <code>str</code>. However, our <code>model</code> does not accept <code>str</code> as input. If you just pass our input to the model, you would get this TypeError:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&gt;&gt;&gt;</span> model(example)
+</span></span><span style="display:flex;"><span><span style="color:#fab387">TypeError</span>: embedding(): argument <span style="color:#a6e3a1">&#39;indices&#39;</span> (position <span style="color:#fab387">2</span>) must be Tensor, <span style="color:#89dceb;font-weight:bold">not</span> <span style="color:#89dceb">str</span>
+</span></span></code></pre></div><p>In order to do text-generation, one first need to to convert inputs into machine-readable formats. This conversion process is called <a
+  href="https://arxiv.org/html/2407.11606v3"
+    target="_blank"
+  >tokenisation</a>. Tokenisation is not the main focus of today&rsquo;s post, but as a quick ELI5, you can functionally see tokenisers as glorified look-up tables that converts texts into indices. <code>Model</code> reads these indicies, through it&rsquo;s own internal lookup table, convert them into text matrices.</p>
+<p>It works like this:
+<pre class="not-prose mermaid">
+flowchart LR
+    ipt(["input"]) <--> tkn["Tokenizer"]
+    tkn <--> mdl["Model"]
+    classDef default fill: transparent, bg-color: transparent
+</pre>
+</p>
+<p>For example:
+<pre class="not-prose mermaid">
+flowchart LR
+    ipt(["text: 'cat sits'"]) <--tokenizer--> tkn["tokens: [[8, 10]]"]
+    tkn --> mdl["Model"]
+    classDef default fill: transparent, bg-color: transparent
+</pre>
+</p>
+<p>For huggingface&rsquo;s <code>transformers</code> library, tokenisation is handeled by <code>Tokenizer</code> objects. Every pre-trained text models in <code>transformers</code> library all come with their own paired tokenizers. This is the one used by our model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(CHECKPOINT)
+</span></span></code></pre></div><p>To tokenize our text:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tokens <span style="color:#89dceb;font-weight:bold">=</span> tokenizer(example, return_tensors<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#39;pt&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(tokens)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(tokens[<span style="color:#a6e3a1">&#39;input_ids&#39;</span>]<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span></code></pre></div><p>You would see our tokenized text input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#a6e3a1">&#39;input_ids&#39;</span>: tensor([[<span style="color:#fab387">13048</span>]]), <span style="color:#a6e3a1">&#39;attention_mask&#39;</span>: tensor([[<span style="color:#fab387">1</span>]])}
+</span></span><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">1</span>])
+</span></span></code></pre></div>
+<h3 class="relative group">The Transformer
+    <div id="the-transformer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-transformer" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>Base model &amp; the task head</strong></p>
+<hr>
+<p>Models in the <code>transformers</code> library are assembed by two parts: the transformer itself,  task-specific &lsquo;head&rsquo;. Let&rsquo;s have a look at our model architecture by running <code>print(model)</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#89dceb">print</span>(model)
+</span></span><span style="display:flex;"><span>Qwen3ForCausalLM(
 </span></span><span style="display:flex;"><span>  (model): Qwen3Model(
 </span></span><span style="display:flex;"><span>    (embed_tokens): Embedding(<span style="color:#fab387">151936</span>, <span style="color:#fab387">1024</span>)
 </span></span><span style="display:flex;"><span>    (layers): ModuleList(
@@ -1874,157 +1688,254 @@ Here&rsquo;s huggingface&rsquo;s link to the model: <br>
 </span></span><span style="display:flex;"><span>  )
 </span></span><span style="display:flex;"><span>  (lm_head): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">151936</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
 </span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>In output above, our transformer base model is the one called  <code>(model): Qwen3Model</code> at the very beginning, the task-head is the <code>lm_head: Linear</code> at the very end. Let&rsquo;s separate them apart:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>base_model <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>model
+</span></span><span style="display:flex;"><span>task_head <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>lm_head
+</span></span></code></pre></div><p><code>print(base_model)</code>  shall give you the output save as above except the &rsquo;lm_head&rsquo; bits.</p>
+<p><strong>Running the transformer</strong></p>
+<hr>
+<p>To do text generation, we first pass the inputs to the <code>base_model</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>output <span style="color:#89dceb;font-weight:bold">=</span> base_model(<span style="color:#89dceb;font-weight:bold">**</span>tokens)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(output)
+</span></span></code></pre></div><p>Which would give you this output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>BaseModelOutputWithPast(last_hidden_state<span style="color:#89dceb;font-weight:bold">=</span>tensor([[[ <span style="color:#fab387">7.4006</span>, <span style="color:#fab387">29.0470</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.1732</span>,  <span style="color:#89dceb;font-weight:bold">...</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.2643</span>,  <span style="color:#fab387">1.1580</span>,  <span style="color:#fab387">1.1260</span>]]]), past_key_values<span style="color:#89dceb;font-weight:bold">=</span>DynamicCache(layers<span style="color:#89dceb;font-weight:bold">=</span>[DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer, DynamicLayer]), hidden_states<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>, attentions<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">None</span>)
+</span></span></code></pre></div><p>Output of the transformer <code>base_model</code> is the <code>last_hidden_state</code> attribute of the <code>BaseModelOutputWithPast</code> object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>last_hidden_state <span style="color:#89dceb;font-weight:bold">=</span> output<span style="color:#89dceb;font-weight:bold">.</span>last_hidden_state
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(last_hidden_state<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">1</span>, <span style="color:#fab387">1024</span>])
 </span></span></code></pre></div>
-<h3 class="relative group">Model Architecture
-    <div id="model-architecture" class="anchor"></div>
+<h3 class="relative group">The Task-Head
+    <div id="the-task-head" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model-architecture" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-task-head" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>The very core of a transformer model can be checked by:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pprint(chat<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>model)
-</span></span></code></pre></div><p>And you will get an output similar to the previous output, but without <code>lm_head</code> at the end:<br></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3Model(
-</span></span><span style="display:flex;"><span>  (embed_tokens): Embedding(<span style="color:#fab387">151936</span>, <span style="color:#fab387">1024</span>)
-</span></span><span style="display:flex;"><span>  (layers): ModuleList(
-</span></span><span style="display:flex;"><span>    (<span style="color:#fab387">0</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">27</span>): <span style="color:#fab387">28</span> x Qwen3DecoderLayer(
-</span></span><span style="display:flex;"><span>      (self_attn): Qwen3Attention(
-</span></span><span style="display:flex;"><span>        (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>        (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+<hr>
+<hr>
+<hr>
+
+<h2 class="relative group">Tokenisation
+    <div id="tokenisation-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tokenisation-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Quick sidenote on tokenizer</strong><br>
+On top of the transformer models themselves, we also need some helper objects in order to convert inputs/ outputs between human-readable and machine-readable formats: our inputs and desirerd outputs are both texts, however models only accepts matrices as their inputs and would only output matrices. This conversation process is called <a
+  href="https://arxiv.org/html/2407.11606v3"
+    target="_blank"
+  >tokenisation</a>. For huggingface transformers library, tokenisation is handeled by obejcts called <code>Tokenizer</code>. Tokenisation is very important process for linguistic research, and there are a lot of different methods to tokenise texts. <br></p>
+<p>Tokenisation is not the main focus of today&rsquo;s post, but as a quick ELI5, you can functionally see tokenisers as glorified look-up tables that converts texts into indices. <code>Model</code> reads these indicies, through it&rsquo;s own internal lookup table, convert them into text matrices. Pre-trained text models from <code>transformers</code> library all come with their own paired tokenizers.<br>
+It works like this:
+<pre class="not-prose mermaid">
+flowchart LR
+    ipt(["input"]) <--> tkn["Tokenizer"]
+    tkn <--> mdl["Model"]
+    classDef default fill: transparent, bg-color: transparent
+</pre>
+</p>
+<p>For example:
+<pre class="not-prose mermaid">
+flowchart LR
+    ipt(["text: 'cat sits'"]) <--tokenizer--> tkn["index: [[8, 10]]"]
+    tkn <--model--> mdl["matrix: <br>[[0.3, 0.2, 0.5], <br>[0.1, 0.7, 0.3]]"]
+    classDef default fill: transparent, bg-color: transparent
+</pre>
+</p>
+<p><strong>converter</strong><br>
+In order to test out the model, we&rsquo;ll first need to prepare a function that converts inputs &amp; outputs back and forth. Copy this function and paste into python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#cba6f7">def</span> <span style="color:#89b4fa">model_converter</span>(tokenizer, inputs: Union[<span style="color:#89dceb">str</span>, ModelOutput, torch<span style="color:#89dceb;font-weight:bold">.</span>Tensor]) <span style="color:#89dceb;font-weight:bold">-&gt;</span> Union[<span style="color:#89dceb">str</span>, BatchEncoding]:
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e3a1">&#34;&#34;&#34;Converts between text inputs and token indicies
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        tokenizer (PreTrainedTokenizerFast): the tokenizer to use
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">        inputs (Union[str, ModelOutput, torch.Tensor]): text inputs or model outputs
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e3a1">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic"># text -&gt; model inputs</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">if</span> <span style="color:#89dceb">isinstance</span>(inputs, <span style="color:#89dceb">str</span>):
+</span></span><span style="display:flex;"><span>        message <span style="color:#89dceb;font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>            {<span style="color:#a6e3a1">&#34;role&#34;</span>: <span style="color:#a6e3a1">&#34;user&#34;</span>, <span style="color:#a6e3a1">&#34;content&#34;</span>: inputs}
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        tokens <span style="color:#89dceb;font-weight:bold">=</span> tokenizer<span style="color:#89dceb;font-weight:bold">.</span>apply_chat_template(
+</span></span><span style="display:flex;"><span>            message, 
+</span></span><span style="display:flex;"><span>            tokenize<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>, 
+</span></span><span style="display:flex;"><span>            return_dict<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>, 
+</span></span><span style="display:flex;"><span>            enable_thinking<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>,
+</span></span><span style="display:flex;"><span>            add_generation_prompt<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">True</span>,
+</span></span><span style="display:flex;"><span>            return_tensors<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#39;pt&#39;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">return</span> tokens
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic"># in this demo, we will enconter several different types of model outputs...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic"># outputs from model.generate()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">elif</span> <span style="color:#89dceb">isinstance</span>(inputs, torch<span style="color:#89dceb;font-weight:bold">.</span>Tensor):
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> inputs<span style="color:#89dceb;font-weight:bold">.</span>ndim<span style="color:#89dceb;font-weight:bold">==</span><span style="color:#fab387">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> tokenizer<span style="color:#89dceb;font-weight:bold">.</span>decode(inputs)
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">elif</span> inputs<span style="color:#89dceb;font-weight:bold">.</span>ndim <span style="color:#89dceb;font-weight:bold">&gt;</span> <span style="color:#fab387">1</span> <span style="color:#89dceb;font-weight:bold">and</span> inputs<span style="color:#89dceb;font-weight:bold">.</span>shape[<span style="color:#fab387">0</span>]<span style="color:#89dceb;font-weight:bold">==</span><span style="color:#fab387">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> model_converter(tokenizer, inputs[<span style="color:#fab387">0</span>])    
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> tokenizer<span style="color:#89dceb;font-weight:bold">.</span>batch_decode(inputs)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6c7086;font-style:italic"># outputs from model.forward</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">elif</span> <span style="color:#89dceb">isinstance</span>(inputs, ModelOutput):
+</span></span><span style="display:flex;"><span>        <span style="color:#cba6f7">if</span> <span style="color:#a6e3a1">&#39;logits&#39;</span> <span style="color:#89dceb;font-weight:bold">in</span> inputs:
+</span></span><span style="display:flex;"><span>            sequences <span style="color:#89dceb;font-weight:bold">=</span> inputs<span style="color:#89dceb;font-weight:bold">.</span>logits<span style="color:#89dceb;font-weight:bold">.</span>topk(<span style="color:#fab387">1</span>, dim<span style="color:#89dceb;font-weight:bold">=-</span><span style="color:#fab387">1</span>)<span style="color:#89dceb;font-weight:bold">.</span>view(<span style="color:#fab387">1</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#cba6f7">return</span> model_converter(tokenizer, sequences)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#cba6f7">raise</span> <span style="color:#fab387">TypeError</span>(<span style="color:#89dceb">type</span>(inputs))
+</span></span></code></pre></div><br>
+Copy these codes to initialise the tokenizer:
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tokenizer <span style="color:#89dceb;font-weight:bold">=</span> AutoTokenizer<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(CHECKPOINT)
+</span></span><span style="display:flex;"><span>convert:Callable <span style="color:#89dceb;font-weight:bold">=</span> partial(model_converter, tokenizer)
+</span></span></code></pre></div>
+<h3 class="relative group">Model
+    <div id="model-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#model-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Copy these codes to initialise the model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#89dceb;font-weight:bold">=</span> AutoModelForCausalLM<span style="color:#89dceb;font-weight:bold">.</span>from_pretrained(CHECKPOINT)
+</span></span><span style="display:flex;"><span>model<span style="color:#89dceb;font-weight:bold">.</span>generation_config<span style="color:#89dceb;font-weight:bold">.</span>max_new_tokens <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">128</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#89dceb;font-weight:bold">.</span>requires_grad_(<span style="color:#fab387">False</span>)
+</span></span></code></pre></div><p>You are now all set.</p>
+
+<h2 class="relative group">Running the model
+    <div id="running-the-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#running-the-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before dive into the text generation mechaism, let&rsquo;s try some text generation first.
+Copy this example text or use whatever other texts you&rsquo;d like to have a try on:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>example <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Why are you running?&#34;</span>
+</span></span></code></pre></div><p><strong>Tokenisation</strong><br>
+First, we&rsquo;ll need to convert input text into model-redable form:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tokens <span style="color:#89dceb;font-weight:bold">=</span> convert(example)
+</span></span></code></pre></div><p>Running <code>print(tokens)</code> would print out something looks like a dictionary with keys like <code>input_ids</code> and <code>attention_mask</code>. <code>input_ids</code> are our main interest, these are our formatted input that gets converted into model-redable matrix. Using <code>convert</code>, we can convert the tokens back into text:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(convert(tokens[<span style="color:#a6e3a1">&#39;input_ids&#39;</span>]))
+</span></span></code></pre></div><p>&hellip;which would give you something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_start<span style="color:#89dceb;font-weight:bold">|&gt;</span>user
+</span></span><span style="display:flex;"><span>Why are you running<span style="color:#f38ba8">?</span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_end<span style="color:#89dceb;font-weight:bold">|&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_start<span style="color:#89dceb;font-weight:bold">|&gt;</span>assistant
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;</span>think<span style="color:#89dceb;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;/</span>think<span style="color:#89dceb;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p>&ldquo;&lt;|im_start|&gt;user&rdquo;, &ldquo;&lt;|im_start|&gt;assistant&rdquo;, &ldquo;&lt;think&gt;&rdquo; and &ldquo;&lt;/think&gt;&rdquo; are <code>extra special tokens</code> that manually amended by the <code>model_converter</code> in order to format our inputs into a format that the model was orinially trained with. Formatting input this way would help the model generating better results. Different tokenizers have different set of special tokens. For Qwen3 used here, you can view all special tokens by calling tokenizer.get_added_vocab() to see a list of all theset tokens.<br></p>
+<p><strong>Text Generation</strong><br>
+Use <code>model.generate</code> to run text generation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>outputs <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>generate(<span style="color:#89dceb;font-weight:bold">**</span>tokens)
+</span></span><span style="display:flex;"><span>outputs
+</span></span></code></pre></div><p>You would see that our model returned antoher matrix of token indicies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor([[<span style="color:#fab387">151644</span>,    <span style="color:#fab387">872</span>,    <span style="color:#fab387">198</span>,  <span style="color:#fab387">10234</span>,    <span style="color:#fab387">525</span>,    <span style="color:#fab387">498</span>,   <span style="color:#fab387">4303</span>,     <span style="color:#fab387">30</span>, <span style="color:#fab387">151645</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#fab387">198</span>, <span style="color:#fab387">151644</span>,  <span style="color:#fab387">77091</span>,    <span style="color:#fab387">198</span>, <span style="color:#fab387">151667</span>,    <span style="color:#fab387">271</span>, <span style="color:#fab387">151668</span>,    <span style="color:#fab387">271</span>,     <span style="color:#fab387">40</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#fab387">2776</span>,    <span style="color:#fab387">537</span>,   <span style="color:#fab387">4303</span>,     <span style="color:#fab387">13</span>,    <span style="color:#fab387">358</span>,   <span style="color:#fab387">2776</span>,   <span style="color:#fab387">1101</span>,   <span style="color:#fab387">1588</span>,    <span style="color:#fab387">311</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#fab387">1492</span>,    <span style="color:#fab387">498</span>,    <span style="color:#fab387">448</span>,    <span style="color:#fab387">697</span>,   <span style="color:#fab387">4755</span>,     <span style="color:#fab387">13</span>,   <span style="color:#fab387">6771</span>,    <span style="color:#fab387">752</span>,   <span style="color:#fab387">1414</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#fab387">1246</span>,    <span style="color:#fab387">358</span>,    <span style="color:#fab387">646</span>,   <span style="color:#fab387">7789</span>,    <span style="color:#fab387">498</span>,      <span style="color:#fab387">0</span>, <span style="color:#fab387">151645</span>]])
+</span></span></code></pre></div><p>Use <code>convert</code> to convert it back to text:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(convert(outputs))
+</span></span></code></pre></div><p>text generation is a randomised process, therefore your result may be different from mine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_start<span style="color:#89dceb;font-weight:bold">|&gt;</span>user
+</span></span><span style="display:flex;"><span>Why are you running<span style="color:#f38ba8">?</span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_end<span style="color:#89dceb;font-weight:bold">|&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_start<span style="color:#89dceb;font-weight:bold">|&gt;</span>assistant
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;</span>think<span style="color:#89dceb;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&lt;/</span>think<span style="color:#89dceb;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>I<span style="color:#a6e3a1">&#39;m not running. I&#39;</span>m just here to help you <span style="color:#cba6f7">with</span> your questions<span style="color:#89dceb;font-weight:bold">.</span> Let me know how I can assist you<span style="color:#f38ba8">!</span><span style="color:#89dceb;font-weight:bold">&lt;|</span>im_end<span style="color:#89dceb;font-weight:bold">|&gt;</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Text generation, one word at a time
+    <div id="text-generation-one-word-at-a-time" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#text-generation-one-word-at-a-time" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Instead of generating the entire sentence at once, model generates texts one token at a time. We&rsquo;ll first take a look at how model generates one word from the input text, and look at the entire text generation process in the next section. For a quick recap on the model architecture, please refer to the previous post: <a
+  href="https://yuyiheng.cc/posts/transformers-pt-1/#the-transformer-itself"
+    target="_blank"
+  >here&rsquo;s the link</a>. <br></p>
+<p>Text models in the <code>transformers</code> library are assembed by two parts, the <code>XXXModel</code> itself and task-specific <code>xx_head</code>. The <code>XXXModel</code> refers to the <strong>transformer model</strong> itself, and <code>xx_head</code> is a converter that converts transformer outputs according to different tasks, usually called <strong>task head</strong>.<br></p>
+<p>Let&rsquo;s have a look at our model by running <code>print(model)</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#89dceb">print</span>(model)
+</span></span><span style="display:flex;"><span>Qwen3ForCausalLM(
+</span></span><span style="display:flex;"><span>  (model): Qwen3Model(
+</span></span><span style="display:flex;"><span>    (embed_tokens): Embedding(<span style="color:#fab387">151936</span>, <span style="color:#fab387">1024</span>)
+</span></span><span style="display:flex;"><span>    (layers): ModuleList(
+</span></span><span style="display:flex;"><span>      (<span style="color:#fab387">0</span><span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">27</span>): <span style="color:#fab387">28</span> x Qwen3DecoderLayer(
+</span></span><span style="display:flex;"><span>        (self_attn): Qwen3Attention(
+</span></span><span style="display:flex;"><span>          (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>          (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        (mlp): Qwen3MLP(
+</span></span><span style="display:flex;"><span>          (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
+</span></span><span style="display:flex;"><span>          (act_fn): SiLU()
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>        (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
 </span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>      (mlp): Qwen3MLP(
-</span></span><span style="display:flex;"><span>        (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>        (act_fn): SiLUActivation()
-</span></span><span style="display:flex;"><span>      )
-</span></span><span style="display:flex;"><span>      (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>      (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
 </span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    (norm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
+</span></span><span style="display:flex;"><span>    (rotary_emb): Qwen3RotaryEmbedding()
 </span></span><span style="display:flex;"><span>  )
-</span></span><span style="display:flex;"><span>  (norm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>  (rotary_emb): Qwen3RotaryEmbedding()
+</span></span><span style="display:flex;"><span>  (lm_head): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">151936</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
 </span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>The <code>embed_tokens</code> is the <a
-  href="#overview"><strong>Stage 1</strong></a> mentioned earlier, and the <code>lm_head</code> is the <a
-  href="#overview"><strong>Stage 3</strong></a>. The core of a transformer, is what we&rsquo;ve been discussing today.<br></p>
-<p>Let&rsquo;s have a look at one of the layers inside the transformer:<br></p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>layer <span style="color:#89dceb;font-weight:bold">=</span> chat<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>layers[<span style="color:#fab387">0</span>]
-</span></span><span style="display:flex;"><span>pprint(layer)
-</span></span></code></pre></div><p>You will see something like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3DecoderLayer(
-</span></span><span style="display:flex;"><span>  (self_attn): Qwen3Attention(
-</span></span><span style="display:flex;"><span>    (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>    (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>  )
-</span></span><span style="display:flex;"><span>  (mlp): Qwen3MLP(
-</span></span><span style="display:flex;"><span>    (gate_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (up_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (down_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">3072</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>    (act_fn): SiLUActivation()
-</span></span><span style="display:flex;"><span>  )
-</span></span><span style="display:flex;"><span>  (input_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>  (post_attention_layernorm): Qwen3RMSNorm((<span style="color:#fab387">1024</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>Layer is divided into 2 major sections, just like we <a
-  href="#the-transformer-itself">discussed previously</a>:</p>
-<ul>
-<li><code>self_attn</code> is where attention gets calculated.</li>
-<li>All the rest (i.e., <code>mlp</code>, <code>input_layernorm</code> and <code>post_attention_layernorm</code>) are step-by-step computations of combining and averaging the attention heads.</li>
-</ul>
-<p>Run the following code to see the structure of an attention head:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>attention <span style="color:#89dceb;font-weight:bold">=</span> layer<span style="color:#89dceb;font-weight:bold">.</span>self_attn
-</span></span><span style="display:flex;"><span>pprint(attention)
-</span></span></code></pre></div><p>The <code>q_proj</code>, <code>k_proj</code> and <code>v_proj</code> are the <a
-  href="#the-attention-head">three matrices</a> mentioned earlier:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Qwen3Attention(
-</span></span><span style="display:flex;"><span>  (q_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  (k_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  (v_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  (o_proj): Linear(in_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">2048</span>, out_features<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1024</span>, bias<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">False</span>)
-</span></span><span style="display:flex;"><span>  (q_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>  (k_norm): Qwen3RMSNorm((<span style="color:#fab387">128</span>,), eps<span style="color:#89dceb;font-weight:bold">=</span><span style="color:#fab387">1e-06</span>)
-</span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>The actual impelmentations of attention heads are different from model to model, but the general principle behind should be roughly the same. I&rsquo;ll dive deeper into it in the future.</p>
-<p>// &hellip;existing code&hellip;</p>
+</span></span></code></pre></div><p>In the outputs shown above, <code>(model)</code> is our transformer, and <code>(lm_head)</code> is our text-generation head. To demonstrate, let&rsquo;s use the example mentioned in the previous section:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># convert texts into tokens</span>
+</span></span><span style="display:flex;"><span>example <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#a6e3a1">&#34;Why are you running?&#34;</span>
+</span></span><span style="display:flex;"><span>tokens <span style="color:#89dceb;font-weight:bold">=</span> convert(example)
+</span></span><span style="display:flex;"><span><span style="color:#6c7086;font-style:italic"># pass tokens to the transformer</span>
+</span></span><span style="display:flex;"><span>transformed <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>model<span style="color:#89dceb;font-weight:bold">.</span>forward(<span style="color:#89dceb;font-weight:bold">**</span>tokens)
+</span></span></code></pre></div><p>The raw output from <code>transformers</code> models contains not only the final output, but also computation results inbetween. These inbetween data are very useful for anyone who&rsquo;s interested in figuring out behaviours of their model. For now we are only interested in the final output, <code>last_hidden_state</code>. Let&rsquo;s take a look:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#39;Shape of the input matrix:&#39;</span>, tokens[<span style="color:#a6e3a1">&#39;input_ids&#39;</span>]<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#39;Shape of the output matrix:&#39;</span>, transformed<span style="color:#89dceb;font-weight:bold">.</span>last_hidden_state<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#39;Output:</span><span style="color:#89b4fa">\n</span><span style="color:#a6e3a1">&#39;</span>, transformed<span style="color:#89dceb;font-weight:bold">.</span>last_hidden_state)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Shape of the <span style="color:#89dceb">input</span> matrix: torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">17</span>])
+</span></span><span style="display:flex;"><span>Shape of the output matrix: torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">17</span>, <span style="color:#fab387">1024</span>])
+</span></span><span style="display:flex;"><span>Output:
+</span></span><span style="display:flex;"><span> tensor([[[  <span style="color:#fab387">5.1596</span>,  <span style="color:#fab387">19.8593</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.2142</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.9417</span>,   <span style="color:#fab387">0.8061</span>,   <span style="color:#fab387">0.8258</span>],
+</span></span><span style="display:flex;"><span>         [  <span style="color:#fab387">1.6308</span>,  <span style="color:#fab387">26.9123</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.1482</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">3.7286</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">3.3529</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.7485</span>],
+</span></span><span style="display:flex;"><span>         [ <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.9393</span>,   <span style="color:#fab387">7.0810</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.4507</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.8947</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.6471</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">2.8123</span>],
+</span></span><span style="display:flex;"><span>         <span style="color:#89dceb;font-weight:bold">...</span>,
+</span></span><span style="display:flex;"><span>         [  <span style="color:#fab387">4.9579</span>, <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">29.7081</span>,   <span style="color:#fab387">0.0470</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,   <span style="color:#fab387">0.9277</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">2.9034</span>,   <span style="color:#fab387">0.9229</span>],
+</span></span><span style="display:flex;"><span>         [  <span style="color:#fab387">3.7464</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">7.0461</span>,   <span style="color:#fab387">0.1408</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,   <span style="color:#fab387">4.0884</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.4918</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.3324</span>],
+</span></span><span style="display:flex;"><span>         [ <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.5219</span>,  <span style="color:#fab387">12.8126</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">1.1671</span>,  <span style="color:#89dceb;font-weight:bold">...</span>,   <span style="color:#fab387">2.8096</span>,   <span style="color:#fab387">0.8872</span>,  <span style="color:#89dceb;font-weight:bold">-</span><span style="color:#fab387">0.3728</span>]]])
+</span></span></code></pre></div><p>We then pass the outputs of our transformer to the task head, <code>lm_hed</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>logits <span style="color:#89dceb;font-weight:bold">=</span> model<span style="color:#89dceb;font-weight:bold">.</span>lm_head(transformed<span style="color:#89dceb;font-weight:bold">.</span>last_hidden_state)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Shape of the final output matrix:&#34;</span>, logits<span style="color:#89dceb;font-weight:bold">.</span>shape)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Shape of the final output: torch<span style="color:#89dceb;font-weight:bold">.</span>Size([<span style="color:#fab387">1</span>, <span style="color:#fab387">17</span>, <span style="color:#fab387">151936</span>])
+</span></span></code></pre></div><p>As you can see, through the computation, our text inputs gets converted into a matrix of indicies of size <code>1 x 17</code>, then gets transformed into a matrix of size <code>1 x 17 x 1024</code>, and then gets converted into a (very big!) matrix of size <code>1 x 17 x 151,936</code>:</p>
+<pre class="not-prose mermaid">
+flowchart TB
+    text(["text"])--tokenizer-->ipt["matrix: 1 x 17"] --"model"--> tfm["matrix: 1 x 17 x 1024"] --"lm_head"-->output["matrix: 1 x 17 x 151,936"]
+    classDef default fill: transparent, bg-color: transparent
+</pre>
 
-<h3 class="relative group">Have some fun!
-    <div id="have-some-fun" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#have-some-fun" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>Meanwhile, since we&rsquo;ve got a generative model already, we might as well test out some text generations:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat(<span style="color:#a6e3a1">&#34;Why is the content, which was held to be true in perceiving, in fact only belongs to the form, and it dissolves into the form’s unity 🥺🥺🥺🥺🥺??&#34;</span>)
-</span></span></code></pre></div><p>Or, you can turn on the &rsquo;thinking&rsquo; mode to enable chain-of-thought:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat<span style="color:#89dceb;font-weight:bold">.</span>enable_thinking <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#fab387">True</span>
-</span></span><span style="display:flex;"><span>chat(<span style="color:#a6e3a1">&#34;But...but the phenomenology Φ147 says the inner, essential is essentially the truth of appearance😠😠😠 I&#39;m absolutely fewming&#34;</span>)
-</span></span></code></pre></div><p>If it takes too long to run, you can clear chat history to remove cached chats:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>chat<span style="color:#89dceb;font-weight:bold">.</span>clear_history()
-</span></span></code></pre></div><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="llm is magic text"
-    src="./featured.jpg"
-    ><figcaption>&lsquo;LLM is magic&rsquo;</figcaption></figure>
-<p>I wanted to point out the (maybe) obvious thing here: almost all operations mentioned contain learnable parameters. Inside individual attention heads, the three matrices converted from inputs are typically created by multiplying (&lsquo;dot product&rsquo;) inputs with three <strong>separate</strong> matrices. These matrices are part of the learnable parameters for the attention head. When we combine matrices, the combination operation also has <a
-  href="https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html"
-    target="_blank"
-  >their own learnable parameters</a>. Furthermore, when we combine outputs from each &lsquo;attention head&rsquo;, this combining operation also has its own set of trainable parameters, so on and so on&hellip; Almost every stage of the matrix computations are parameterized, resulting in the unbelievably <strong>massive</strong> AI models as of today. However, the model used in the demo today, despite its size, is still able to produce long and very coherent responses. Yes, in a sense, transformers are just a huge stack of matrix calculations. However, we know very little about the reason behind it. We gave names to these matrices, but we don&rsquo;t know much about their behavior.<br></p>
-
-<h2 class="relative group">Final thoughts
-    <div id="final-thoughts" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#final-thoughts" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>Transformer neural network models aren&rsquo;t as mysterious as one might think. It has no difference compared with any other functions. At the end of the day it&rsquo;s just another mathematical function, but takes <em>matrices</em> as inputs, does <em>matrix</em> calculations, and outputs <em>matrices</em>. Just like any other neural network models, it takes multiple steps to do the calculation. Within each computational step, the inputs get processed by three mini-neural networks, and outputs are re-combined together as the output of the current step. In this sense, transformers are like nested neural networks: they are bigger neural networks that contain lots of mini neural networks.<br></p>
-<p><strong>What&rsquo;s up next?</strong><br>
-There are still a bit more stuffs that I&rsquo;d like to share, like how text-generation works and what&rsquo;s really happenning when we are training a generative model. We&rsquo;ve heard of the same old things over and over: <em>&lsquo;generative LLM is just a very massive auto-complete!&rsquo;</em>. Whilst I do aggree with it, I also find it not helpful if one wants to <em>understand</em> text generation, for both model training and model inference. In the next post, we&rsquo;ll have a look at the <strong>Stage 3</strong> for text generation.</p>
-
-<h2 class="relative group">Some Other Resources
-    <div id="some-other-resources" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#some-other-resources" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>I hope whoever comes across this post would find it useful. Here are some extra reading materials that I found particularly useful:<br></p>
-<ol>
-<li><a
-  href="https://docs.pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html"
-    target="_blank"
-  >Pytorch&rsquo;s step-byp-step guide</a> on creating a generative LLM is prob one of the best out there that teaches you all the fundenmentals.</li>
-<li><a
-  href="https://github.com/jessevig/bertviz"
-    target="_blank"
-  >BertViz, a very good visualisation tool</a> for looking at attention heads layer by layer. You can run it interactively in a jupyter notebook.</li>
-<li><a
-  href="https://huggingface.co/learn/llm-course/en/chapter0/1"
-    target="_blank"
-  >Huggingface&rsquo;s LLM cources.</a> Although they tends to focus on the side of programming &amp; practical applications, I found many of their conceptual guides very good for a beginner.</li>
-</ol>
+<p>TODO: MERGE PREVIOUS SECTION (THE DEMO TEXT GENERATION) WITH THE CURRENT SECTION
+TODO: RE-WRITE THE convert FUNCTION TO FIT MY CURRENT NARRATIVE!!!</p>
 
           
           
@@ -2120,7 +2031,7 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
         <a
           target="_blank"
           class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://bsky.app/intent/compose?text=ELI5%20Transformers%20%28Part%201%29:%20Attention%20Mechanism%20&#43;http://localhost:1313/posts/transformers-pt-1/"
+          href="https://bsky.app/intent/compose?text=ELI5%20Transformers%20%28Part%202%29%20-%20Generation&#43;http://localhost:1313/posts/transformers-pt-2-prev/"
           title="Post on Bluesky"
           aria-label="Post on Bluesky">
           <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256,232.562c-21.183,-41.196 -78.868,-117.97 -132.503,-155.834c-51.378,-36.272 -70.978,-29.987 -83.828,-24.181c-14.872,6.72 -17.577,29.554 -17.577,42.988c0,13.433 7.365,110.138 12.169,126.281c15.873,53.336 72.376,71.358 124.413,65.574c2.66,-0.395 5.357,-0.759 8.089,-1.097c-2.68,0.429 -5.379,0.796 -8.089,1.097c-76.259,11.294 -143.984,39.085 -55.158,137.972c97.708,101.165 133.908,-21.692 152.484,-83.983c18.576,62.291 39.972,180.718 150.734,83.983c83.174,-83.983 22.851,-126.674 -53.408,-137.969c-2.71,-0.302 -5.409,-0.667 -8.089,-1.096c2.732,0.337 5.429,0.702 8.089,1.096c52.037,5.785 108.54,-12.239 124.413,-65.574c4.804,-16.142 12.169,-112.847 12.169,-126.281c-0,-13.434 -2.705,-36.267 -17.577,-42.988c-12.85,-5.806 -32.45,-12.09 -83.829,24.181c-53.634,37.864 -111.319,114.635 -132.502,155.831Z"/></svg></span>
@@ -2131,7 +2042,7 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
         <a
           target="_blank"
           class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/posts/transformers-pt-1/&amp;title=ELI5%20Transformers%20%28Part%201%29:%20Attention%20Mechanism%20"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/posts/transformers-pt-2-prev/&amp;title=ELI5%20Transformers%20%28Part%202%29%20-%20Generation"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn">
           <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
@@ -2143,7 +2054,7 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
         <a
           target="_blank"
           class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://s2f.kytta.dev/?text=ELI5%20Transformers%20%28Part%201%29:%20Attention%20Mechanism%20%20http://localhost:1313/posts/transformers-pt-1/"
+          href="https://s2f.kytta.dev/?text=ELI5%20Transformers%20%28Part%202%29%20-%20Generation%20http://localhost:1313/posts/transformers-pt-2-prev/"
           title="Share via Mastodon"
           aria-label="Share via Mastodon">
           <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
@@ -2171,8 +2082,8 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/transformers-pt-1/index.md"
-          data-oid-likes="likes_posts/transformers-pt-1/index.md"></script>
+          data-oid="views_posts/transformers-pt-2-prev/index.md"
+          data-oid-likes="likes_posts/transformers-pt-2-prev/index.md"></script>
       
     </section>
 
@@ -2188,21 +2099,21 @@ There are still a bit more stuffs that I&rsquo;d like to share, like how text-ge
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
-        </span>
-        <span class="flex flex-col items-end">
-          
             <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
               href="/posts/transformers-pt-2/">
               <span class="leading-6">
-                ELI5 Transformers (Part 2) - Generation&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;ELI5 Transformers (Part 2) - Generation
               </span>
             </a>
             
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
                 <time datetime="2025-11-11T00:00:00&#43;00:00">11 November 2025</time>
               </span>
             
+          
+        </span>
+        <span class="flex flex-col items-end">
           
         </span>
       </div>
