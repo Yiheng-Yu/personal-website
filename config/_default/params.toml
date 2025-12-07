@@ -53,7 +53,6 @@ cardViewScreenWidth = false
 layoutBackgroundBlur = false
 disableHeroImageFilter = false
 orderByWeight = false
-showViews = true
 
 [article]
 showDate = true
@@ -90,7 +89,7 @@ layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
 showSummary = false
-showViews = true
+showViews = false
 showLikes = false
 showTableOfContents = false
 showCards = false
@@ -107,7 +106,7 @@ excludedKinds = [ "taxonomy", "term" ]
 showTermCount = true
 showHero = false
 showBreadcrumbs = false
-showViews = true
+showViews = false
 showLikes = false
 showTableOfContents = true
 cardView = false
@@ -115,7 +114,7 @@ cardView = false
 [term]
 showHero = false
 showBreadcrumbs = false
-showViews = true
+showViews = false
 showLikes = false
 showTableOfContents = true
 groupByYear = false
