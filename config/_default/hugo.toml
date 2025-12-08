@@ -11,11 +11,7 @@ summaryLength = 0
 buildDrafts = false
 buildFuture = false
 enableEmoji = true
-
-[privacy]
-  [privacy.disqus]
-    disable = false
-# googleAnalytics = "G-XXXXXXXXX"
+googleAnalytics = "G-4X2W77Z3VD"
 
 [pagination]
   pagerSize = 100
