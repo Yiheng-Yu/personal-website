@@ -1,5 +1,5 @@
 */.DS_Store
 */public
-/content/drafts/*
-# Local Netlify folder
+/content/draft/*
+/public/*
 .netlify
