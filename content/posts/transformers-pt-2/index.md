@@ -355,8 +355,6 @@ task head: Linear(in_features=1024, out_features=151936, bias=False)
 
 ### Text generation, step-by-step 
 
-**TO COMPLETE**
-
 Let's go back to our previous exmaple and have a look at how matrices are transformed throughout the entire process.
 
 We first create an text input:
