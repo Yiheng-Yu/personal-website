@@ -2,14 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Status on Myxiniformes Moment</title>
-    <link>https://yuyiheng.cc/status/</link>
+    <link>http://localhost:1313/status/</link>
     <description>Recent content in Status on Myxiniformes Moment</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>yuyiheng1994@gmail.com (@Yiheng Yu)</managingEditor>
     <webMaster>yuyiheng1994@gmail.com (@Yiheng Yu)</webMaster>
     <copyright>© 2025 @Yiheng Yu</copyright>
-    <atom:link href="https://yuyiheng.cc/status/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/status/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Draft</title>
+      <link>http://localhost:1313/status/draft/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      <author>yuyiheng1994@gmail.com (@Yiheng Yu)</author>
+      <guid>http://localhost:1313/status/draft/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>

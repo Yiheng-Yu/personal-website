@@ -12,11 +12,11 @@
   # SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES="AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg,AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
 
 [context.production.environment]
-  HUGO_VERSION = "0.152.2"
+  HUGO_VERSION = "0.153.3"
   HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.152.2"
+  HUGO_VERSION = "0.153.3"
 
 [[headers]]
   for = "/*"

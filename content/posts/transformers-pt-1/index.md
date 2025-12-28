@@ -12,6 +12,8 @@ params:
   math: true
 ---
 
+{{< katex >}}
+
 In this particular post, I would like to do a very brief overview of the transformer model architecture, specifically on the attention mechanism. I won't go into too much math and there won't be any mathematical formulas. However, I would assume readers of this silly little post already have some okay-ish background in math/datascience. (i.e., matrix computations, embeddings, tokens, model fitting etc.). I am not going to list out all the implementation details for transformers, since there are a lot of very good materials out there and they are doing fantastic jobs. Instead, in this (maybe series of?) post, I would like to draw out a general framework on transformers to help one understand the detailed math behind.<br>
 
 Today, I'll very quickly go through some very basics on neural network model, just enough to cover what needed for this post, accompied by demo of transformer model as a proof of concept. In this section, there will be some codes that you can copy and paste into an interactive python session to fiddle around for a bit. And lastly, I'll do a quick sketch on the general architecture of transformers, and a overview of the attention mechasm.<br>
