@@ -565,7 +565,12 @@ And here it is:
 The demo in the section above shows how matrix is transformed step-by-step through the whole model inference process:
 
 {{< mermaid >}}
-
+---
+config:
+  layout: dagre
+  theme: redux
+  look: neo
+---
 flowchart TB
  subgraph Model["<br>"]
         n4["last_hidden_state<br>size: [1, 16, 1024]"]
