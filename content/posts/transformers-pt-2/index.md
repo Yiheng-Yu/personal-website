@@ -335,7 +335,23 @@ On a side note, this workflow is suprising similar to the model architecture of 
 
 ## Model Inference
 
-Transformers are, just like all other neural networks, functions that handles matrix computations. 
+Transformers are, just like all other neural networks, functions that handles matrix computations. Considering it's size, it is basically impossible to trace every internal calculation steps. On the other hand, understanding how inputs are converted into the outputs can be crucial when it comes to model development and debugging. Instead of looking at how raw numbers gets changed over the calculation steps, looking at how the shape of input matrix gets converted during model inference would be much more helpful and much more informative.
+
+Let's use text-generation as our example. We will be using the same [QWEN3](https://huggingface.co/Qwen/Qwen3-0.6B) model & tokenizer used in the previous section.
+
+Getting the model & the tokenizer:
+
+```python
+import pprint
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+device = torch.get_default_device()
+checkpoint = r"Qwen/Qwen3-0.6B"  # link to the model checkpoint
+model = AutoModelForCausalLM.from_pretrained(checkpoint).to(device)
+model.requires_grad_(False)  # setting our model in inference mode
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+```
 
 ### Task Head
 
@@ -353,7 +369,7 @@ task head: Linear(in_features=1024, out_features=151936, bias=False)
 >>>
 ```
 
-### Text generation, step-by-step 
+### Text generation, step-by-step
 
 Let's go back to our previous exmaple and have a look at how matrices are transformed throughout the entire process.
 
