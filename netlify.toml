@@ -9,7 +9,6 @@
   NODE_VERSION = "25.2.1"
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
-  # SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES="AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg,AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
 
 [context.production.environment]
   HUGO_VERSION = "0.153.3"
@@ -24,3 +23,6 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
+
+[functions]
+  directory = "netlify/functions"
