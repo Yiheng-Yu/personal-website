@@ -1,6 +1,7 @@
 import sgMail from "@sendgrid/mail"
+import sendgrid
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 const fetch = require("node-fetch");
 const now = Date.now();
 const oneDayAgo = now - 24 * 60 * 60 * 1000;
