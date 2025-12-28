@@ -1,5 +1,6 @@
 */.DS_Store
-**/public
+**/public/
 /content/draft/*
-/public/*
+**/public/*
+public/
 .netlify
