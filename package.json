@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@dataconnect/generated": "file:src/dataconnect-generated",
-    "@netlify/blobs": "^10.4.2"
+    "@netlify/blobs": "^10.4.2",
+    "@netlify/functions": "^5.1.2"
   }
 }

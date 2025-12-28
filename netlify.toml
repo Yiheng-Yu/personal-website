@@ -26,3 +26,6 @@
 
 [functions]
   directory = "netlify/functions"
+
+[functions."analytics-digest"]
+schedule = "@daily"
