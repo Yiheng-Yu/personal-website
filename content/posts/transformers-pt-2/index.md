@@ -602,6 +602,8 @@ Running transformers boils down to three things: preprocess inputs into model-re
 
 The next post will take a more in-depth look at text-generation, and starting to divert the main focus from inference to model training.
 
+## Some further reading
+
 Here are some external reading materials that I found very useful when it comes to learning model inference:
 
 1. [pytorch's intro on neural networks](https://docs.pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html).
