@@ -10,7 +10,7 @@ export default async (req) => {
 
 export const config = {
   // schedule: '@daily',
-  schedule: '10 11 * * *',
+  schedule: '20 11 * * *',
 }
 
 const fetch = require("node-fetch");
@@ -18,7 +18,7 @@ const now = Date.now();
 const oneDayAgo = now - 24 * 60 * 60 * 1000;
 const { NETLIFY_BLOG_SITE_ID, NETLIFY_TOKEN, SENDGRID_API_KEY } = process.env;
 
-exports.handler = async function (event) {
+exports.handler = async function handler(event) {
   try {
     // Fetch the data
     const sources = await fetchNetlify(
