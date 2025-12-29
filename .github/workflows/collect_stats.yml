@@ -2,7 +2,7 @@ name: collect stats
 
 on:
   schedule:
-    - cron:  '30 15 * * *'
+    - cron:  '45 20 * * *'
   workflow_dispatch:
 
 jobs:
