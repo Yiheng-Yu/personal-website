@@ -22,8 +22,7 @@ jobs:
         name: exports
         path: '*.csv'
   
-    - name: Download artifact
-        uses: actions/download-artifact@v4
+    - uses: actions/download-artifact@v4
         with:
           name: build-output
           path: exports/
