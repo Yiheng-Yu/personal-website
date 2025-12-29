@@ -7,7 +7,6 @@ summary: "(it's just learning the API)"
 font_family: "Monospace"
 tags: ["AI", "Machine Learning", "ELI5"]
 topics: "transformers"
-status: "draft"
 featureimage: https://imgs.xkcd.com/comics/transformers.png
 draft: false
 ---

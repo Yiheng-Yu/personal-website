@@ -9,7 +9,8 @@ export default async (req) => {
 }
 
 export const config = {
-  schedule: '@daily',
+  // schedule: '@daily',
+  schedule: '10 11 * * *',
 }
 
 const fetch = require("node-fetch");
