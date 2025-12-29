@@ -1,0 +1,83 @@
+name: collect stats
+
+on:
+  schedule:
+    - cron:  '30 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  export-run:
+    runs-on: ubuntu-latest
+    environment: netlify-stats-env
+    steps:
+
+    - uses: actions/checkout@v1
+    - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
+      with:
+        netlify-token: ${{ secrets.NETLIFY_TOKEN }}
+        netlify-site-id: ${{ secrets.NETLIFY_SITE }}
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: exports
+        path: '*.csv'
+  
+    - uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: exports/
+
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/pageviews.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 0
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/visitors.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 1
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/bandwidth.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 2
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+    
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/sources.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 3
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+
+
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/pages.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 4
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
+    
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
+      with:
+        csv_path: exports/not_found.csv
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        worksheet: 5
+        append_content: true
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
