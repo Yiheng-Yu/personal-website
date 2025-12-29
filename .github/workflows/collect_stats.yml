@@ -20,11 +20,11 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: exports
-        path: '*.csv'
+        path: 'data/*.csv'
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/pageviews.csv
+        csv_path: data/pageviews.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 0
         append_content: true
@@ -33,7 +33,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/visitors.csv
+        csv_path: data/visitors.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 1
         append_content: true
@@ -42,7 +42,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/bandwidth.csv
+        csv_path: data/bandwidth.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 2
         append_content: true
@@ -51,7 +51,7 @@ jobs:
     
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/sources.csv
+        csv_path: data/sources.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 3
         append_content: true
@@ -61,7 +61,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/pages.csv
+        csv_path: data/pages.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 4
         append_content: true
@@ -70,7 +70,7 @@ jobs:
     
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: exports/not_found.csv
+        csv_path: data/not_found.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 5
         append_content: true
