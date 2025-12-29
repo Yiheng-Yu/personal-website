@@ -27,7 +27,6 @@ jobs:
         csv_path: pageviews.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 0
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
@@ -36,7 +35,6 @@ jobs:
         csv_path: visitors.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 1
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
@@ -45,7 +43,6 @@ jobs:
         csv_path: bandwidth.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 2
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     
@@ -54,17 +51,14 @@ jobs:
         csv_path: sources.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 3
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
-
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
         csv_path: pages.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 4
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     
@@ -73,6 +67,5 @@ jobs:
         csv_path: not_found.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 5
-        append_content: true
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
