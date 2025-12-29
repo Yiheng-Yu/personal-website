@@ -1,6 +1,5 @@
 import sgMail from "@sendgrid/mail"
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const fetch = require("node-fetch");
 const now = Date.now();
 const oneDayAgo = now - 24 * 60 * 60 * 1000;
@@ -19,6 +18,8 @@ exports.handler = async function (event) {
     // Render the email
     const html = renderEmail({ sources, pages });
 
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setDataResidency('eu');
     await sgMail.send({
         to: process.env.EMAIL_TO,
         from: process.env.EMAIL_FROM,

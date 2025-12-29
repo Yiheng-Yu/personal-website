@@ -22,16 +22,6 @@
     </item>
     
     <item>
-      <title>ELI5 Transformers (Part 3) - Text Generation</title>
-      <link>http://localhost:1313/draft/transformers-pt-3/</link>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
-      <author>yuyiheng1994@gmail.com (@Yiheng Yu)</author>
-      <guid>http://localhost:1313/draft/transformers-pt-3/</guid>
-      <description>(it&amp;rsquo;s glorified sequence classification)</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/draft/transformers-pt-3/featured.jpg" />
-    </item>
-    
-    <item>
       <title>ELI5 Transformers (Part 1): Attention Mechanism </title>
       <link>http://localhost:1313/posts/transformers-pt-1/</link>
       <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
