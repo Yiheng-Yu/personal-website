@@ -20,21 +20,26 @@ jobs:
         name: exports
         path: '*.csv'
 
-  sheet-upload:
-    runs-on: ubuntu-latest
-    environment: netlify-stats-env
-    steps:
-    - uses: actions/checkout@v1
-    - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
-      with:
-        netlify-token: ${{ secrets.NETLIFY_TOKEN }}
-        netlify-site-id: ${{ secrets.NETLIFY_SITE }}
-        days: -1
-        disable-header: true
+  # sheet-upload:
+  #   runs-on: ubuntu-latest
+  #   environment: netlify-stats-env
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
+  #     with:
+  #       netlify-token: ${{ secrets.NETLIFY_TOKEN }}
+  #       netlify-site-id: ${{ secrets.NETLIFY_SITE }}
+  #       days: -1
+  #       disable-header: true
 
+    - uses: actions/checkout@v5
+    - uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'
+  
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: pageviews.csv
+        csv_path: exports/pageviews.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 0
         append_content: true
@@ -43,7 +48,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: visitors.csv
+        csv_path: exports/visitors.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 1
         append_content: true
@@ -52,7 +57,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: bandwidth.csv
+        csv_path: exports/bandwidth.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 2
         append_content: true
@@ -61,7 +66,7 @@ jobs:
     
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: sources.csv
+        csv_path: exports/sources.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 3
         append_content: true
@@ -71,7 +76,7 @@ jobs:
 
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: pages.csv
+        csv_path: exports/pages.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 4
         append_content: true
@@ -80,7 +85,7 @@ jobs:
     
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
-        csv_path: not_found.csv
+        csv_path: exports/not_found.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 5
         append_content: true
