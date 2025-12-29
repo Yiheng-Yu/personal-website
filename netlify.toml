@@ -10,6 +10,9 @@
   TZ = "UTC"  # Set to preferred timezone
   GIT_SUBMODULES = "true"
 
+[build.plugins]
+package = "node_modules/"
+
 [context.production.environment]
   HUGO_VERSION = "0.153.3"
   HUGO_ENV = "production"
@@ -23,9 +26,3 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-
-[functions]
-  directory = "netlify/functions"
-
-[functions."analytics-digest"]
-schedule = '30 11 * * *'

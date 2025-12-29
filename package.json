@@ -4,6 +4,8 @@
     "@netlify/blobs": "^10.4.2",
     "@netlify/functions": "^5.1.2",
     "@sendgrid/mail": "^8.1.6",
-    "node-fetch": "^3.3.2"
+    "@types/node": "^22.19.3",
+    "node-fetch": "^3.3.2",
+    "typescript": "^4.9.5"
   }
 }
