@@ -8,6 +8,7 @@ on:
 jobs:
   export-run:
     runs-on: ubuntu-latest
+    environment: netlify-stats-env
     steps:
     - uses: actions/checkout@v1
     - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
@@ -21,6 +22,7 @@ jobs:
 
   sheet-upload:
     runs-on: ubuntu-latest
+    environment: netlify-stats-env
     steps:
     - uses: actions/checkout@v1
     - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
@@ -32,24 +34,24 @@ jobs:
     - uses: niklasmerz/csv-to-google-spreadsheet@master
       with:
         csv_path: pageviews.csv
-        spreadsheet_id: ${{ secrets.google_spreadsheet_id }}
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 0
         append_content: true
-        google_service_account_email: ${{ secrets.google_service_account_email }}
-        google_service_account_private_key: ${{ secrets.google_service_account_private_key }}
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     - uses: niklasmerz/csv-to-google-spreadsheet@master
       with:
         csv_path: visitors.csv
-        spreadsheet_id: ${{ secrets.google_spreadsheet_id }}
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 1
         append_content: true
-        google_service_account_email: ${{ secrets.google_service_account_email }}
-        google_service_account_private_key: ${{ secrets.google_service_account_private_key }}
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     - uses: niklasmerz/csv-to-google-spreadsheet@master
       with:
         csv_path: bandwidth.csv
-        spreadsheet_id: ${{ secrets.google_spreadsheet_id }}
+        spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
         worksheet: 2
         append_content: true
-        google_service_account_email: ${{ secrets.google_service_account_email }}
-        google_service_account_private_key: ${{ secrets.google_service_account_private_key }}
+        GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+        GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
