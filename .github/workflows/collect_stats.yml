@@ -31,8 +31,8 @@ jobs:
         netlify-site-id: ${{ secrets.NETLIFY_SITE }}
         days: -1
         disable-header: true
-        
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: pageviews.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
@@ -41,7 +41,7 @@ jobs:
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: visitors.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
@@ -50,7 +50,7 @@ jobs:
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: bandwidth.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
@@ -59,7 +59,7 @@ jobs:
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: sources.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
@@ -69,7 +69,7 @@ jobs:
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
 
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: pages.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
@@ -78,7 +78,7 @@ jobs:
         GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
         GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY }}
     
-    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.1.0
+    - uses: Yiheng-Yu/csv-to-google-spreadsheet@1.2.0
       with:
         csv_path: not_found.csv
         spreadsheet_id: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
