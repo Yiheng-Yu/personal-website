@@ -2,7 +2,8 @@ name: collect stats
 
 on:
   schedule:
-    - cron:  '55 20 * * *'
+    - cron:  '00 21 * * *'
+  workflow_dispatch:
 
 jobs:
   export-run:
