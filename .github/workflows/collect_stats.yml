@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: netlify-stats-env
     steps:
-    
+
     - uses: actions/checkout@v1
     - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
       with:
@@ -22,6 +22,12 @@ jobs:
         name: exports
         path: '*.csv'
   
+    - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: exports/
+
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
         csv_path: exports/pageviews.csv
