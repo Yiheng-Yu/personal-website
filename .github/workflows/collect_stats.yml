@@ -10,32 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     environment: netlify-stats-env
     steps:
+    
     - uses: actions/checkout@v1
     - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
       with:
         netlify-token: ${{ secrets.NETLIFY_TOKEN }}
         netlify-site-id: ${{ secrets.NETLIFY_SITE }}
+
     - uses: actions/upload-artifact@v4
       with:
         name: exports
         path: '*.csv'
-
-  # sheet-upload:
-  #   runs-on: ubuntu-latest
-  #   environment: netlify-stats-env
-  #   steps:
-  #   - uses: actions/checkout@v1
-  #   - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
-  #     with:
-  #       netlify-token: ${{ secrets.NETLIFY_TOKEN }}
-  #       netlify-site-id: ${{ secrets.NETLIFY_SITE }}
-  #       days: -1
-  #       disable-header: true
-
-    - uses: actions/checkout@v5
-    - uses: actions/setup-python@v6
-      with:
-        python-version: '3.13'
   
     - uses: Yiheng-Yu/csv-to-google-spreadsheet@master
       with:
