@@ -1,24 +1,17 @@
 // To learn about scheduled functions and supported cron extensions,
 // see: https://ntl.fyi/sched-func
 import sgMail from "@sendgrid/mail"
+import fetch from "node-fetch"
 
-export default async (req) => {
-  const { next_run } = await req.json()
-
-  console.log('Received event! Next invocation at:', next_run)
-}
-
-export const config = {
-  // schedule: '@daily',
-  schedule: '23 11 * * *',
-}
-
-const fetch = require("node-fetch");
 const now = Date.now();
 const oneDayAgo = now - 24 * 60 * 60 * 1000;
 const { NETLIFY_BLOG_SITE_ID, NETLIFY_TOKEN, SENDGRID_API_KEY } = process.env;
+// export const config = {
+//   // schedule: '@daily',
+//   schedule: '23 11 * * *',
+// }
 
-exports.handler = async function (event) {
+export const handler = async function (event) {
   try {
     // Fetch the data
     const sources = await fetchNetlify(

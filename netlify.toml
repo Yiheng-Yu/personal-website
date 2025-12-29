@@ -28,4 +28,4 @@
   directory = "netlify/functions"
 
 [functions."analytics-digest"]
-schedule = "@daily"
+schedule = '30 11 * * *'
