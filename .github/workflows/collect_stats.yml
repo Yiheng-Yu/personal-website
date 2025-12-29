@@ -12,7 +12,7 @@ jobs:
     steps:
 
     - uses: actions/checkout@v1
-    - uses: NiklasMerz/netlify-analytics-collector@v2.0.0
+    - uses: Yiheng-Yu/netlify-analytics-collector@main
       with:
         netlify-token: ${{ secrets.NETLIFY_TOKEN }}
         netlify-site-id: ${{ secrets.NETLIFY_SITE }}
