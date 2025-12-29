@@ -1,9 +1,21 @@
+// To learn about scheduled functions and supported cron extensions,
+// see: https://ntl.fyi/sched-func
 import sgMail from "@sendgrid/mail"
+
+export default async (req) => {
+  const { next_run } = await req.json()
+
+  console.log('Received event! Next invocation at:', next_run)
+}
+
+export const config = {
+  schedule: '@daily',
+}
 
 const fetch = require("node-fetch");
 const now = Date.now();
 const oneDayAgo = now - 24 * 60 * 60 * 1000;
-const { NETLIFY_BLOG_SITE_ID, NETLIFY_TOKEN } = process.env;
+const { NETLIFY_BLOG_SITE_ID, NETLIFY_TOKEN, SENDGRID_API_KEY } = process.env;
 
 exports.handler = async function (event) {
   try {
@@ -18,13 +30,19 @@ exports.handler = async function (event) {
     // Render the email
     const html = renderEmail({ sources, pages });
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setApiKey(SENDGRID_API_KEY);
     sgMail.setDataResidency('eu');
     await sgMail.send({
-        to: process.env.EMAIL_TO,
-        from: process.env.EMAIL_FROM,
-        subject: "Daily Netlify Analytics Digest",
-        html,
+      to: process.env.EMAIL_TO,
+      from: process.env.EMAIL_FROM,
+      subject: "Daily Netlify Analytics Digest",
+      html,
+    })
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch((error) => {
+      console.error(error)
     })
     
     // Response with the email's contents
