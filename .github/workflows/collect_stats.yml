@@ -2,7 +2,7 @@ name: collect stats
 
 on:
   schedule:
-    - cron:  '00 21 * * *'
+    - cron:  '55 20 * * *'
 
 jobs:
   export-run:
