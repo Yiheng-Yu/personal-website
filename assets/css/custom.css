@@ -95,10 +95,33 @@ blockquote {
       stroke: #4a6cff;
       stroke-width: 1px;
     }
-/* .edgeLabel {
-  background-color: transparent;
-  color: black;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 4px;
-} */
+
+/* level 2 (h3) → bullet */
+#TableOfContents ul ul > li::before {
+  content: "\25B7\2002";
+  position: relative;
+  left: 0;
+}
+
+/* level 3 (h4) */
+#TableOfContents ul ul ul > li::before {
+  content: "\2013\2002";
+  position: relative;
+  left: 0;
+}
+
+/* level 4 (h5) */
+#TableOfContents ul ul ul ul > li::before {
+  content: "\2027\2002";
+  position: relative;
+  left: 0;
+}
+
+.dark #TableOfContents a.active {
+  color: rgba(138, 255, 210, 0.650)
+}
+
+#TableOfContents a.active {
+  font-weight: bolder;
+  color: rgb(108, 202, 107)
+}

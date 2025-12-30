@@ -559,9 +559,9 @@ And here it is:
 
 ***
 
-### Recap: matrix transformation journey
+### Recap: transformation journey
 
-The demo in the section above shows how matrix is transformed step-by-step through the whole model inference process:
+The demo in the section above shows how matrix is transformed step-by-step through the whole model inference process, here's a recap of how the shape of our input data changes throughout the computation process:
 
 {{< mermaid >}}
 ---
