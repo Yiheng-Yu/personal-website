@@ -26,7 +26,8 @@
   lineNoStart = 1
   lineNos = false
   lineNumbersInTable = false
-  style = 'catppuccin-mocha'
+  # style = 'tokyonight-moon'
+  style = 'nord'
   tabWidth = 4
   wrapperClass = 'highlight'
 

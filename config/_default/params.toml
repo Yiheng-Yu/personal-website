@@ -15,6 +15,7 @@ smartTOCHideUnfocusedChildren = false
 fingerprintAlgorithm = "sha512"
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
+favicon = false
 
 [firebase]
 apiKey = "AIzaSyC7c0UZ3xECttjMuZWh5AE41qOMLl5bAcg"

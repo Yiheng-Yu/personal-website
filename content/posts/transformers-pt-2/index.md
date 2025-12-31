@@ -42,19 +42,19 @@ This post mainly focuses on a general introduction on running a already trained 
 First, install dependencies and start an interactive Python session. In the terminal, create a virtual environment so the work in this post doesn't affect other projects:
 
 ```sh
-python -m venv transformers-pt2 
+python -m venv transformers 
 ```
 
 If you were using <highlight>windows</highlight>, type these in your terminal:
 
 ```powershell
-transformers-pt2\Scripts\activate
+transformers\Scripts\activate
 ```
 
 For <highlight>mac</highlight> and <highlight>linux</highlight>, run:
 
 ```bash
-source transformers-pt2/bin/activate
+source transformers/bin/activate
 ```
 
 Then install dependencies and start Python:
@@ -564,6 +564,7 @@ And here it is:
 The demo in the section above shows how matrix is transformed step-by-step through the whole model inference process, here's a recap of how the shape of our input data changes throughout the computation process:
 
 {{< mermaid >}}
+
 ---
 config:
   layout: dagre

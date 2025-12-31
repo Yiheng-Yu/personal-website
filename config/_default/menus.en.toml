@@ -23,31 +23,23 @@
  weight = 20
  orderByWeight = false
 
+
+# [[main]]
+#   name = "Python"
+#   parent = "Topics"  
+#   pageRef = "topics/python/"
+#   weight = 20
+
 [[main]]
   name = "Transformer"
   parent = "Topics"  
   pageRef = "topics/transformers/"
+  weight = 10
 
 # [[subnavigation]]
 #   name = "Transformer"
 #   parent = "Topics"
 #   pageRef = "topic/Transformer"
-
-#[[main]]
-#  name = "Parent"
-#  weight = 20
-
-# [[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
 
 #[[subnavigation]]
 #  name = "An interesting topic"

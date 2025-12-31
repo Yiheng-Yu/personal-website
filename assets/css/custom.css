@@ -44,6 +44,7 @@ bullet {
     font-size: 100%;
 }
 
+
 pre code {
     font-size: 90%;
     background-color: rgb(0 0 0 / 0);
@@ -66,6 +67,7 @@ code[data-lang=text] {
     text-wrap: wrap;
     max-height: 600px;
 }
+
 
 highlight {
   font-size:100%;
@@ -125,3 +127,14 @@ blockquote {
   font-weight: bolder;
   color: rgb(108, 202, 107)
 }
+
+th, td {
+    /* border: 0.3em; */
+    text-align: left;
+    /* border: 1px solid; */
+    padding-top: 0.5em;
+    padding-right: 0em;
+    padding-left: 0.5em;
+    border-collapse: collapse;
+}
+
