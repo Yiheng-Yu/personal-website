@@ -1,0 +1,14 @@
+{
+  "hugoConfig": "hugo.toml",
+
+  "cleanResourcesGen": true,
+  "cleanPublic": true,
+  "cleanImageCache": true,
+
+  "defaultImagesCacheSubdir": "hugogridgallery",
+
+  "extraPaths": [
+    ":cacheDir",
+    "public/"
+  ]
+}

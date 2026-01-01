@@ -1,8 +1,4 @@
-/* @font-face {
-    font-family: font;
-    src: url('/fonts/font.ttf');
-} */
-
+/* Font  */
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next');
 
 html {
@@ -16,6 +12,7 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+/* Decorated text */
 a {
   text-decoration: underline;
 }
@@ -34,16 +31,26 @@ nav {
    text-decoration: underline;
 }
 
+highlight {
+  font-size:95%;
+  color: hsl(95, 67%, 59%);
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Image */
 figure {
   display: inline-block;
   text-align: center;
   margin: 5px;
 }
 
+/* Bullet points */
 bullet {
-    font-size: 100%;
+    font-size: 95%;
 }
 
+/* Syntax highlight code blocks */
 pre code {
     font-size: 90%;
     display: block;
@@ -66,13 +73,14 @@ code[data-lang=VimL] {
     max-height: 600px;
 }
 
-highlight {
-  font-size:95%;
-  color: hsl(95, 67%, 59%);
-  font-weight: bold;
-  font-style: normal;
+blockquote {
+  font-size: 90%;
+  font-style: italic;
+  font-weight: normal;
 }
 
+
+/* Line separator  */
 hr {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -82,13 +90,7 @@ hr::after{
   padding:1px;
 }
 
-blockquote {
-  font-size: 90%;
-  font-style: italic;
-  font-weight: normal;
-}
-
-/* for mermaid */
+/* Mermaid */
 .cluster rect {
       fill: rgba(255, 255, 255, 0.0);
       stroke: #4a6cff;
@@ -116,6 +118,8 @@ blockquote {
   left: 0;
 }
 
+
+/* TOC */
 .dark #TableOfContents a.active {
   color: rgba(138, 255, 210, 0.650)
 }
@@ -125,6 +129,8 @@ blockquote {
   color: rgb(108, 202, 107)
 }
 
+
+/* Tables */
 th, td {
     /* border: 0.3em; */
     text-align: left;
@@ -135,3 +141,8 @@ th, td {
     border-collapse: collapse;
 }
 
+/* Admonition (i.e., github 'Tip', 'Note', see https://blowfish.page/docs/shortcodes/#admonition */
+.callout[data-callout="tip"] {
+    background: var(--color-callout-red);
+    --callout-icon: lucide-alert-circle;
+}

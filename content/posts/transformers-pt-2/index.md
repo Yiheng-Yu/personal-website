@@ -80,10 +80,9 @@ import torch
 from transformers import AutoModelForCausalLM
 ```
 
-> Sidenote:
-> As of November 2025, Pytorch/ Apple still haven't fully fixed the <a href="https://github.com/pytorch/pytorch/issues/91368">memory leak</a> issue for Apple Silicon devices. As a result, running models with pytorch may gets slower and slower over time, or freeze compeletly. If you were running a Macbook purchased after 2020, I'd recomment manually set pytorch device as 'cpu'.<br>
+> [!TIP]-for Mac users
+> As of November 2025, Pytorch/ Apple still haven't fully fixed the <a href="https://github.com/pytorch/pytorch/issues/91368">memory leak</a> issue for Apple Silicon devices. As a result, running models with pytorch may gets slower and slower over time, or freeze compeletly. If you were running a Macbook purchased after 2020, I'd recommend manually set pytorch device as 'cpu'.<br>
 > Skip this if you were confident that this memory leak won't happen:
-
 > ```python
 > torch.set_default_device('cpu')
 > ```
