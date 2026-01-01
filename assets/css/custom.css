@@ -118,7 +118,6 @@ hr::after{
   left: 0;
 }
 
-
 /* TOC */
 .dark #TableOfContents a.active {
   color: rgba(138, 255, 210, 0.650)
@@ -139,10 +138,4 @@ th, td {
     padding-right: 0em;
     padding-left: 0.5em;
     border-collapse: collapse;
-}
-
-/* Admonition (i.e., github 'Tip', 'Note', see https://blowfish.page/docs/shortcodes/#admonition */
-.callout[data-callout="tip"] {
-    background: var(--color-callout-red);
-    --callout-icon: lucide-alert-circle;
 }
