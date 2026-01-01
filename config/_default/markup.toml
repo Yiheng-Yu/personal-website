@@ -26,8 +26,7 @@
   lineNoStart = 1
   lineNos = false
   lineNumbersInTable = false
-  # style = 'tokyonight-moon'
-  style = 'nord'
+  style = 'tokyonight-moon'
   tabWidth = 4
   wrapperClass = 'highlight'
 

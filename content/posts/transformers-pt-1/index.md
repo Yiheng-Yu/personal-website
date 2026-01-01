@@ -122,16 +122,16 @@ Make sure you have python pre-installed. If you were using windows, python can b
 
 We first need to install some dependencies. Open terminal/ command prompt, type this command to install required dependencies:<br>
 
-```sh
+```Fish
 pip install torch transformers
 ```
 And then type:<br>
-```sh
+```Fish
 python
 ```
 To open python and start an interactive python session.<br><br>
 *Alternatively, if you installed [ipython](https://ipython.org/install.html), which should already be installed if you have installed [jupyter notebook](https://jupyter.org/install) previously, you can open ipython instead:*
-```sh
+```Fish
 ipython
 ```
 
@@ -327,9 +327,8 @@ Qwen3Attention(
 )
 ```
 
-The actual impelmentations of attention heads are different from model to model, but the general principle behind should be roughly the same. I'll dive deeper into it in the future.
+The actual implementations of attention heads are different from model to model, but the general principle behind should be roughly the same. I'll dive deeper into it in the future.
 
-// ...existing code...
 
 ### Have some fun!
 Meanwhile, since we've got a generative model already, we might as well test out some text generations:

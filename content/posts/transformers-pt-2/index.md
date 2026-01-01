@@ -41,7 +41,7 @@ This post mainly focuses on a general introduction on running a already trained 
 
 First, install dependencies and start an interactive Python session. In the terminal, create a virtual environment so the work in this post doesn't affect other projects:
 
-```sh
+```Fish
 python -m venv transformers 
 ```
 
@@ -59,7 +59,7 @@ source transformers/bin/activate
 
 Then install dependencies and start Python:
 
-```sh
+```Fish
 pip install torch tokenizers -U
 pip install transformers --pre
 python

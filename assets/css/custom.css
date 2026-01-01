@@ -44,12 +44,10 @@ bullet {
     font-size: 100%;
 }
 
-
 pre code {
     font-size: 90%;
-    background-color: rgb(0 0 0 / 0);
     display: block;
-    max-height: 500px;  
+    max-height: 500px;
     overflow-y: auto; 
     overflow-x: auto;
 }
@@ -63,17 +61,16 @@ code[data-lang=python] {
     max-height: 600px;
 }
 
-code[data-lang=text] {
+code[data-lang=VimL] {
     text-wrap: wrap;
     max-height: 600px;
 }
 
-
 highlight {
-  font-size:100%;
+  font-size:95%;
   color: hsl(95, 67%, 59%);
   font-weight: bold;
-  font-style:normal;
+  font-style: normal;
 }
 
 hr {
