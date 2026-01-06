@@ -59,18 +59,32 @@ pre code {
     overflow-x: auto;
 }
 
+/* inline code: dark mode  */
+.dark :not(pre) > code {
+  font-size: 85%;
+  /* color: rgba(255, 255, 255, 0.85); */
+  background-color: rgba(34, 37, 53, 0.835);
+}
+
+/* inline code: light mode  */
+.light :not(pre) > code {
+  font-size: 85%;
+  color: rgba(255, 255, 255, 0.555);
+  background-color: rgba(34, 37, 53, 0.75);
+}
+
 ::selection {
   color: oklch(95.3% 0.051 180.801);
   background: oklch(35% 0.16 232.661);
 }
 
 code[data-lang=python] {
-    max-height: 600px;
+  max-height: 600px;
 }
 
 code[data-lang=VimL] {
-    text-wrap: wrap;
-    max-height: 600px;
+  text-wrap: wrap;
+  max-height: 600px;
 }
 
 blockquote {
@@ -78,7 +92,6 @@ blockquote {
   font-style: italic;
   font-weight: normal;
 }
-
 
 /* Line separator  */
 hr {
@@ -119,6 +132,10 @@ hr::after{
 }
 
 /* TOC */
+.toc-right {
+  min-width: 300px;
+}
+
 .dark #TableOfContents a.active {
   color: rgba(138, 255, 210, 0.650)
 }
@@ -127,7 +144,6 @@ hr::after{
   font-weight: bolder;
   color: rgb(108, 202, 107)
 }
-
 
 /* Tables */
 th, td {
@@ -138,4 +154,17 @@ th, td {
     padding-right: 0em;
     padding-left: 0.5em;
     border-collapse: collapse;
+}
+
+/* admonitions */
+.admonition[data-type="info"] .admonition-content {
+  font-size: 95%
+}
+
+.dark {
+    --adm-info-bg: rgba(30, 36, 55, 0.557);
+}
+
+.light {
+  --adm-info-bg: rgba(169, 201, 255, 0.757);
 }

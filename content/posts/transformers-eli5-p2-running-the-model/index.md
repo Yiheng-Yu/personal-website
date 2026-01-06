@@ -1,5 +1,5 @@
 ---
-title: "ELI5 Transformers (Part 2) - Running the model"
+title: "ELI5 Transformers  - Running the model"
 date: 2025-12-27
 publishDate: 2025-12-27
 
@@ -13,7 +13,7 @@ draft: false
 
 {{< katex >}}
 
-*This is part 2 of the ELI5 transformers series, however you do not need to read Part 1 in order to follow the article. Link to the previous article can be found [in this link](https://yuyiheng.cc/posts/transformers-pt-1/)*
+*This is part of the ELI5 transformers series, however you do not need to read any previous posts in order to follow the current one. Link to the previous article can be found [in this link](https://yuyiheng.cc/posts/transformers-pt-1/)*
 
 Having a trained transformer model alone is not enough to practically solve most tasks: you also need infrastructure that converts inputs and outputs between human- and model-readable formats. From experience, much of the work in AI is actually on building a maintainable, production-ready ecosystem that manages the model rather than on the model itself. The majority of the cost (both in time and resources) for running and maintaining AI comes from this supporting infrastructure.
 

@@ -1,5 +1,5 @@
 ---
-title: "ELI5 Transformers (Part 1): Attention Mechanism "
+title: "ELI5 Transformers: Attention Mechanism "
 date: 2025-10-31
 publishDate: 2025-10-31
 draft: false
