@@ -110,27 +110,6 @@ hr::after{
       stroke-width: 1px;
     }
 
-/* level 2 (h3) → bullet */
-#TableOfContents ul ul > li::before {
-  content: "\25B7\2002";
-  position: relative;
-  left: 0;
-}
-
-/* level 3 (h4) */
-#TableOfContents ul ul ul > li::before {
-  content: "\2013\2002";
-  position: relative;
-  left: 0;
-}
-
-/* level 4 (h5) */
-#TableOfContents ul ul ul ul > li::before {
-  content: "\2027\2002";
-  position: relative;
-  left: 0;
-}
-
 /* TOC */
 .toc-right {
   min-width: 300px;
@@ -144,6 +123,52 @@ hr::after{
   font-weight: bolder;
   color: rgb(108, 202, 107)
 }
+
+/* level 2 */
+#TableOfContents ul ul > li::before {
+  content: "\25B7\2002";
+  position: relative;
+  left: 0;
+}
+/* always visible */
+#TableOfContents ul ul > li {
+  display: block;
+}
+
+/* level 3*/
+#TableOfContents ul ul ul > li::before {
+  content: "\2013\2002";
+  position: relative;
+  left: 0;
+}
+
+#TableOfContents ul ul ul > li {
+  display: none;
+}
+
+#TableOfContents li.active > ul,
+#TableOfContents li.current > ul {
+  display: block;
+}
+
+
+/* nav#TableOfContents ul ul ul ul {
+  display: none;
+} */
+
+/* level 4
+#TableOfContents ul ul ul ul > li::before {
+  content: "\2027\2002";
+  position: relative;
+  left: 0;
+} */
+
+/* #TableOfContents ul ul ul ul > li {
+  display: none;
+} */
+
+
+
 
 /* Tables */
 th, td {

@@ -3,9 +3,9 @@ title: "ELI5 Transformers  - Running the model"
 date: 2025-12-27
 publishDate: 2025-12-27
 
-summary: "(it's just learning the API)"
+summary: "(you just need format your inputs)"
 font_family: "Monospace"
-tags: ["AI", "Machine Learning", "ELI5"]
+tags: ["huggingface", "ELI5",]
 topics: "transformers"
 featureimage: https://imgs.xkcd.com/comics/transformers.png
 draft: false
@@ -589,8 +589,8 @@ flowchart TB
     n3@{ shape: terminal}
     n8@{ shape: rect}
     classDef default fill: transparent, bg-color: transparent
-    style n1 stroke-width:4px,stroke-dasharray: 0
-    style n8 stroke-width:4px,stroke-dasharray: 0
+    style n1 stroke-width:4px, stroke-dasharray: 0
+    style n8 stroke-width:4px, stroke-dasharray: 0
     style Model fill:transparent
 
 {{< /mermaid >}}

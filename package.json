@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@dataconnect/generated": "file:src/dataconnect-generated",
+    "@mermaid-js/layout-elk": "^0.2.0",
     "@netlify/blobs": "^10.4.2",
     "@netlify/functions": "^5.1.2",
     "@sendgrid/mail": "^8.1.6",

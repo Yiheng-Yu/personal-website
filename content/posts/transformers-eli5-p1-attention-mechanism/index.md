@@ -5,7 +5,7 @@ publishDate: 2025-10-31
 draft: false
 summary: "(it's glorified linear algebra)"
 font_family: "Monospace"
-tags: ["AI", "Machine Learning", "ELI5"]
+tags: ["huggingface", "ELI5", ]
 topics: "transformers"
 
 params:

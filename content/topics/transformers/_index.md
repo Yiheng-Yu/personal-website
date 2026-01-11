@@ -4,6 +4,7 @@ title: "Transformer"
 cascade:
   showDate: false
   showAuthor: false
+  showSummary: true
   showViews: false
   showLikes: false
   invertPagination: false
