@@ -112,7 +112,7 @@ hr::after{
 
 /* TOC */
 .toc-right {
-  min-width: 300px;
+  min-width: 350px;
 }
 
 .dark #TableOfContents a.active {
@@ -124,33 +124,60 @@ hr::after{
   color: rgb(108, 202, 107)
 }
 
-/* level 2 */
-#TableOfContents ul ul > li::before {
-  content: "\25B7\2002";
-  position: relative;
-  left: 0;
-}
-/* always visible */
-#TableOfContents ul ul > li {
-  display: block;
+/* ---------- level 2 ---------- */
+#TableOfContents ul ul {
+  counter-reset: toc-l1;
 }
 
-/* level 3*/
+#TableOfContents ul ul > li {
+  counter-increment: toc-l1;
+}
+
+#TableOfContents ul ul > li::before {
+  content: counter(toc-l1) " -\2002";
+}
+
+/* ---------- level 3 ---------- */
 #TableOfContents ul ul ul > li::before {
-  content: "\2013\2002";
-  position: relative;
-  left: 0;
+  content: "\25B7\2002";
 }
 
 #TableOfContents ul ul ul > li {
-  display: none;
-}
-
-#TableOfContents li.active > ul,
-#TableOfContents li.current > ul {
   display: block;
 }
 
+/* ---------- level 4+ ---------- */
+/* collapse level 4+ LISTS, not items */
+#TableOfContents ul ul ul ul {
+  display: none;
+}
+
+/* expand active branch */
+#TableOfContents li.active > ul ul,
+#TableOfContents li.current > ul ul {
+  display: block;
+}
+
+/* level 4 bullet */
+#TableOfContents ul ul ul ul > li::before {
+  content: "\2013\2002";
+}
+
+/* collapse level 4+ */
+#TableOfContents ul ul ul ul {
+  display: none;
+}
+
+/* expand entire active path */
+#TableOfContents ul ul ul ul {
+  display: none;
+}
+
+/* Expand every ancestor of the active item */
+#TableOfContents li:has(> a.active) > ul,
+#TableOfContents li:has(ul a.active) > ul {
+  display: block;
+}
 
 /* nav#TableOfContents ul ul ul ul {
   display: none;
@@ -193,3 +220,4 @@ th, td {
 .light {
   --adm-info-bg: rgba(169, 201, 255, 0.757);
 }
+
