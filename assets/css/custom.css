@@ -111,6 +111,11 @@ hr::after{
     }
 
 /* TOC */
+
+.toc {
+  max-height: none;
+}
+
 .toc-right {
   min-width: 350px;
 }
