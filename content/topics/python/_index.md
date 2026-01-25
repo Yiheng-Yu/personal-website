@@ -1,6 +1,5 @@
 ---
-title: "Python"
-subtitle: "Introduction of Python for Data Scientist"
+title: "Python for data scientists"
 draft: false
 
 cascade:
@@ -12,4 +11,6 @@ cascade:
   orderByWeight: true
 ---
 
-As someone came from a much heavier background of Matlab and R, learning python has been a massive headache for me in the past. Most of the existing tutorials for python aren't build for us data scientists, but targeted for software developer and computer scientists. I just want do be able to do things in python like that of R studio, without getting bombarded with waves and waves of new terminologies! I want to share some of my learnings as well as the frustrations here.
+Coming from a much heavier background in MATLAB and R, learning Python was a massive headache for me at first. Most existing Python tutorials aren’t really written for us data scientists, but for software developers who already understands the basics. All I wanted was to use Python the way I used RStudio, without being bombarded by wave after wave of new terminology.
+
+I want to share some of my learnings and frustrations here, along with more data-oriented tutorials that I hope will help others who have the same needs.

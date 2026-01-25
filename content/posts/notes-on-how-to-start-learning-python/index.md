@@ -8,11 +8,9 @@ tags: ["Tutorial"]
 topics: "python"
 series: ["Python",]
 series_order: 1
-draft: true
+draft: false
 
-featureimage: https://imgs.xkcd.com/comics/data_pipeline_2x.png
-# featureimage: https://imgs.xkcd.com/comics/data_point.png
-
+featureimage: https://imgs.xkcd.com/comics/bug.png
 ---
 
 ## Why Python?
@@ -20,6 +18,8 @@ featureimage: https://imgs.xkcd.com/comics/data_pipeline_2x.png
 I found the hardest part of learning python is learning *how to learn* python, or learning how to learn programming in general. Yes, both R and Matlab are very heavy on the side of programming, however, both of these two languages hides a lot of computer science stuff out of your sight. As a result, any other more programming languages could feel very intimating at the start. Python is one of these more generalised programming language.
 
 ### Compared with R
+
+![data pipeline](https://imgs.xkcd.com/comics/data_pipeline_2x.png "[Data pipeline](https://xkcd.com/2054)")
 
 Generally, compared with R:
 
@@ -250,8 +250,16 @@ I mainly use VS Code for:
 - Reading source codes, mostly for figuring out the implementation details or modyfing them.
 - Multi-language developments. For example, writing this website.
 
-..And I mainly use Spyder for:
+And I mainly use Spyder for:
 - Testing out new ideas
 - Writing throwaway scripts
 - Doing exploratory data works
 - An superme replacement for Microsoft Excel. Why would I write those unreadable, unmaintainable excel formula when I can do exactly the same task but with much lesser headache in Python...
+
+## Useful Resources
+
+Some useful learning resources:
+
+- Real Python's article on each topic of interest, for example, [this article on if/else/for in python](https://realpython.com/python-control-flow/) article. I found it much easier to type 'things i want to learn' plus 'site:realpython.com' in search engine than navigating through their website.
+
+- [Stack overflow](https://stackoverflow.com/) for being the best resource out there when one needs to find help.
