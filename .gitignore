@@ -6,3 +6,4 @@ public/
 .netlify
 public
 node_modules
+resources/*

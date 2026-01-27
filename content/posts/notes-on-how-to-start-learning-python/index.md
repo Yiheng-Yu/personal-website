@@ -3,11 +3,12 @@ title: "On learning how to learn python"
 date: 2026-01-24
 publishDate: 2026-01-24
 
-summary: ""
+summary: "Very gentle introductions of python & basic setup recommendations for data scientists"
 tags: ["Tutorial"]
-topics: "python"
+topics: ["python", "posts"]
 series: ["Python",]
 series_order: 1
+weight: 30
 draft: false
 
 featureimage: https://imgs.xkcd.com/comics/bug.png
@@ -17,9 +18,9 @@ featureimage: https://imgs.xkcd.com/comics/bug.png
 
 I found the hardest part of learning python is learning *how to learn* python, or learning how to learn programming in general. Yes, both R and Matlab are very heavy on the side of programming, however, both of these two languages hides a lot of computer science stuff out of your sight. As a result, any other more programming languages could feel very intimating at the start. Python is one of these more generalised programming language.
 
-### Compared with R
+***
 
-![data pipeline](https://imgs.xkcd.com/comics/data_pipeline_2x.png "[Data pipeline](https://xkcd.com/2054)")
+### Compared with R
 
 Generally, compared with R:
 
@@ -30,7 +31,11 @@ Generally, compared with R:
 - Python has multiple of very mature library for building/ running/ managing/ accessing/ modifying neural network models and neural network related pipelines.
 - **Also**, Python has pretty good support for running/ managing R scripts.
 
+![data pipeline](https://imgs.xkcd.com/comics/data_pipeline_2x.png "[Data pipeline](https://xkcd.com/2054)")
+
 In general, I found python being an excellent *medium* bridging the rich math and stats libraries of R and the daily ins and outs of R tasks.
+
+***
 
 ### Tips on learning
 
@@ -42,17 +47,23 @@ Sometimes I would come accross some papers/ new models written in Python, these 
 
 I found there are a lot of things that comes *extremely* handy with python, but the benefit **only comes after** I gained enough knowledge about it. Python allows you to do A LOT of things, but I found the best way of learning how to do it is not following some text books, it's learning how to do things that you want to do, but in python. 
 
-**2. 'Too hard for a beginner'**
+***
+
+**2. No such thing as 'Too hard for a beginner'**
 
 There is no project that's too hard for a beginner. The only difference is the amout of learning required might be different for a more experienced person. You want to write an entire program for your computer with python? Yes it might very hard if you don't know anything, but it's not impossible. You'd need to learn a lot of things, of course. You will came accross many obstacles and many of them can be extremely discouraging. There will be many error messages and most of the time your code won't work. That's all part of learning.
 
 But, THE most important, the quickest, and the only way of learning, is **writing your own code**.
+
+***
 
 **3. Your first code will be horrible**
 
 The only way to learn a language is to write your own version. Not just copying down the tutorial, you need to write your **own** version of the code. Or, a good alternative would be copying someone elses examples, and **modifying** it so that it suits your purpose.
 
 It's very normal to go back to your old codes and re-write sections and sections of it because you've learned better way ot doing it. It's an *extremely* common thing even for very matured, well-maintained commercial packages, even.
+
+***
 
 **4. All errors are human error**
 
@@ -62,6 +73,8 @@ Unexpected things happens. But these things happens because *human* made mistake
 
 More over, You won't brick you machine from tying things out. Even if you do, most of the time, there are always ways of recovering your lost progress.
 
+***
+
 ## Basics
 
 ### It feels more like an app
@@ -70,6 +83,7 @@ Just like simply having R-studio isn't enough, you need to install R in order to
 
 The good news is, if you were using Mac/ Linux, your computer probably already have python installed as part of the operation system. If you were unfortunately a Windows user, the easiest way is to [download from the Microsoft Store](https://apps.microsoft.com/detail/9pnrbtzxmb4z), or from [the official website](https://www.python.org/downloads/).
 
+***
 
 ### Running: the python console
 
@@ -82,11 +96,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-> To exit, simply close terminal window, the same way as closing any other applications on your computer.
-
 This is equivalent of the 'console' at the bottom in R-Studio/ Matlab:
 
 ![R-Studio Console](r-studio-console.png "R Studio console")
+
+> To exit, simply close terminal window, the same way as closing any other applications on your computer.
+
+***
 
 ### Running: pre-written scripts
 
@@ -128,6 +144,8 @@ And you should see the result:
 Hello!
 ```
 
+***
+
 ## Setting things up
 
 ### Environment manager
@@ -142,6 +160,8 @@ Just like you can have many folders arranging in however ways you like, you can 
 
 There are a lot of python version managers out there: the official ```venv``` that comes with offcial python apps, the fast and modern ```uv```, and ```conda``` which I would like to recommend to you.
 
+***
+
 ### Install environment manager
 
 To install, conda comes with 2 versions: ***Anaconda*** that works and feels like an actual app, and ***Miniconda*** that can only be accessed through terminal. I ***do not*** recommend Anaconda, it's slow, clunky and just overall very painfull to use. Miniconda comes with everything you need, without the hassle and the head-scartching pain of waiting for things to load.
@@ -153,6 +173,8 @@ Here's the official link for installing Miniconda:
 
 Follow the installation instruction to install Miniconda, then go to the 'Verify your install' section for your operating system ([Windows](https://www.anaconda.com/docs/getting-started/miniconda/install#windows), [Mac](https://www.anaconda.com/docs/getting-started/miniconda/install#macos), [Linux](https://www.anaconda.com/docs/getting-started/miniconda/install#linux)) to check if conda was correctly installed.
 
+***
+
 ## Popular Tools
 
 There are a lot of different R Studio equivalents for python. These are called 'IDE's.
@@ -160,6 +182,8 @@ There are a lot of different R Studio equivalents for python. These are called '
 Just like you don't need RStudio to write and run R, you also don't need IDE to write and run Python, but they are extremely handy when it comes to script development.
 
 There are several common ones which I am going list out in this section, and will talk out my current set up in the next section.
+
+***
 
 ### Pycharm
 
@@ -174,6 +198,8 @@ There are several common ones which I am going list out in this section, and wil
 **Cons**
 - Its powerfullness comes with cost of being very low and clunky.
 - From a personal experience, if you were doing web deveopment, writing an app etc., I can see the appeal of pycharm. However, a lots of these functions aren't really up for a data scientist. Its rigourness helps software development, but is a huge downside if I just want something that works very quickly.
+
+***
 
 ### Jupyter Notebook
 
@@ -194,6 +220,8 @@ There are many notebook varients that feels more or less the same from an user p
 - The downside is, you need to do A LOT of adjustments and customisations initialy in order to make it suitable for your needs. If you've been writing with raw R or Matlab ('.r' and '.m' files, instead of '.rmd' files), you may find learning jupyter notebook quite painful. You need to know a little bit of local host, a bit html, and a lot of python ins and outs.
 - Just like R markdown, jupyter notebook is *solely* is *solely* a notebook for taking records of snippts of codes and ideas. It is *not* a tool for writing packages, libraries, applications etc. In the past, I did tried and tested a lot of different ways of creating some sort of workflows/ scripts using notebook, but result in varying degrees of success, most of them falling on the unsuccessfull side.
 
+***
+
 ### VS Code
 
 ![R in VS Code](https://user-images.githubusercontent.com/4662568/122425511-1eaa1480-cfc2-11eb-9d60-f7daab13c1f6.png "R in VS Code")
@@ -206,9 +234,10 @@ As of December, 2025, VS Code is currently considered to be the [most used IDEs 
 - It's an extremly flexible tool, you can tune it however you like, making it work in ways that you find comfortable. It natually works with multiple programing langauges.
 
 **Cons**
-- It's an extremely flexible too, you can tiune it however you like, thus, you will have a lot of things to learn beforehand. You will need to learn [JSON](https://code.visualstudio.com/docs/languages/json), the concept of [workspace](https://code.visualstudio.com/docs/configure/settings), configurate your [debugger](https://code.visualstudio.com/docs/debugtest/debugging-configuration), etc. There is a HUGE learning curve if you don't come from a programming background, and learning all these at once can be a bit overwhelming.
+- It's an extremely flexible tool, you can tune it however you like, thus, you will have a lot of things to learn beforehand. You will need to learn [JSON](https://code.visualstudio.com/docs/languages/json), the concept of [workspace](https://code.visualstudio.com/docs/configure/settings), configurate your [debugger](https://code.visualstudio.com/docs/debugtest/debugging-configuration), etc. There is a HUGE learning curve if you don't come from a programming background, and learning all these at once can be a bit overwhelming.
 - I use VS Code mainly as a debugger, for chaing/ modifying python modules that I've been developing in the past. These modules contain lots of sub-modules, with each of them doing it's own thing whilst taking with some other sub-modules. I usually need to go into part of my old code, changing a bit of the code, adding some new functiontionality to it, or modifhying packages downloaded from somwhere else. VS Code is the excellent tool for this particular task.
 
+***
 
 ## My Recommendation
 
@@ -224,9 +253,9 @@ You also can change it to Matlab layout too:
 ![spyder-matlab-layout](basically-matlab.png "Basically Matlab")
 
 In addition to the ease of use, here are list of things that I found really good about spyder:
-- Variable explorer where you can double click to view variables
+- Variable explorer where you can double click to view variables, which is **extremely** helpful for whoever starts learning python
 - Console that works in the same way as R & matlab
-- Very handy tool plotting tool
+- Very handy plotting tool, inline plotting is a life saver
 - Unlike jupyter notebook, you can develop local packages with it.
 
 However, it also comes with it's own share of problems:
@@ -236,6 +265,8 @@ However, it also comes with it's own share of problems:
 - Spyder does not have much support for non-python language.
 
 However, all issues spyder has are not very much of concern when it comes to data science. Because of this, I would like to think Spyder as the perfect gateway tool for any data scientist/ R or Matlab user who wants to learn python. One can safely build their first project with spyder, learn the basic in and outs with familiar user interface, and slowly migrate to other tools once the know much better about what they should be looking for.
+
+***
 
 **Notes on install Spyder**
 
@@ -255,6 +286,8 @@ And I mainly use Spyder for:
 - Writing throwaway scripts
 - Doing exploratory data works
 - An superme replacement for Microsoft Excel. Why would I write those unreadable, unmaintainable excel formula when I can do exactly the same task but with much lesser headache in Python...
+
+***
 
 ## Useful Resources
 

@@ -184,24 +184,6 @@ hr::after{
   display: block;
 }
 
-/* nav#TableOfContents ul ul ul ul {
-  display: none;
-} */
-
-/* level 4
-#TableOfContents ul ul ul ul > li::before {
-  content: "\2027\2002";
-  position: relative;
-  left: 0;
-} */
-
-/* #TableOfContents ul ul ul ul > li {
-  display: none;
-} */
-
-
-
-
 /* Tables */
 th, td {
     /* border: 0.3em; */
@@ -226,3 +208,5 @@ th, td {
   --adm-info-bg: rgba(169, 201, 255, 0.757);
 }
 
+
+/* Tree */
