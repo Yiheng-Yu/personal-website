@@ -14,11 +14,11 @@
 package = "node_modules/"
 
 [context.production.environment]
-  HUGO_VERSION = "0.154.5"
+  HUGO_VERSION = "0.155.2"
   HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.154.5"
+  HUGO_VERSION = "0.155.2"
 
 [[headers]]
   for = "/*"

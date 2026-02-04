@@ -8,7 +8,6 @@ tags: ["Tutorial"]
 topics: ["python", "posts"]
 series: ["Python",]
 series_order: 1
-weight: 30
 draft: false
 
 featureimage: https://imgs.xkcd.com/comics/bug.png
