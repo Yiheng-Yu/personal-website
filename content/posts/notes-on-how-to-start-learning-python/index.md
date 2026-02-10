@@ -5,7 +5,7 @@ publishDate: 2026-01-24
 
 summary: "Very gentle introductions of python & basic setup recommendations for data scientists"
 tags: ["Tutorial"]
-topics: ["python", "posts"]
+topics: ["python"]
 series: ["Python",]
 series_order: 1
 draft: false

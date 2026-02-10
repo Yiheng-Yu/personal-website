@@ -23,6 +23,12 @@
  weight = 20
  orderByWeight = false
 
+# [[main]]
+#   name = "Statistics"
+#   parent = "Topics"  
+#   pageRef = "topics/statistics/"
+#   weight = 30
+
 [[main]]
   name = "Transformer"
   parent = "Topics"  

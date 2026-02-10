@@ -1,14 +1,13 @@
 ---
 title: "Transformers"
 
-cascade:
-  showDate: false
-  showAuthor: false
-  showSummary: true
-  showViews: false
-  showLikes: false
-  invertPagination: false
-  orderByWeight: true
+showDate: false
+showAuthor: false
+showSummary: true
+showViews: false
+showLikes: false
+invertPagination: false
+orderByWeight: true
 ---
 I find lots of available introductions on transformers very confusing.
 
