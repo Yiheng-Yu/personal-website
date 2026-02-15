@@ -175,7 +175,7 @@ Let' go through the codes in side this for-loop line-by-line, and see how parame
 
 **model.forward**
 
-```python {linenos=inline hl_lines=1}
+```python {linenos="inline" hl_lines=1}
 model_outputs = model.forward(data_inputs)
 loss = evaluation_function(model_outputs, target)
 loss.backward()
@@ -189,7 +189,7 @@ model.zero_grad()
 
 **evaluation_function**
 
-```python {linenos=inline hl_lines=2}
+```python {linenos="inline" hl_lines=2}
 model_outputs = model.forward(data_inputs)
 loss = evaluation_function(model_outputs, target)
 loss.backward()
@@ -203,7 +203,7 @@ model.zero_grad()
 
 **loss.backward**
 
-```python {linenos=inline hl_lines=3}
+```python {linenos="inline" hl_lines=3}
 model_outputs = model.forward(data_inputs)
 loss = evaluation_function(model_outputs, target)
 loss.backward()
@@ -230,7 +230,7 @@ This boardcasting process is based on some crazily genius math, [which I would u
 
 **optimizer.step**
 
-```python {linenos=inline hl_lines=4}
+```python {linenos="inline" hl_lines=4}
 model_outputs = model.forward(data_inputs)
 loss = evaluation_function(model_outputs, target)
 loss.backward()
@@ -244,7 +244,7 @@ model.zero_grad()
 
 **model.zero_grad**
 
-```python {linenos=inline hl_lines=5}
+```python {linenos="inline" hl_lines=5}
 model_outputs = model.forward(data_inputs)
 loss = evaluation_function(model_outputs, target)
 loss.backward()
@@ -289,7 +289,7 @@ Your log files should have:
 
 One very good advantage of ```pytorch```'s optimisation syntax is that it allows one to control when model's parameter gets updated. Instead of the example optimisation loop [mentioned before](#an-optimisation-step), one could also do something like this, note the highlighted line 6:
 
-```python {linenos=inline hl_lines=6}
+```python {linenos="inline" hl_lines=6}
 for batch_index, batch_input in enumerate(dataset):
     model_outputs = model.forward(data_inputs)
     loss = evaluation_function(model_outputs, data_inputs)
@@ -310,7 +310,7 @@ Conditional statements in line 6 (```batch_index%5 == 0```) evaluates to be ```T
 
 [As discussed earlier](#checkpoints), you would also want to be able to save your model so that you can, of cource, use your model,,, In practice, model are saved at every x checkpoints, so that one could pick up and re-start training from a desired time stamp. Something like:
 
-```python {linenos=inline hl_lines=4}
+```python {linenos="inline" hl_lines=4}
 for batch_index, batch_input in enumerate(dataset):
   ...
   if batch_index % 1000 == 0:  # saves model at every 1000th step
@@ -324,7 +324,7 @@ for batch_index, batch_input in enumerate(dataset):
 
 As mentioned in the [workflow section](#checkpoints) above, one would also need to evaluate model performance every now and then. This is usually handeled like this:
 
-```python {linenos=inline hl_lines=4}
+```python {linenos="inline" hl_lines=4}
 for batch_index, batch_input in enumerate(dataset):
   ...
   if batch_index % 1000 == 0:  # evaluates model at every 1000th step
