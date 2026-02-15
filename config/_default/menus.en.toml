@@ -11,33 +11,27 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "Posts"
+ name = "posts"
  pageRef = "posts"
  weight = 10
  orderByWeight = false
  firebase = true
 
 [[main]]
- name = "Topics"
+ name = "by topic"
  pageRef = "Topics"
  weight = 20
  orderByWeight = false
 
-# [[main]]
-#   name = "Statistics"
-#   parent = "Topics"  
-#   pageRef = "topics/statistics/"
-#   weight = 30
-
 [[main]]
   name = "Transformer"
-  parent = "Topics"  
+  parent = "by topic"  
   pageRef = "topics/transformers/"
   weight = 20
 
 [[main]]
   name = "Python"
-  parent = "Topics"  
+  parent = "by topic"  
   pageRef = "topics/python/"
   weight = 10
 

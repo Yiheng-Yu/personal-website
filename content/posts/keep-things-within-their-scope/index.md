@@ -3,7 +3,7 @@ title: "Keep things within their scope(?)"
 date: 2026-02-13
 publishDate: 2026-02-13
 
-summary: "Scope"
+summary: "Context matters!"
 tags: ["Tutorial"]
 topics: ["python",]
 series: ["Python",]
