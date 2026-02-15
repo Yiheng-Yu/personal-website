@@ -1,0 +1,33 @@
+{{ $url := .Get "url" }}
+{{ $type := .Get "type" }}
+{{ $startLine := .Get "startLine" | default 1 | int }}
+{{ $startLine = sub $startLine 1 }}
+{{ $endLine := .Get "endLine" | default -1 | int }}
+{{ $selectedLines := slice }}
+{{ with resources.GetRemote (urls.Parse $url) }}
+  {{ $lines := split .Content "\n" }}
+  {{ $totalLine := $lines | len }}
+
+  {{ if ne $endLine -1 }}
+    {{ $endLine = math.Min $endLine $totalLine }}
+  {{ else }}
+    {{ $endLine = $totalLine }}
+  {{ end }}
+
+  {{ if gt $startLine $endLine }}
+    {{ errorf "codeimporter shortcode: startLine is greater than endLine" . }}
+  {{ end }}
+
+  {{ $selectedLines := first $endLine $lines }}
+  {{ $selectedLines = after $startLine $selectedLines }}
+
+  {{ if gt $startLine 1 }}
+    {{ $codeBlock := printf "```%s {linenos=inline, lineNoStart=%d}\n...\n%s\n...\n```" $type $startLine (delimit $selectedLines "\n") }}
+    {{ $codeBlock | markdownify }}
+   {{ else }}
+  {{ $codeBlock := printf "```%s {linenos=inline, lineNoStart=%d}\n%s\n...\n```" $type $startLine (delimit $selectedLines "\n") }}
+  {{ end }}
+  
+{{ else }}
+  {{ warnf "codeimporter shortcode: unable to fetch %q: %s" $url .Position }}
+{{ end }}

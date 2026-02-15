@@ -12,6 +12,10 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+figure figcaption {
+    text-align: center;
+}
+
 /* Decorated text */
 a {
   text-decoration: underline;
@@ -20,9 +24,11 @@ a {
 .summary {
  font-style: italic;
 }
+
 .post-summary {
   font-style: italic;
 }
+
 nav {
   font-size:85%;
 }
@@ -61,14 +67,15 @@ pre code {
 
 /* inline code: dark mode  */
 .dark :not(pre) > code {
-  font-size: 85%;
-  /* color: rgba(255, 255, 255, 0.85); */
+  font-size: 80%;
+  font-weight:500;
   background-color: rgba(34, 37, 53, 0.835);
 }
 
 /* inline code: light mode  */
 .light :not(pre) > code {
-  font-size: 85%;
+  font-size: 80%;
+  font-weight:500;
   color: rgba(255, 255, 255, 0.555);
   background-color: rgba(34, 37, 53, 0.75);
 }
@@ -76,6 +83,25 @@ pre code {
 ::selection {
   color: oklch(95.3% 0.051 180.801);
   background: oklch(35% 0.16 232.661);
+}
+
+/* highlight code block */
+.codeblock-title {
+  font-family: var(--font-mono);
+  font-size: 80%;
+  padding:0.2rem 0.2rem 0.2rem 0.5rem;
+  background-color: rgba(17, 18, 26, 0.818);
+  color: oklch(96.8% 0.007 247.896);
+  border-bottom: 0px solid hsl(var(--b3));
+}
+
+.highlight pre, .chroma pre {
+  font-size: 80%;
+  padding:0.5rem 0.5rem 0.5rem 0.7rem;
+}
+
+html.dark .codeblock-title {
+  background-color: rgba(17, 18, 26, 0.541);
 }
 
 code[data-lang=python] {
@@ -88,10 +114,11 @@ code[data-lang=VimL] {
 }
 
 blockquote {
-  font-size: 90%;
+  font-size: 95%;
   font-style: italic;
   font-weight: normal;
 }
+
 
 /* Line separator  */
 hr {
@@ -207,6 +234,3 @@ th, td {
 .light {
   --adm-info-bg: rgba(169, 201, 255, 0.757);
 }
-
-
-/* Tree */
