@@ -17,12 +17,12 @@
 
 [highlight]
   noClasses = true
-  anchorLineNos = true
+  anchorLineNos = false
   codeFences = true
   guessSyntax = false
   hl_Lines = ''
   hl_inline = false
-  lineAnchors = ''
+  lineAnchors = ""
   lineNoStart = 1
   lineNos = false
   lineNumbersInTable = false
