@@ -9,6 +9,7 @@
     unsafe = true
 
   [goldmark.extensions]
+    KaTeX = true
     [goldmark.extensions.passthrough]
       enable = true
       [goldmark.extensions.passthrough.delimiters]
